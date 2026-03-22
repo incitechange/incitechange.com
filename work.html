@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Lori Williams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #060f1a;
+      --navy-900: #0a1e30;
+      --navy-800: #0d2b45;
+      --navy-700: #123760;
+      --navy-600: #1a4d82;
+      --navy-500: #2463a0;
+      --navy-400: #4d84bc;
+      --navy-300: #7fadd0;
+      --navy-200: #b3cfe4;
+      --navy-100: #deeaf4;
+      --navy-50:  #f0f6fb;
+      --teal-900: #082e30;
+      --teal-800: #0d4446;
+      --teal-700: #125c60;
+      --teal-600: #167b80;
+      --teal-500: #1a8a8f;
+      --teal-400: #22adb3;
+      --teal-300: #4dccd1;
+      --teal-200: #8de3e7;
+      --teal-100: #c8f2f4;
+      --teal-50:  #eafbfc;
+      --lime-700: #637a00;
+      --lime-600: #8aaa00;
+      --lime-500: #b0d000;
+      --lime-400: #c2d900;
+      --lime-300: #d4e84a;
+      --lime-200: #e5f28e;
+      --lime-100: #f2f9c8;
+      --ink-900: #111412;
+      --ink-800: #1e2422;
+      --ink-700: #2e3835;
+      --ink-600: #435450;
+      --ink-500: #5e736e;
+      --ink-400: #7d9490;
+      --ink-300: #a4b8b4;
+      --ink-200: #cad8d6;
+      --ink-100: #e8eeec;
+      --ink-50:  #f4f7f6;
+      --cream: #faf8f3;
+      --white: #ffffff;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Outfit', sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --transition-base: 250ms ease;
+      --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--ink-900);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--ink-100);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--navy-800);
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .nav-logo span { color: var(--lime-400); }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-600);
+      letter-spacing: 0.02em;
+      transition: color var(--transition-base);
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-links a:hover { color: var(--navy-800); }
+    .nav-links a.active { color: var(--navy-800); }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0; right: 0;
+      height: 2px;
+      background: var(--lime-400);
+      border-radius: 2px;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3rem);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--ink-100);
+    }
+
+    /* Shag geometric shapes */
+    .ph-shape-1 {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 220px;
+      height: 220px;
+      background: var(--teal-100);
+      border-radius: 50%;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .ph-shape-2 {
+      position: absolute;
+      bottom: 10px;
+      right: 180px;
+      width: 56px;
+      height: 56px;
+      background: var(--lime-300);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .ph-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ph-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 1rem;
+    }
+    .ph-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--teal-500);
+      border-radius: 2px;
+    }
+
+    .ph-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--navy-800);
+      margin-bottom: 1.25rem;
+    }
+    .ph-headline em {
+      font-style: italic;
+      color: var(--teal-500);
+    }
+
+    .ph-sub {
+      font-size: 1.0625rem;
+      font-weight: 300;
+      color: var(--ink-500);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    /* ACTIVE TAG BANNER */
+    .tag-banner {
+      display: none;
+      background: var(--navy-800);
+      padding: 0.75rem clamp(1.5rem, 5vw, 4rem);
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .tag-banner.visible { display: flex; }
+    .tb-label {
+      font-size: 0.875rem;
+      color: var(--navy-200);
+    }
+    .tb-label strong { color: var(--lime-400); }
+    .tb-clear {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--teal-300);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color var(--transition-base);
+    }
+    .tb-clear:hover { color: var(--cream); }
+
+    /* WORK GRID */
+    .work-section {
+      padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .work-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Card hide/show for tag filtering */
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--ink-100);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 48px rgba(13, 43, 69, 0.12);
+      border-color: var(--teal-200);
+    }
+    .project-card:hover .card-reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-card.hidden {
+      display: none;
+    }
+
+    .card-bar { height: 5px; flex-shrink: 0; }
+    .bar-mixed { background: linear-gradient(90deg, var(--navy-700), var(--teal-400), var(--lime-400)); }
+    .bar-teal  { background: linear-gradient(90deg, var(--teal-600), var(--teal-300)); }
+    .bar-lime  { background: linear-gradient(90deg, var(--lime-600), var(--lime-300)); }
+    .bar-navy  { background: linear-gradient(90deg, var(--navy-700), var(--navy-400)); }
+
+    .card-body {
+      padding: 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-400);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.3125rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--navy-800);
+      margin-bottom: 0.875rem;
+    }
+
+    .card-desc {
+      font-size: 0.9375rem;
+      color: var(--ink-500);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 4px 11px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      border: 1px solid transparent;
+    }
+
+    .tag:hover { filter: brightness(0.92); }
+
+    .tag.active-tag {
+      box-shadow: 0 0 0 2px var(--lime-400);
+    }
+
+    .tag-teal    { background: var(--teal-100);  color: var(--teal-700); }
+    .tag-navy    { background: var(--navy-100);  color: var(--navy-700); }
+    .tag-lime    { background: var(--lime-100);  color: var(--lime-700); }
+    .tag-neutral { background: var(--ink-100);   color: var(--ink-600); }
+
+    .card-reveal {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--teal-600);
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all var(--transition-base);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card-reveal::after { content: '→'; }
+
+    /* EMPTY STATE */
+    .empty-state {
+      display: none;
+      grid-column: 1 / -1;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .empty-state.visible { display: block; }
+    .empty-state p {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-400);
+      margin-bottom: 1rem;
+    }
+    .empty-state button {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--teal-600);
+      background: none;
+      border: 1.5px solid var(--teal-400);
+      border-radius: var(--radius-sm);
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+    .empty-state button:hover {
+      background: var(--teal-50);
+    }
+
+    /* ARTICLE TEASER */
+    .article-section {
+      background: var(--ink-50);
+      padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+      border-top: 1px solid var(--ink-100);
+    }
+    .article-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .article-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--ink-100);
+      border-left: 4px solid var(--lime-400);
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 2rem;
+      transition: all var(--transition-base);
+      text-decoration: none;
+      color: inherit;
+    }
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(13, 43, 69, 0.1);
+    }
+    .ac-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--lime-700);
+      margin-bottom: 0.5rem;
+    }
+    .ac-title {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 400;
+      color: var(--navy-800);
+      margin-bottom: 0.625rem;
+      line-height: 1.25;
+    }
+    .ac-desc {
+      font-size: 0.9375rem;
+      color: var(--ink-500);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .ac-cta {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--teal-600);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+    .ac-cta::after { content: '→'; }
+
+    /* SECTION HEADER */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .section-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--lime-400);
+      flex-shrink: 0;
+      position: relative;
+      top: -2px;
+    }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-400);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300;
+      color: var(--navy-800);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy-950);
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy-300);
+    }
+    .footer-logo span { color: var(--lime-400); }
+    .footer-nav { display: flex; gap: 2rem; list-style: none; }
+    .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
+    .footer-nav a:hover { color: var(--navy-200); }
+    .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
+
+    /* PAGE LOAD */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .ph-eyebrow { animation: fadeUp 0.5s ease 0.05s both; }
+    .ph-headline { animation: fadeUp 0.5s ease 0.15s both; }
+    .ph-sub      { animation: fadeUp 0.5s ease 0.25s both; }
+
+    @media (max-width: 600px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .article-card { grid-template-columns: 1fr; }
+      .ac-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="index.html" class="nav-logo">lori<span>.</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="making.html">Making</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="ph-shape-1"></div>
+    <div class="ph-shape-2"></div>
+    <div class="ph-inner">
+      <p class="ph-eyebrow">Selected work</p>
+      <h1 class="ph-headline">The problems<br><em>worth showing.</em></h1>
+      <p class="ph-sub">
+        Six engagements across healthcare, enterprise tech, ecommerce, nonprofit,
+        and state government. Click any tag to filter by type.
+      </p>
+    </div>
+  </div>
+
+  <!-- ACTIVE TAG BANNER -->
+  <div class="tag-banner" id="tagBanner">
+    <p class="tb-label">Showing work tagged <strong id="activeTagLabel"></strong></p>
+    <button class="tb-clear" onclick="clearFilter()">Clear filter ×</button>
+  </div>
+
+  <!-- WORK GRID -->
+  <section class="work-section">
+    <div class="work-inner">
+      <div class="card-grid" id="cardGrid">
+
+        <!-- BRIDGE PARTNERS -->
+        <a href="bridge-partners.html" class="project-card"
+           data-tags="process-design,web-delivery,program-management,ms-project,sharepoint,power-bi,qa-workflows">
+          <div class="card-bar bar-mixed"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">Bridge Partners · 2025</p>
+            <h3 class="card-title">When the process is the problem</h3>
+            <p class="card-desc">A partner-heavy web program running on manual spreadsheets, color-coded Word docs, and ad-hoc handoffs. I mapped the structural risks and built a pragmatic path forward.</p>
+            <div class="tag-row">
+              <span class="tag tag-teal" data-tag="process-design">Process Design</span>
+              <span class="tag tag-teal" data-tag="web-delivery">Web Delivery</span>
+              <span class="tag tag-navy" data-tag="program-management">Program Management</span>
+              <span class="tag tag-neutral" data-tag="ms-project">MS Project</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- SETON -->
+        <a href="seton.html" class="project-card"
+           data-tags="enterprise-pm,web-delivery,program-management,cms,sitecore,healthcare,requirements">
+          <div class="card-bar bar-teal"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">Seton Healthcare · 2014–2018</p>
+            <h3 class="card-title">Enterprise at a human scale</h3>
+            <p class="card-desc">Led digital strategy across a regulated healthcare system — secure physician portals, online scheduling, a Sitecore migration, and stakeholders who did not always agree.</p>
+            <div class="tag-row">
+              <span class="tag tag-navy" data-tag="enterprise-pm">Enterprise PM</span>
+              <span class="tag tag-teal" data-tag="cms">CMS</span>
+              <span class="tag tag-neutral" data-tag="sitecore">Sitecore</span>
+              <span class="tag tag-neutral" data-tag="healthcare">Healthcare</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- 360TRAINING -->
+        <a href="360training.html" class="project-card"
+           data-tags="ai-workflows,web-delivery,ecommerce,cms,program-management,analytics">
+          <div class="card-bar bar-lime"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">360training · 2021–2023</p>
+            <h3 class="card-title">Teaching AI to help, not replace</h3>
+            <p class="card-desc">Built AI-assisted content workflows that got to first draft in a fraction of the time — without letting the machine anywhere near the judgment calls.</p>
+            <div class="tag-row">
+              <span class="tag tag-lime" data-tag="ai-workflows">AI Workflows</span>
+              <span class="tag tag-teal" data-tag="web-delivery">Web Delivery</span>
+              <span class="tag tag-neutral" data-tag="ecommerce">Ecommerce</span>
+              <span class="tag tag-neutral" data-tag="cms">CMS</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- TASB -->
+        <a href="tasb.html" class="project-card"
+           data-tags="program-management,analytics,web-delivery,requirements,process-design">
+          <div class="card-bar bar-navy"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">TASB · 2018–2019</p>
+            <h3 class="card-title">Building an agency from the inside</h3>
+            <p class="card-desc">Ran a fee-for-service internal digital agency serving Texas school boards — scopes, budgets, stakeholder focus groups, and an analytics model connecting member behavior to business goals.</p>
+            <div class="tag-row">
+              <span class="tag tag-navy" data-tag="program-management">Program Management</span>
+              <span class="tag tag-teal" data-tag="analytics">Analytics</span>
+              <span class="tag tag-neutral" data-tag="process-design">Process Design</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- ETS/PwC -->
+        <a href="ets.html" class="project-card"
+           data-tags="enterprise-pm,analytics,program-management,power-bi,ms-project">
+          <div class="card-bar bar-teal"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">ETS via PwC · 2019–2021</p>
+            <h3 class="card-title">10,000 tasks and counting</h3>
+            <p class="card-desc">Managed interconnected project schedules at enterprise scale for Texas K-12 statewide assessment — and built the Power BI infrastructure that made it all visible to executives.</p>
+            <div class="tag-row">
+              <span class="tag tag-navy" data-tag="enterprise-pm">Enterprise PM</span>
+              <span class="tag tag-lime" data-tag="analytics">Analytics</span>
+              <span class="tag tag-lime" data-tag="power-bi">Power BI</span>
+              <span class="tag tag-neutral" data-tag="ms-project">MS Project</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- AUSTIN FREE-NET -->
+        <a href="austin-free-net.html" class="project-card"
+           data-tags="nonprofit,web-delivery,analytics,program-management,requirements">
+          <div class="card-bar bar-mixed"></div>
+          <div class="card-body">
+            <p class="card-eyebrow">Austin Free-Net · 2011–2014</p>
+            <h3 class="card-title">Digital access as a public good</h3>
+            <p class="card-desc">Rebuilt a nonprofit's web presence from the ground up, designed Salesforce reporting for city and state grant compliance, and won a PRSA award along the way.</p>
+            <div class="tag-row">
+              <span class="tag tag-teal" data-tag="nonprofit">Nonprofit</span>
+              <span class="tag tag-teal" data-tag="web-delivery">Web Delivery</span>
+              <span class="tag tag-neutral" data-tag="analytics">Analytics</span>
+            </div>
+            <div class="card-reveal">Read the case study</div>
+          </div>
+        </a>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState">
+          <p>Nothing here with that tag yet.</p>
+          <button onclick="clearFilter()">Show all work</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKEDIN ARTICLE TEASER -->
+  <section class="article-section">
+    <div class="article-inner">
+      <div class="section-header">
+        <div class="section-dot"></div>
+        <p class="section-eyebrow">Writing</p>
+      </div>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Thinking out loud.</h2>
+      <a href="https://www.linkedin.com/pulse/program-trouble-its-also-my-job-search-lori-williams"
+         target="_blank" rel="noopener" class="article-card">
+        <div>
+          <p class="ac-label">LinkedIn Article · 2025</p>
+          <h3 class="ac-title">This program is in trouble. It's also my job search.</h3>
+          <p class="ac-desc">On what a fragile web program and an active job search have in common — and what it looks like to diagnose both with the same set of tools.</p>
+        </div>
+        <span class="ac-cta">Read on LinkedIn</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="index.html" class="footer-logo">lori<span>.</span></a>
+    <nav>
+      <ul class="footer-nav">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="making.html">Making</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">© 2026 Lori Williams</p>
+  </footer>
+
+  <script>
+    let activeTag = null;
+
+    // Tag click handler — works on tags inside cards
+    document.querySelectorAll('.tag[data-tag]').forEach(tag => {
+      tag.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // prevent card link from firing
+        const tagSlug = this.dataset.tag;
+
+        if (activeTag === tagSlug) {
+          clearFilter();
+          return;
+        }
+
+        filterByTag(tagSlug, this.textContent.trim());
+      });
+    });
+
+    function filterByTag(slug, label) {
+      activeTag = slug;
+
+      const cards = document.querySelectorAll('.project-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+        if (cardTags.includes(slug)) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Highlight matching tags
+      document.querySelectorAll('.tag[data-tag]').forEach(t => {
+        t.classList.toggle('active-tag', t.dataset.tag === slug);
+      });
+
+      // Show/hide banner
+      const banner = document.getElementById('tagBanner');
+      const bannerLabel = document.getElementById('activeTagLabel');
+      banner.classList.add('visible');
+      bannerLabel.textContent = label;
+
+      // Empty state
+      document.getElementById('emptyState').classList.toggle('visible', visibleCount === 0);
+
+      // Scroll to grid
+      document.getElementById('cardGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function clearFilter() {
+      activeTag = null;
+      document.querySelectorAll('.project-card').forEach(c => c.classList.remove('hidden'));
+      document.querySelectorAll('.tag[data-tag]').forEach(t => t.classList.remove('active-tag'));
+      document.getElementById('tagBanner').classList.remove('visible');
+      document.getElementById('emptyState').classList.remove('visible');
+    }
+
+    // Handle URL param on load (e.g. work.html?tag=analytics)
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const tagParam = params.get('tag');
+      if (tagParam) {
+        // Find display label for this slug
+        const matchingTag = document.querySelector(`.tag[data-tag="${tagParam}"]`);
+        const label = matchingTag ? matchingTag.textContent.trim() : tagParam;
+        filterByTag(tagParam, label);
+      }
+    });
+  </script>
+
+</body>
+</html>

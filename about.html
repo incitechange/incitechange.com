@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Lori Williams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #060f1a;
+      --navy-900: #0a1e30;
+      --navy-800: #0d2b45;
+      --navy-700: #123760;
+      --navy-600: #1a4d82;
+      --navy-500: #2463a0;
+      --navy-400: #4d84bc;
+      --navy-300: #7fadd0;
+      --navy-200: #b3cfe4;
+      --navy-100: #deeaf4;
+      --navy-50:  #f0f6fb;
+      --teal-900: #082e30;
+      --teal-800: #0d4446;
+      --teal-700: #125c60;
+      --teal-600: #167b80;
+      --teal-500: #1a8a8f;
+      --teal-400: #22adb3;
+      --teal-300: #4dccd1;
+      --teal-200: #8de3e7;
+      --teal-100: #c8f2f4;
+      --teal-50:  #eafbfc;
+      --lime-700: #637a00;
+      --lime-600: #8aaa00;
+      --lime-500: #b0d000;
+      --lime-400: #c2d900;
+      --lime-300: #d4e84a;
+      --lime-200: #e5f28e;
+      --lime-100: #f2f9c8;
+      --ink-900: #111412;
+      --ink-800: #1e2422;
+      --ink-700: #2e3835;
+      --ink-600: #435450;
+      --ink-500: #5e736e;
+      --ink-400: #7d9490;
+      --ink-300: #a4b8b4;
+      --ink-200: #cad8d6;
+      --ink-100: #e8eeec;
+      --ink-50:  #f4f7f6;
+      --cream: #faf8f3;
+      --white: #ffffff;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Outfit', sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --transition-base: 250ms ease;
+      --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--cream); border-bottom: 1px solid var(--ink-100);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
+    .nav-logo span { color: var(--lime-400); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--ink-600); letter-spacing: 0.02em; transition: color var(--transition-base); position: relative; padding-bottom: 2px; }
+    .nav-links a:hover { color: var(--navy-800); }
+    .nav-links a.active { color: var(--navy-800); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--lime-400); border-radius: 2px; }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3rem);
+      position: relative; overflow: hidden; border-bottom: 1px solid var(--ink-100);
+    }
+    .ph-shape-1 { position: absolute; top: -40px; right: -40px; width: 260px; height: 260px; background: var(--teal-100); border-radius: 50%; opacity: 0.5; pointer-events: none; }
+    .ph-shape-2 { position: absolute; bottom: 20px; right: 200px; width: 60px; height: 60px; background: var(--lime-200); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); opacity: 0.6; pointer-events: none; }
+    .ph-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
+    .ph-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .ph-eyebrow::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--teal-500); border-radius: 2px; }
+    .ph-headline { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.03em; color: var(--navy-800); margin-bottom: 1.25rem; }
+    .ph-headline em { font-style: italic; color: var(--teal-500); }
+    .ph-sub { font-size: 1.0625rem; font-weight: 300; color: var(--ink-500); line-height: 1.65; max-width: 560px; }
+
+    /* SECTION UTIL */
+    .section { padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem); }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem; }
+    .section-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--lime-400); flex-shrink: 0; position: relative; top: -2px; }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-400); }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 300; color: var(--navy-800); letter-spacing: -0.02em; line-height: 1.15; }
+
+    /* WHO I AM */
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .who-body p { font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.8; margin-bottom: 1.25rem; }
+    .who-body p:last-child { margin-bottom: 0; }
+
+    /* DIFFERENTIATORS */
+    .diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .diff-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.75rem; border-top: 3px solid var(--teal-400); }
+    .diff-card.lime { border-top-color: var(--lime-500); }
+    .diff-card.navy { border-top-color: var(--navy-600); }
+    .diff-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--ink-200); line-height: 1; margin-bottom: 0.75rem; }
+    .diff-title { font-size: 1rem; font-weight: 600; color: var(--navy-800); margin-bottom: 0.5rem; }
+    .diff-text { font-size: 0.9rem; color: var(--ink-500); line-height: 1.65; }
+
+    /* TESTIMONIAL */
+    .testimonial-block { background: var(--white); border-left: 4px solid var(--lime-400); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; padding: 2rem 2.5rem; margin-top: 2rem; }
+    .tb-quote { font-family: var(--font-display); font-size: 1.25rem; font-weight: 300; font-style: italic; line-height: 1.55; color: var(--navy-800); margin-bottom: 0.875rem; }
+    .tb-attr { font-size: 0.875rem; color: var(--ink-400); font-weight: 500; }
+
+    /* TIMELINE */
+    .timeline-section { background: var(--navy-800); position: relative; overflow: hidden; }
+    .timeline-shape-1 { position: absolute; top: -80px; right: -60px; width: 320px; height: 320px; background: var(--teal-900); border-radius: 50%; opacity: 0.5; pointer-events: none; }
+    .timeline-shape-2 { position: absolute; bottom: -40px; left: 5%; width: 100px; height: 100px; background: var(--lime-400); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); opacity: 0.08; pointer-events: none; }
+
+    .timeline-intro { font-size: 1rem; font-weight: 300; color: var(--navy-300); line-height: 1.7; max-width: 560px; margin-bottom: 3rem; }
+
+    /* Timeline tabs */
+    .timeline-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .tl-tab {
+      font-family: var(--font-body); font-size: 0.8rem; font-weight: 500;
+      padding: 8px 16px; border-radius: 100px; border: 1.5px solid var(--navy-600);
+      color: var(--navy-300); background: transparent; cursor: pointer;
+      transition: all var(--transition-base);
+    }
+    .tl-tab:hover { border-color: var(--teal-400); color: var(--teal-300); }
+    .tl-tab.active { background: var(--lime-400); border-color: var(--lime-400); color: var(--navy-900); font-weight: 600; }
+
+    /* Timeline entries */
+    .timeline-entries { position: relative; }
+    .timeline-entries::before {
+      content: ''; position: absolute; left: 18px; top: 0; bottom: 0;
+      width: 2px; background: var(--navy-600);
+    }
+
+    .tl-entry {
+      display: flex; gap: 1.5rem; margin-bottom: 0; max-height: 0;
+      overflow: hidden; opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease;
+    }
+    .tl-entry.visible { max-height: 400px; opacity: 1; margin-bottom: 1.5rem; }
+    .tl-entry:last-child { margin-bottom: 0; }
+
+    .tl-dot-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding-top: 4px; }
+    .tl-dot { width: 38px; height: 38px; border-radius: 50%; background: var(--navy-700); border: 2px solid var(--navy-500); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; transition: all var(--transition-base); }
+    .tl-dot.tl-active { background: var(--lime-400); border-color: var(--lime-400); }
+    .tl-dot.tl-teal { background: var(--teal-700); border-color: var(--teal-500); }
+    .tl-dot-inner { width: 10px; height: 10px; border-radius: 50%; background: var(--navy-400); }
+    .tl-dot.tl-active .tl-dot-inner { background: var(--navy-900); }
+    .tl-dot.tl-teal .tl-dot-inner { background: var(--teal-300); }
+
+    .tl-content { background: var(--navy-700); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; flex: 1; }
+    .tl-date { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime-400); margin-bottom: 0.375rem; }
+    .tl-role { font-family: var(--font-display); font-size: 1.0625rem; font-weight: 400; color: var(--cream); margin-bottom: 0.25rem; line-height: 1.25; }
+    .tl-org { font-size: 0.875rem; color: var(--teal-300); font-weight: 500; margin-bottom: 0.625rem; }
+    .tl-desc { font-size: 0.875rem; color: var(--navy-300); line-height: 1.65; }
+
+    /* BEYOND THE JOB */
+    .beyond-section { background: var(--ink-50); }
+    .beyond-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .beyond-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.75rem; }
+    .bc-icon { font-size: 1.5rem; margin-bottom: 0.875rem; }
+    .bc-title { font-size: 1rem; font-weight: 600; color: var(--navy-800); margin-bottom: 0.5rem; }
+    .bc-text { font-size: 0.9rem; color: var(--ink-500); line-height: 1.65; }
+
+    /* CTA */
+    .cta-section { background: var(--teal-900); position: relative; overflow: hidden; text-align: center; }
+    .cta-shape-1 { position: absolute; top: -80px; left: -60px; width: 280px; height: 280px; background: var(--teal-800); border-radius: 50%; opacity: 0.5; pointer-events: none; }
+    .cta-shape-2 { position: absolute; bottom: -40px; right: 10%; width: 120px; height: 120px; background: var(--lime-400); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); opacity: 0.08; pointer-events: none; }
+    .cta-inner { position: relative; z-index: 1; max-width: 520px; margin: 0 auto; }
+    .cta-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-400); margin-bottom: 1rem; }
+    .cta-headline { font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    .cta-headline em { font-style: italic; color: var(--teal-300); }
+    .btn-lime { background: var(--lime-400); color: var(--navy-900); padding: 14px 30px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; border: none; font-family: var(--font-body); transition: all var(--transition-spring); text-decoration: none; }
+    .btn-lime:hover { background: var(--lime-300); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(194,217,0,0.3); }
+
+    /* FOOTER */
+    .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy-300); }
+    .footer-logo span { color: var(--lime-400); }
+    .footer-nav { display: flex; gap: 2rem; list-style: none; }
+    .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
+    .footer-nav a:hover { color: var(--navy-200); }
+    .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .ph-eyebrow { animation: fadeUp 0.5s ease 0.05s both; }
+    .ph-headline { animation: fadeUp 0.5s ease 0.15s both; }
+    .ph-sub      { animation: fadeUp 0.5s ease 0.25s both; }
+
+    @media (max-width: 860px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .beyond-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">lori<span>.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="making.html">Making</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="ph-shape-1"></div>
+    <div class="ph-shape-2"></div>
+    <div class="ph-inner">
+      <p class="ph-eyebrow">About</p>
+      <h1 class="ph-headline">Same brain,<br><em>different materials.</em></h1>
+      <p class="ph-sub">Senior web and digital program manager. Also: paint pourer, problem-solver, and keeper of a very opinionated cat.</p>
+    </div>
+  </div>
+
+  <!-- WHO I AM -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-dot"></div>
+        <p class="section-eyebrow">Who I am</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-body">
+          <p>I make complex digital programs make sense — to engineers, to executives, and to the people stuck in between. For twenty years I have been the person who walks into a situation where the plan and the reality have stopped talking to each other, and figures out how to get them back in the same room.</p>
+          <p>I work best in the space where technology, content, process, and people all intersect. Where someone needs to translate between a CMS migration and a stakeholder who just wants to know when the site will be live. Where a broken QA workflow needs a new system, not just a new spreadsheet. Where the team is capable but the operating model is working against them.</p>
+          <p>I don't use jargon if I can use plain language instead. I don't build processes for the sake of having processes. And I try hard to make the people around me feel like the chaos is manageable — because usually it is, once someone draws the map.</p>
+
+          <div class="testimonial-block">
+            <p class="tb-quote">"She untangles and reframes chaotic team systems and emotions into fixable processes — with empathy and calmness. I saw it firsthand."</p>
+            <p class="tb-attr">Design vendor, Bridge Partners engagement · 2025</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-header" style="margin-bottom: 1.5rem;">
+            <div class="section-dot"></div>
+            <p class="section-eyebrow">What makes me unusual</p>
+          </div>
+          <div class="diff-grid">
+            <div class="diff-card">
+              <div class="diff-num">01</div>
+              <p class="diff-title">I speak both languages</p>
+              <p class="diff-text">Technical enough to know when something is genuinely hard and when it's being made complicated. Business-fluent enough to translate that to a VP without losing the nuance.</p>
+            </div>
+            <div class="diff-card lime">
+              <div class="diff-num">02</div>
+              <p class="diff-title">I build measurement in from the start</p>
+              <p class="diff-text">Analytics infrastructure, Power BI dashboards, GTM governance — I don't treat measurement as a reporting afterthought. It's part of how I know the work is working.</p>
+            </div>
+            <div class="diff-card navy">
+              <div class="diff-num">03</div>
+              <p class="diff-title">I use AI practically</p>
+              <p class="diff-text">Not as a novelty. I've built AI-assisted content workflows that cut drafting time to a fraction while keeping brand voice and human judgment exactly where they belong.</p>
+            </div>
+            <div class="diff-card">
+              <div class="diff-num">04</div>
+              <p class="diff-title">I make the room calmer</p>
+              <p class="diff-text">Delivery chaos is usually a communication and visibility problem wearing a technical costume. I find the real problem and address that instead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section timeline-section">
+    <div class="timeline-shape-1"></div>
+    <div class="timeline-shape-2"></div>
+    <div class="section-inner" style="position: relative; z-index: 1;">
+      <div class="section-header">
+        <div class="section-dot"></div>
+        <p class="section-eyebrow" style="color: var(--navy-400);">Career timeline</p>
+      </div>
+      <h2 class="section-title" style="color: var(--cream); margin-bottom: 1rem;">Twenty years of web delivery.</h2>
+      <p class="timeline-intro">Click a decade to explore. Each stop added something the next one needed.</p>
+
+      <div class="timeline-tabs">
+        <button class="tl-tab active" onclick="filterTimeline('all')">All</button>
+        <button class="tl-tab" onclick="filterTimeline('2020s')">2020s</button>
+        <button class="tl-tab" onclick="filterTimeline('2010s')">2010s</button>
+        <button class="tl-tab" onclick="filterTimeline('2000s')">2000s</button>
+      </div>
+
+      <div class="timeline-entries" id="timelineEntries">
+
+        <div class="tl-entry visible" data-era="2020s">
+          <div class="tl-dot-col"><div class="tl-dot tl-active"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Feb – Jul 2025</p>
+            <p class="tl-role">Web Delivery Program Manager</p>
+            <p class="tl-org">Bridge Partners (Microsoft Surface for Business)</p>
+            <p class="tl-desc">Diagnosed structural delivery risks across a complex multi-vendor web program. Built a QA intake proof-of-concept, milestone visibility model, and documented a pragmatic modernization path.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2020s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Dec 2021 – Sep 2023</p>
+            <p class="tl-role">Web Marketing Manager</p>
+            <p class="tl-org">360training</p>
+            <p class="tl-desc">Owned web delivery for B2B and B2C ecommerce properties. Built AI-assisted content workflows, led UAT across large releases, and created reusable delivery templates and operating rhythms.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2020s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Dec 2019 – May 2021</p>
+            <p class="tl-role">Project Manager</p>
+            <p class="tl-org">Educational Testing Service via PwC</p>
+            <p class="tl-desc">Managed 10,000+ task project schedules for Texas K-12 statewide assessment. Built Power BI reporting infrastructure and created standardized schedule creation processes adopted across the PMO.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2010s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Jan 2018 – Dec 2019</p>
+            <p class="tl-role">Senior Digital Project Manager</p>
+            <p class="tl-org">Texas Association of School Boards (TASB)</p>
+            <p class="tl-desc">Led an internal fee-for-service digital agency. Ran 40+ hours of stakeholder focus groups, built analytics connecting member behavior to business goals, and established delivery governance across a multi-site portfolio.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2010s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Nov 2014 – Jan 2018</p>
+            <p class="tl-role">Senior Digital Strategist</p>
+            <p class="tl-org">Ascension — Seton Healthcare Family</p>
+            <p class="tl-desc">Led enterprise digital programs in a regulated healthcare environment: secure physician portals, online scheduling, Sitecore migration, and patient-facing experiences integrated with legacy systems.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2010s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">May 2011 – Oct 2014</p>
+            <p class="tl-role">Director of Digital Strategy</p>
+            <p class="tl-org">Austin Free-Net / Texas Equal Access to Justice Foundation</p>
+            <p class="tl-desc">Rebuilt nonprofit web presences from the ground up. Designed Salesforce reporting for city, state, and federal grant compliance. Won a PRSA award for the TEAJF engagement.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2000s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">2000s</p>
+            <p class="tl-role">Web Manager / Digital Strategist</p>
+            <p class="tl-org">Tivoli/IBM · AMD · EDS · Convio/Blackbaud · Works.com · ibooks.com</p>
+            <p class="tl-desc">Enterprise web management, internet marketing, CMS implementation, and early ecommerce across technology, government, and nonprofit sectors. Re-architected Tivoli's 70,000-page site navigation over six months.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry visible" data-era="2000s">
+          <div class="tl-dot-col"><div class="tl-dot tl-teal"><div class="tl-dot-inner"></div></div></div>
+          <div class="tl-content">
+            <p class="tl-date">Earlier</p>
+            <p class="tl-role">Web & Communications</p>
+            <p class="tl-org">Texas Governor's Office · Texas Access to Justice Foundation</p>
+            <p class="tl-desc">Public-sector web and communications work that established an early fluency in regulated environments, government requirements, and mission-driven organizations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND THE JOB -->
+  <section class="section beyond-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-dot"></div>
+        <p class="section-eyebrow">Beyond the job</p>
+      </div>
+      <h2 class="section-title" style="margin-bottom: 2rem;">The problem-solving doesn't stop.</h2>
+      <div class="beyond-grid">
+        <div class="beyond-card">
+          <div class="bc-icon">🎨</div>
+          <p class="bc-title">Paint pouring</p>
+          <p class="bc-text">Analytical art. The weights of pigments and the chemicals you add to each one change how gravity interacts with them. The variables are real, the results are not entirely predictable, and that's exactly why it's interesting.</p>
+        </div>
+        <div class="beyond-card">
+          <div class="bc-icon">🔧</div>
+          <p class="bc-title">Lori-ventions</p>
+          <p class="bc-text">Magnets, velcro, resin, and whatever's at hand. When something in the environment doesn't work as well as it should, I fix it. The goal is always the same: remove the friction.</p>
+        </div>
+        <div class="beyond-card">
+          <div class="bc-icon">📦</div>
+          <p class="bc-title">Craftventions</p>
+          <p class="bc-text">Recycled and found objects turned into something useful or beautiful — usually both. The Pax Accessories Box is a side table, a storage unit, a motion-activated light situation, and a portrait of a cat.</p>
+        </div>
+        <div class="beyond-card">
+          <div class="bc-icon">🤝</div>
+          <p class="bc-title">Community</p>
+          <p class="bc-text">Adult literacy teaching, annual homeless point-in-time counts in Austin (team leader on many of them), and the ongoing conviction that showing up in person matters. Also: pinball. Pete and I are enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="cta-shape-1"></div>
+    <div class="cta-shape-2"></div>
+    <div class="section-inner cta-inner">
+      <p class="cta-label">Work together</p>
+      <h2 class="cta-headline">If a problem is worth<br><em>solving, I'm interested.</em></h2>
+      <a href="contact.html" class="btn-lime">Get in touch</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="index.html" class="footer-logo">lori<span>.</span></a>
+    <nav><ul class="footer-nav">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="making.html">Making</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <p class="footer-copy">© 2026 Lori Williams</p>
+  </footer>
+
+  <script>
+    function filterTimeline(era) {
+      document.querySelectorAll('.tl-tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.tl-entry').forEach(entry => {
+        if (era === 'all' || entry.dataset.era === era) {
+          entry.classList.add('visible');
+        } else {
+          entry.classList.remove('visible');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
