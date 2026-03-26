@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building an agency from the inside — Lori Williams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy-950:#060f1a;--navy-900:#0a1e30;--navy-800:#0d2b45;--navy-700:#123760;--navy-600:#1a4d82;--navy-500:#2463a0;--navy-400:#4d84bc;--navy-300:#7fadd0;--navy-200:#b3cfe4;--navy-100:#deeaf4;--navy-50:#f0f6fb;--teal-800:#0d4446;--teal-700:#125c60;--teal-600:#167b80;--teal-500:#1a8a8f;--teal-400:#22adb3;--teal-300:#4dccd1;--teal-200:#8de3e7;--teal-100:#c8f2f4;--teal-50:#eafbfc;--lime-700:#637a00;--lime-600:#8aaa00;--lime-500:#b0d000;--lime-400:#c2d900;--lime-300:#d4e84a;--lime-200:#e5f28e;--lime-100:#f2f9c8;--ink-900:#111412;--ink-700:#2e3835;--ink-600:#435450;--ink-500:#5e736e;--ink-400:#7d9490;--ink-300:#a4b8b4;--ink-200:#cad8d6;--ink-100:#e8eeec;--ink-50:#f4f7f6;--cream:#faf8f3;--white:#ffffff;--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',sans-serif;--radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;--transition-base:250ms ease;--transition-spring:350ms cubic-bezier(0.34,1.56,0.64,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;}body{font-family:var(--font-body);background:var(--cream);color:var(--ink-900);-webkit-font-smoothing:antialiased;}a{text-decoration:none;color:inherit;}
+    .nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--ink-100);padding:0 clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:4rem;height:64px;}
+    .nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--navy-800);letter-spacing:-0.02em;flex-shrink:0;}.nav-logo span{color:var(--lime-400);}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}.nav-links a{font-size:0.875rem;font-weight:500;color:var(--ink-600);letter-spacing:0.02em;transition:color var(--transition-base);position:relative;padding-bottom:2px;}.nav-links a:hover{color:var(--navy-800);}.nav-links a.active{color:var(--navy-800);}.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--lime-400);border-radius:2px;}
+    .back-bar{padding:1rem clamp(1.5rem,5vw,4rem);border-bottom:1px solid var(--ink-100);}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--ink-500);transition:color var(--transition-base);}.back-link::before{content:'←';}.back-link:hover{color:var(--navy-800);}
+    .cs-header{padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem) 0;position:relative;overflow:hidden;}.cs-header-shapes{position:absolute;inset:0;pointer-events:none;}.csh-circle{position:absolute;top:-60px;right:-80px;width:320px;height:320px;background:var(--teal-100);border-radius:50%;opacity:0.5;}.csh-diamond{position:absolute;top:80px;right:200px;width:56px;height:56px;background:var(--lime-300);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);opacity:0.6;}
+    .cs-header-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}.cs-client-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap;}.cs-client-badge{background:var(--navy-800);color:var(--lime-400);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;}.cs-date{font-size:0.875rem;color:var(--ink-400);}
+    .cs-headline{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.03em;color:var(--navy-800);margin-bottom:1rem;}.cs-headline em{font-style:italic;color:var(--teal-500);}
+    .cs-subhead{font-size:1.125rem;font-weight:300;color:var(--ink-500);line-height:1.65;max-width:600px;margin-bottom:2rem;}
+    .cs-tag-row{display:flex;gap:0.5rem;flex-wrap:wrap;padding-bottom:clamp(2rem,4vw,3rem);}.cs-tag{font-size:0.75rem;font-weight:500;padding:5px 14px;border-radius:100px;cursor:pointer;transition:all var(--transition-base);}.cs-tag:hover{filter:brightness(0.92);}.cs-tag.teal{background:var(--teal-100);color:var(--teal-700);}.cs-tag.navy{background:var(--navy-100);color:var(--navy-700);}.cs-tag.lime{background:var(--lime-100);color:var(--lime-700);}.cs-tag.neutral{background:var(--ink-100);color:var(--ink-600);}
+    .color-bar{height:5px;background:linear-gradient(90deg,var(--navy-700),var(--navy-400));max-width:1200px;margin:0 auto;}
+    .cs-body{max-width:1200px;margin:0 auto;padding:clamp(3rem,5vw,5rem) clamp(1.5rem,5vw,4rem);display:grid;grid-template-columns:200px 1fr;gap:0 4rem;}
+    .cs-sidenav-inner{position:sticky;top:80px;display:flex;flex-direction:column;gap:0.25rem;}.sidenav-item{display:flex;align-items:center;gap:0.625rem;font-size:0.8125rem;font-weight:500;color:var(--ink-400);cursor:pointer;padding:0.375rem 0;transition:color var(--transition-base);background:none;border:none;font-family:var(--font-body);text-align:left;}.sidenav-item:hover{color:var(--navy-700);}.sidenav-item.active{color:var(--navy-800);}.sidenav-num{font-family:var(--font-display);font-size:0.75rem;font-weight:600;color:var(--lime-500);min-width:20px;}.sidenav-item.active .sidenav-num{color:var(--lime-400);}
+    .cs-section{margin-bottom:4rem;scroll-margin-top:90px;}.cs-section:last-child{margin-bottom:0;}.cs-section-num{display:inline-flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}.cs-num-badge{background:var(--navy-800);color:var(--lime-400);font-family:var(--font-display);font-size:0.875rem;font-weight:600;width:36px;height:36px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}.cs-section-title{font-family:var(--font-body);font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-600);}
+    .cs-h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;color:var(--navy-800);margin-bottom:1.25rem;line-height:1.2;}.cs-p{font-size:1rem;font-weight:300;color:var(--ink-700);line-height:1.8;margin-bottom:1.25rem;max-width:680px;}.cs-p:last-of-type{margin-bottom:0;}
+    .finding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}.finding-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.5rem;border-top:3px solid var(--teal-400);}.finding-title{font-family:var(--font-body);font-size:0.875rem;font-weight:600;color:var(--navy-800);margin-bottom:0.5rem;}.finding-text{font-size:0.875rem;color:var(--ink-500);line-height:1.65;}
+    .built-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}.built-card{background:var(--navy-800);border-radius:var(--radius-lg);padding:1.75rem;position:relative;overflow:hidden;}.built-card::after{content:'';position:absolute;bottom:-16px;right:-16px;width:60px;height:60px;border-radius:50%;background:var(--lime-400);opacity:0.1;}.built-horizon{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime-400);margin-bottom:0.625rem;}.built-title{font-family:var(--font-display);font-size:1.125rem;font-weight:400;color:var(--cream);margin-bottom:0.625rem;line-height:1.25;}.built-text{font-size:0.875rem;color:var(--navy-300);line-height:1.65;}
+    .results-list{margin-top:1.5rem;display:flex;flex-direction:column;gap:0.75rem;}.result-item{display:flex;align-items:flex-start;gap:0.875rem;background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-md);padding:1.25rem 1.5rem;}.result-dot{width:8px;height:8px;border-radius:50%;background:var(--lime-400);flex-shrink:0;margin-top:6px;}.result-text{font-size:0.9375rem;color:var(--ink-700);line-height:1.65;}
+    .honest-block{background:var(--teal-800);border-radius:var(--radius-xl);padding:2.5rem;margin-top:1.5rem;position:relative;overflow:hidden;}.honest-block::before{content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:var(--teal-700);border-radius:50%;opacity:0.6;}.honest-block p{font-size:1rem;font-weight:300;color:var(--teal-100);line-height:1.8;position:relative;z-index:1;max-width:640px;}.honest-block p+p{margin-top:1rem;}
+    .stat-row{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;}.stat-block{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.5rem 2rem;}.stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:300;color:var(--teal-500);line-height:1;margin-bottom:0.25rem;}.stat-label{font-size:0.875rem;color:var(--ink-500);line-height:1.4;max-width:160px;}
+    .related-section{background:var(--ink-50);border-top:1px solid var(--ink-100);padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);}.related-inner{max-width:1200px;margin:0 auto;}.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.5rem;}.related-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:all var(--transition-base);text-decoration:none;color:inherit;}.related-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,43,69,0.1);border-color:var(--teal-200);}.related-card:hover .rc-reveal{opacity:1;transform:translateY(0);}.rc-bar{height:4px;}.rc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}.rc-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-400);margin-bottom:0.4rem;}.rc-title{font-family:var(--font-display);font-size:1.125rem;font-weight:400;color:var(--navy-800);margin-bottom:0.5rem;line-height:1.25;flex:1;}.rc-reveal{font-size:0.8125rem;font-weight:500;color:var(--teal-600);opacity:0;transform:translateY(4px);transition:all var(--transition-base);display:flex;align-items:center;gap:0.35rem;margin-top:0.75rem;}.rc-reveal::after{content:'→';}
+    .section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;}.section-dot{width:10px;height:10px;border-radius:50%;background:var(--lime-400);flex-shrink:0;position:relative;top:-2px;}.section-eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-400);}.section-title-sm{font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--navy-800);letter-spacing:-0.01em;}
+    .footer{background:var(--navy-950);padding:2rem clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}.footer-logo{font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--navy-300);}.footer-logo span{color:var(--lime-400);}.footer-nav{display:flex;gap:2rem;list-style:none;}.footer-nav a{font-size:0.8125rem;color:var(--navy-400);transition:color var(--transition-base);}.footer-nav a:hover{color:var(--navy-200);}.footer-copy{font-size:0.75rem;color:var(--navy-600);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}.cs-client-row{animation:fadeUp 0.5s ease 0.05s both;}.cs-headline{animation:fadeUp 0.5s ease 0.15s both;}.cs-subhead{animation:fadeUp 0.5s ease 0.25s both;}.cs-tag-row{animation:fadeUp 0.5s ease 0.35s both;}
+    @media(max-width:900px){.cs-body{grid-template-columns:1fr;}.cs-sidenav{display:none;}.finding-grid{grid-template-columns:1fr;}.built-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}.stat-row{flex-direction:column;}}
+    @media(max-width:600px){.nav-links{gap:1.25rem;}}
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">lori<span>.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="making.html">Making</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <div class="back-bar"><a href="work.html" class="back-link">Back to Work</a></div>
+
+  <div class="cs-header">
+    <div class="cs-header-shapes"><div class="csh-circle"></div><div class="csh-diamond"></div></div>
+    <div class="cs-header-inner">
+      <div class="cs-client-row">
+        <span class="cs-client-badge">TASB</span>
+        <span class="cs-date">Jan 2018 – Dec 2019 · Senior Digital Project Manager</span>
+      </div>
+      <h1 class="cs-headline">Building an agency<br><em>from the inside.</em></h1>
+      <p class="cs-subhead">Running a fee-for-service internal digital agency serving Texas school boards — strategy, delivery, analytics, and the governance model that made it work.</p>
+      <div class="cs-tag-row">
+        <span class="cs-tag navy" onclick="goToTag('program-management')">Program Management</span>
+        <span class="cs-tag teal" onclick="goToTag('analytics')">Analytics</span>
+        <span class="cs-tag teal" onclick="goToTag('web-delivery')">Web Delivery</span>
+        <span class="cs-tag neutral" onclick="goToTag('process-design')">Process Design</span>
+        <span class="cs-tag teal" onclick="goToTag('requirements')">Requirements</span>
+        <span class="cs-tag neutral" onclick="goToTag('stakeholder-management')">Stakeholder Management</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:0 clamp(1.5rem,5vw,4rem);"><div class="color-bar"></div></div>
+
+  <div class="cs-body">
+    <aside class="cs-sidenav">
+      <div class="cs-sidenav-inner">
+        <button class="sidenav-item active" onclick="scrollTo('section-01')"><span class="sidenav-num">01</span>The situation</button>
+        <button class="sidenav-item" onclick="scrollTo('section-02')"><span class="sidenav-num">02</span>My role</button>
+        <button class="sidenav-item" onclick="scrollTo('section-03')"><span class="sidenav-num">03</span>Discovery</button>
+        <button class="sidenav-item" onclick="scrollTo('section-04')"><span class="sidenav-num">04</span>Analytics model</button>
+        <button class="sidenav-item" onclick="scrollTo('section-05')"><span class="sidenav-num">05</span>Results</button>
+      </div>
+    </aside>
+
+    <div class="cs-content">
+
+      <div class="cs-section" id="section-01">
+        <div class="cs-section-num"><div class="cs-num-badge">01</div><span class="cs-section-title">The situation</span></div>
+        <h2 class="cs-h2">An internal agency model serving Texas school boards.</h2>
+        <p class="cs-p">The Texas Association of School Boards (TASB) operated an internal digital team that functioned as a fee-for-service agency — serving multiple internal clients and member organizations across a portfolio of web and digital projects. I was hired to bring structure to the delivery model, define how strategy got translated into executable plans, and build the measurement foundation that would let the team demonstrate value.</p>
+        <p class="cs-p">The environment was member-driven: school boards and district leaders were the clients, and their needs ranged across public web experiences, secure member portals, content strategy, and digital marketing. The challenge was doing rigorous digital strategy and delivery inside an organization whose core mission was not digital.</p>
+      </div>
+
+      <div class="cs-section" id="section-02">
+        <div class="cs-section-num"><div class="cs-num-badge">02</div><span class="cs-section-title">My role</span></div>
+        <h2 class="cs-h2">Senior Digital Project Manager — strategy, delivery, and governance.</h2>
+        <p class="cs-p">I led strategy and delivery for the internal agency, owning cost estimates, statements of work, budgets, invoicing, and the delivery of public and secure member web experiences. I served as a client-facing advisor to internal stakeholders, guiding digital strategy, scope decisions, and prioritization across concurrent initiatives.</p>
+        <p class="cs-p">I also built the delivery and governance processes that the team needed to operate consistently across multiple concurrent clients — intake, estimation, project documentation, and the measurement model that connected member behavior to business goals.</p>
+      </div>
+
+      <div class="cs-section" id="section-03">
+        <div class="cs-section-num"><div class="cs-num-badge">03</div><span class="cs-section-title">Discovery</span></div>
+        <h2 class="cs-h2">40+ hours of stakeholder focus groups.</h2>
+        <p class="cs-p">Before writing a single requirement, I ran an extended stakeholder discovery process. The goal was to translate the needs of multiple internal client groups — each with different priorities, vocabularies, and definitions of success — into a prioritized backlog of measurable objectives and site capabilities.</p>
+        <p class="cs-p">The focus groups were structured to surface the business goals underneath the feature requests. What do members actually need from this experience? What behavior would tell us the site is working? What are the things that look important but aren't, and what are the things nobody has thought to ask for yet?</p>
+
+        <div class="stat-row">
+          <div class="stat-block">
+            <div class="stat-num">40+</div>
+            <div class="stat-label">hours of internal stakeholder focus groups</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">Multiple</div>
+            <div class="stat-label">concurrent client programs managed simultaneously</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section" id="section-04">
+        <div class="cs-section-num"><div class="cs-num-badge">04</div><span class="cs-section-title">Analytics model</span></div>
+        <h2 class="cs-h2">Connecting member behavior to business goals.</h2>
+        <p class="cs-p">One of the most significant pieces of work at TASB was building an analytics model that connected Google Analytics signals to Salesforce member data. The goal was to visualize the user journey in a way that showed not just what members were doing on the site, but what it meant for the organization's goals.</p>
+        <p class="cs-p">I built the data visualizations in Tableau and Power BI — models that let non-technical stakeholders see the relationship between web behavior and membership outcomes. This was the infrastructure that let the digital team make the case for its own value in a concrete, data-driven way.</p>
+
+        <div class="built-grid">
+          <div class="built-card">
+            <p class="built-horizon">Data integration</p>
+            <p class="built-title">Google Analytics + Salesforce</p>
+            <p class="built-text">Connected web behavior data with member records to create a view of the full user journey from site visit to member engagement and goal attainment.</p>
+          </div>
+          <div class="built-card">
+            <p class="built-horizon">Visualization</p>
+            <p class="built-title">Tableau and Power BI dashboards</p>
+            <p class="built-text">Built stakeholder-facing dashboards that made web performance and member behavior legible to non-technical audiences. Made the invisible visible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section" id="section-05">
+        <div class="cs-section-num"><div class="cs-num-badge">05</div><span class="cs-section-title">Results</span></div>
+        <h2 class="cs-h2">A functioning agency model with measurement built in.</h2>
+
+        <div class="results-list">
+          <div class="result-item"><div class="result-dot"></div><p class="result-text">Ran 40+ hours of internal stakeholder focus groups that produced a prioritized backlog tied to measurable business objectives — not a wish list.</p></div>
+          <div class="result-item"><div class="result-dot"></div><p class="result-text">Built delivery and governance processes — intake, estimation, SOWs, project documentation — that improved accountability and consistency across a multi-client portfolio.</p></div>
+          <div class="result-item"><div class="result-dot"></div><p class="result-text">Connected Google Analytics and Salesforce member data into Tableau and Power BI dashboards that gave stakeholders a concrete view of web performance against business goals.</p></div>
+          <div class="result-item"><div class="result-dot"></div><p class="result-text">Delivered public and secure member web experiences for Texas school districts — navigating the regulatory, political, and member-relations complexity of a statewide member organization.</p></div>
+          <div class="result-item"><div class="result-dot"></div><p class="result-text">Left behind process templates, governance documentation, and an analytics infrastructure that outlasted the engagement.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="related-section">
+    <div class="related-inner">
+      <div class="section-header"><div class="section-dot"></div><p class="section-eyebrow">Related work</p></div>
+      <h2 class="section-title-sm" style="margin-bottom:1.5rem;">More problems worth showing.</h2>
+      <div class="related-grid">
+        <a href="seton.html" class="related-card">
+          <div class="rc-bar" style="background:linear-gradient(90deg,var(--teal-600),var(--teal-300));"></div>
+          <div class="rc-body"><p class="rc-eyebrow">Regional Healthcare · 2014–2018</p><h3 class="rc-title">Enterprise at a human scale</h3><div class="rc-reveal">Read the case study</div></div>
+        </a>
+        <a href="ets.html" class="related-card">
+          <div class="rc-bar" style="background:linear-gradient(90deg,var(--teal-600),var(--teal-300));"></div>
+          <div class="rc-body"><p class="rc-eyebrow">ETS via PwC · 2019–2021</p><h3 class="rc-title">10,000 tasks and counting</h3><div class="rc-reveal">Read the case study</div></div>
+        </a>
+      </div>
+      <div style="margin-top:1.5rem;text-align:right;"><a href="work.html" style="font-size:0.875rem;font-weight:500;color:var(--teal-600);display:inline-flex;align-items:center;gap:0.4rem;">All work →</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="index.html" class="footer-logo">lori<span>.</span></a>
+    <nav><ul class="footer-nav"><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="making.html">Making</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <p class="footer-copy">© 2026 Lori Williams</p>
+  </footer>
+
+  <script>
+    function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}
+    function goToTag(slug){window.location.href=`work.html?tag=${slug}`;}
+    const sections=document.querySelectorAll('.cs-section');
+    const navItems=document.querySelectorAll('.sidenav-item');
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){const id=entry.target.id;const index=Array.from(sections).findIndex(s=>s.id===id);navItems.forEach((item,i)=>{item.classList.toggle('active',i===index);});}});},{rootMargin:'-20% 0px -60% 0px'});
+    sections.forEach(s=>observer.observe(s));
+  </script>
+</body>
+</html>

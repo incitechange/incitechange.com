@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pax et Amor — Lori Williams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy-950:#060f1a;--navy-900:#0a1e30;--navy-800:#0d2b45;--navy-700:#123760;--navy-400:#4d84bc;--navy-300:#7fadd0;--navy-200:#b3cfe4;--navy-100:#deeaf4;--teal-800:#0d4446;--teal-700:#125c60;--teal-600:#167b80;--teal-500:#1a8a8f;--teal-400:#22adb3;--teal-300:#4dccd1;--teal-200:#8de3e7;--teal-100:#c8f2f4;--lime-700:#637a00;--lime-500:#b0d000;--lime-400:#c2d900;--lime-300:#d4e84a;--lime-100:#f2f9c8;--ink-900:#111412;--ink-700:#2e3835;--ink-600:#435450;--ink-500:#5e736e;--ink-400:#7d9490;--ink-300:#a4b8b4;--ink-200:#cad8d6;--ink-100:#e8eeec;--ink-50:#f4f7f6;--cream:#faf8f3;--white:#ffffff;--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',sans-serif;--radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;--transition-base:250ms ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;}body{font-family:var(--font-body);background:var(--cream);color:var(--ink-900);-webkit-font-smoothing:antialiased;}a{text-decoration:none;color:inherit;}
+    .nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--ink-100);padding:0 clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:4rem;height:64px;}.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--navy-800);letter-spacing:-0.02em;flex-shrink:0;}.nav-logo span{color:var(--lime-400);}.nav-links{display:flex;gap:2.5rem;list-style:none;}.nav-links a{font-size:0.875rem;font-weight:500;color:var(--ink-600);letter-spacing:0.02em;transition:color var(--transition-base);position:relative;padding-bottom:2px;}.nav-links a:hover{color:var(--navy-800);}.nav-links a.active{color:var(--navy-800);}.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--lime-400);border-radius:2px;}
+    .back-bar{padding:1rem clamp(1.5rem,5vw,4rem);border-bottom:1px solid var(--ink-100);}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--ink-500);transition:color var(--transition-base);}.back-link::before{content:'←';}.back-link:hover{color:var(--navy-800);}
+
+    /* MAKING PAGE HEADER */
+    .mk-header{background:var(--navy-800);padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3rem);position:relative;overflow:hidden;}
+    .mk-shape-1{position:absolute;top:-60px;right:-40px;width:280px;height:280px;background:var(--teal-800);border-radius:50%;opacity:0.5;pointer-events:none;}
+    .mk-shape-2{position:absolute;bottom:10px;right:220px;width:70px;height:70px;background:var(--lime-400);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);opacity:0.15;pointer-events:none;}
+    .mk-header-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}
+    .mk-type-badge{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime-400);margin-bottom:1rem;}
+    .mk-headline{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.05;letter-spacing:-0.03em;color:var(--cream);margin-bottom:1rem;}
+    .mk-headline em{font-style:italic;color:var(--teal-300);}
+    .mk-subhead{font-size:1.0625rem;font-weight:300;color:var(--navy-300);line-height:1.65;max-width:560px;margin-bottom:1.5rem;}
+    .mk-meta{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;}
+    .mk-meta-item{font-size:0.8rem;color:var(--navy-400);}
+    .mk-meta-item strong{color:var(--lime-400);font-weight:500;}
+
+    /* PHOTO PLACEHOLDER */
+    .photo-section{padding:clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,4rem);background:var(--ink-900);}
+    .photo-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:1rem;}
+    .photo-main{aspect-ratio:4/3;background:var(--navy-800);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+    .photo-main::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--teal-900),var(--navy-900));}
+    .photo-placeholder-text{font-family:var(--font-display);font-size:1rem;font-weight:300;font-style:italic;color:var(--navy-400);position:relative;z-index:1;}
+    .photo-secondary{display:flex;flex-direction:column;gap:1rem;}
+    .photo-thumb{aspect-ratio:4/3;background:var(--teal-900);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;}
+    .photo-thumb-text{font-size:0.75rem;color:var(--teal-600);}
+
+    /* BODY */
+    .mk-body{max-width:800px;margin:0 auto;padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);}
+    .mk-section{margin-bottom:3rem;}
+    .mk-section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-600);margin-bottom:0.75rem;}
+    .mk-h2{font-family:var(--font-display);font-size:clamp(1.375rem,2.5vw,1.75rem);font-weight:400;color:var(--navy-800);margin-bottom:1rem;line-height:1.2;}
+    .mk-p{font-size:1rem;font-weight:300;color:var(--ink-700);line-height:1.8;margin-bottom:1rem;}
+    .mk-p:last-of-type{margin-bottom:0;}
+
+    /* MATERIALS */
+    .materials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1rem;}
+    .material-chip{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-md);padding:0.75rem 1rem;text-align:center;}
+    .material-name{font-size:0.875rem;font-weight:500;color:var(--navy-800);margin-bottom:0.2rem;}
+    .material-role{font-size:0.75rem;color:var(--ink-400);}
+
+    /* RATING */
+    .rating-block{background:var(--navy-800);border-radius:var(--radius-xl);padding:2rem;display:flex;align-items:center;gap:1.5rem;margin-top:2rem;}
+    .rating-stars{font-size:1.75rem;color:var(--lime-400);letter-spacing:0.1em;flex-shrink:0;}
+    .rating-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-400);margin-bottom:0.25rem;}
+    .rating-desc{font-size:0.9rem;color:var(--navy-200);line-height:1.5;}
+
+    /* TAGS */
+    .mk-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1rem;}
+    .mk-tag{font-size:0.75rem;font-weight:500;padding:5px 14px;border-radius:100px;background:var(--ink-100);color:var(--ink-600);cursor:pointer;transition:all var(--transition-base);}.mk-tag:hover{background:var(--teal-100);color:var(--teal-700);}
+
+    /* MORE MAKING */
+    .more-making{background:var(--ink-50);border-top:1px solid var(--ink-100);padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);}
+    .more-inner{max-width:1200px;margin:0 auto;}
+    .more-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-top:1.5rem;}
+    .more-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer;transition:all var(--transition-base);text-decoration:none;color:inherit;display:block;}
+    .more-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,43,69,0.1);border-color:var(--teal-200);}
+    .more-type{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime-700);margin-bottom:0.375rem;}
+    .more-title{font-family:var(--font-display);font-size:1.0625rem;font-weight:400;color:var(--navy-800);line-height:1.25;}
+    .section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;}.section-dot{width:10px;height:10px;border-radius:50%;background:var(--lime-400);flex-shrink:0;position:relative;top:-2px;}.section-eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-400);}
+    .section-title-sm{font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--navy-800);letter-spacing:-0.01em;}
+    .footer{background:var(--navy-950);padding:2rem clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}.footer-logo{font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--navy-300);}.footer-logo span{color:var(--lime-400);}.footer-nav{display:flex;gap:2rem;list-style:none;}.footer-nav a{font-size:0.8125rem;color:var(--navy-400);transition:color var(--transition-base);}.footer-nav a:hover{color:var(--navy-200);}.footer-copy{font-size:0.75rem;color:var(--navy-600);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}.mk-type-badge{animation:fadeUp 0.5s ease 0.05s both;}.mk-headline{animation:fadeUp 0.5s ease 0.15s both;}.mk-subhead{animation:fadeUp 0.5s ease 0.25s both;}
+    @media(max-width:860px){.photo-grid{grid-template-columns:1fr;}.photo-secondary{flex-direction:row;}.more-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.nav-links{gap:1.25rem;}.materials-grid{grid-template-columns:1fr 1fr;}.more-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">lori<span>.</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="making.html" class="active">Making</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <div class="back-bar"><a href="making.html" class="back-link">Back to Making</a></div>
+
+  <div class="mk-header">
+    <div class="mk-shape-1"></div>
+    <div class="mk-shape-2"></div>
+    <div class="mk-header-inner">
+      <p class="mk-type-badge">Craftvention · Wall Art</p>
+      <h1 class="mk-headline">Pax et <em>Amor.</em></h1>
+      <p class="mk-subhead">A portrait of Pax made from stained glass, cardboard, and fur. Found materials, real love, and a ragdoll cat who doesn't know he's famous.</p>
+      <div class="mk-meta">
+        <span class="mk-meta-item"><strong>Status</strong> Complete</span>
+        <span class="mk-meta-item"><strong>Rating</strong> ★★★★★ 5/5</span>
+        <span class="mk-meta-item"><strong>Year</strong> 2024</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO SECTION -->
+  <div class="photo-section">
+    <div class="photo-grid">
+      <div class="photo-main">
+        <p class="photo-placeholder-text">Photo coming</p>
+      </div>
+      <div class="photo-secondary">
+        <div class="photo-thumb"><p class="photo-thumb-text">Detail</p></div>
+        <div class="photo-thumb"><p class="photo-thumb-text">In progress</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mk-body">
+
+    <div class="mk-section">
+      <p class="mk-section-label">The idea</p>
+      <h2 class="mk-h2">What do you make when you love something?</h2>
+      <p class="mk-p">Pax is a ragdoll cat. He has a very specific coloring — light blue, white, black, and various browns — and a personality that is somewhere between extremely opinionated and completely unbothered. He is also, objectively, a subject worth making art about.</p>
+      <p class="mk-p">The challenge was making something that felt like him. Not a photograph, not a generic cat silhouette, but something with his actual character in it. Stained glass was the medium that felt right — the way light moves through it has the same quality as the way he moves through a room. The cardboard and fur came from what was available and what made sense structurally.</p>
+    </div>
+
+    <div class="mk-section">
+      <p class="mk-section-label">The approach</p>
+      <h2 class="mk-h2">Found materials, deliberate decisions.</h2>
+      <p class="mk-p">The piece uses stained glass for the color fields and light transmission, cardboard for structure, and fur for texture and warmth. Every material choice was functional first and aesthetic second — the cardboard holds the structure, the fur provides the sensory dimension that a pure glass piece would lack, and the glass does the thing that nothing else can do: lets light through.</p>
+      <p class="mk-p">The composition was built around Pax's actual color palette and form, not an idealized cat shape. If you know him, you recognize him in it.</p>
+    </div>
+
+    <div class="mk-section">
+      <p class="mk-section-label">Materials</p>
+      <div class="materials-grid">
+        <div class="material-chip"><p class="material-name">Stained glass</p><p class="material-role">Color and light</p></div>
+        <div class="material-chip"><p class="material-name">Cardboard</p><p class="material-role">Structure</p></div>
+        <div class="material-chip"><p class="material-name">Fur</p><p class="material-role">Texture and warmth</p></div>
+      </div>
+    </div>
+
+    <div class="mk-section">
+      <p class="mk-section-label">Tags</p>
+      <div class="mk-tags">
+        <span class="mk-tag" onclick="window.location.href='making.html?type=craftvention'">craftvention</span>
+        <span class="mk-tag">wall art</span>
+        <span class="mk-tag">pax</span>
+        <span class="mk-tag">stained-glass</span>
+        <span class="mk-tag">cardboard</span>
+        <span class="mk-tag">fur</span>
+        <span class="mk-tag">found-objects</span>
+      </div>
+    </div>
+
+    <div class="rating-block">
+      <div class="rating-stars">★★★★★</div>
+      <div>
+        <p class="rating-label">Self-rated 5 out of 5</p>
+        <p class="rating-desc">The rating reflects how fully the piece achieved what it set out to do. Pax recognizes it, which is the only test that matters.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="more-making">
+    <div class="more-inner">
+      <div class="section-header"><div class="section-dot"></div><p class="section-eyebrow">More making</p></div>
+      <h2 class="section-title-sm" style="margin-bottom:1.5rem;">Same brain, different materials.</h2>
+      <div class="more-grid">
+        <a href="making-pax-box.html" class="more-card">
+          <p class="more-type">Craftvention</p>
+          <p class="more-title">The Pax Box</p>
+        </a>
+        <a href="making-paint-pour.html" class="more-card">
+          <p class="more-type">Paint Pouring</p>
+          <p class="more-title">Golfhole Series</p>
+        </a>
+        <a href="making.html" class="more-card">
+          <p class="more-type">All making</p>
+          <p class="more-title">See everything →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="index.html" class="footer-logo">lori<span>.</span></a>
+    <nav><ul class="footer-nav"><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="making.html">Making</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <p class="footer-copy">© 2026 Lori Williams</p>
+  </footer>
+
+</body>
+</html>

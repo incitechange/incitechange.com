@@ -185,7 +185,7 @@
       <div class="making-grid" id="makingGrid">
 
         <!-- PAX ET AMOR -->
-        <div class="making-card" data-type="craftvention">
+        <div class="making-card" data-type="craftvention" data-href="making-pax-et-amor.html">
           <div class="mc-placeholder teal" style="position:relative;">
             <div class="mc-placeholder-shape" style="width:120px;height:120px;background:var(--teal-600);top:-20px;right:-20px;"></div>
             <div class="mc-placeholder-shape" style="width:60px;height:60px;background:var(--lime-400);bottom:20px;left:20px;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);border-radius:0;"></div>
@@ -205,7 +205,7 @@
         </div>
 
         <!-- PAX ACCESSORIES BOX -->
-        <div class="making-card" data-type="craftvention">
+        <div class="making-card" data-type="craftvention" data-href="making-pax-box.html">
           <div class="mc-placeholder dark" style="position:relative;">
             <div class="mc-placeholder-shape" style="width:100px;height:100px;background:var(--lime-400);top:-10px;right:-10px;opacity:0.15;"></div>
             <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--ink-400);position:relative;z-index:1;">Photo coming soon</span>
@@ -244,7 +244,7 @@
         </div>
 
         <!-- GOLFHOLE POUR -->
-        <div class="making-card" data-type="paint-pouring">
+        <div class="making-card" data-type="paint-pouring" data-href="making-paint-pour.html">
           <div class="mc-placeholder teal" style="position:relative;background:var(--navy-900);">
             <div class="mc-placeholder-shape" style="width:160px;height:160px;background:var(--teal-600);top:-40px;right:-40px;"></div>
             <div class="mc-placeholder-shape" style="width:80px;height:80px;background:var(--lime-400);bottom:-20px;left:-20px;opacity:0.3;"></div>
@@ -383,6 +383,14 @@
       document.getElementById('activeBanner').classList.remove('visible');
       document.getElementById('makingEmpty').classList.remove('visible');
     }
+
+    // Card navigation - only navigate if card has a data-href and click was not on a tag
+    document.querySelectorAll('.making-card[data-href]').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.mc-tag')) return; // tag clicks filter, don't navigate
+        window.location.href = this.dataset.href;
+      });
+    });
 
     // Handle URL param
     window.addEventListener('DOMContentLoaded', () => {
