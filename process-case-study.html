@@ -711,7 +711,7 @@
         <span class="cs-date">Feb – Jul 2025 · Contract</span>
       </div>
       <h1 class="cs-headline">When the process<br><em>is the problem.</em></h1>
-      <p class="cs-subhead">How to stabilize a complex web delivery program without blowing up what's already working.</p>
+      <p class="cs-subhead">A full operational diagnostic across five broken delivery systems — and the roadmap to fix them.</p>
       <div class="cs-tag-row">
         <span class="cs-tag teal" onclick="goToTag('process-design')">Process Design</span>
         <span class="cs-tag teal" onclick="goToTag('web-delivery')">Web Delivery</span>
@@ -720,6 +720,7 @@
         <span class="cs-tag neutral" onclick="goToTag('sharepoint')">SharePoint</span>
         <span class="cs-tag lime" onclick="goToTag('power-bi')">Power BI</span>
         <span class="cs-tag teal" onclick="goToTag('qa-workflows')">QA Workflows</span>
+        <span class="cs-tag neutral" onclick="goToTag('stakeholder-management')">Change Management</span>
       </div>
     </div>
   </div>
@@ -742,13 +743,16 @@
           <span class="sidenav-num">02</span> My role
         </button>
         <button class="sidenav-item" onclick="scrollTo('section-03')">
-          <span class="sidenav-num">03</span> What I found
+          <span class="sidenav-num">03</span> The diagnostic
         </button>
         <button class="sidenav-item" onclick="scrollTo('section-04')">
-          <span class="sidenav-num">04</span> What I built
+          <span class="sidenav-num">04</span> The roadmap
         </button>
         <button class="sidenav-item" onclick="scrollTo('section-05')">
-          <span class="sidenav-num">05</span> The honest part
+          <span class="sidenav-num">05</span> Change management
+        </button>
+        <button class="sidenav-item" onclick="scrollTo('section-06')">
+          <span class="sidenav-num">06</span> The honest part
         </button>
       </div>
     </aside>
@@ -762,15 +766,15 @@
           <div class="cs-num-badge">01</div>
           <span class="cs-section-title">The situation</span>
         </div>
-        <h2 class="cs-h2">A program that was running — just not cleanly.</h2>
+        <h2 class="cs-h2">A program that was running. Just not cleanly.</h2>
         <p class="cs-p">
-          I joined a web delivery program managed through a consulting firm, serving a large enterprise technology client. Multiple vendor teams — web, design, content, and development — were collaborating across a segmented Microsoft Teams environment with carefully controlled channel access and confidentiality requirements.
+          I joined a web delivery program managed through a consulting firm, serving a large enterprise technology client. Multiple vendor teams — web, design, content, and development — were collaborating across a segmented Microsoft Teams environment with carefully controlled channel access and confidentiality requirements. The program was active. Pages were being built. Deadlines were being tracked.
         </p>
         <p class="cs-p">
-          The program was moving. Pages were being built. But the underlying delivery infrastructure was fragile in ways that weren't visible until you looked closely: schedules duplicated across multiple Excel files, image assets managed through screenshots and workarounds, copy handed off through color-coded Word documents with no version control, and a shared observation matrix that would have collapsed under the load of a real QA push.
+          But the delivery infrastructure underneath all of it was fragile. Not because of negligence — because of accumulated workarounds. Reasonable solutions, each one made at a point in time when it was the fastest path forward, had layered on top of each other into a system with no slack left in it and no single person who had mapped the whole picture.
         </p>
         <p class="cs-p">
-          Nobody had mapped the full picture yet. That became my first job.
+          Mapping it became my first job. What I found was not three problems. It was five.
         </p>
       </div>
 
@@ -780,92 +784,136 @@
           <div class="cs-num-badge">02</div>
           <span class="cs-section-title">My role</span>
         </div>
-        <h2 class="cs-h2">Web Delivery Program Manager.</h2>
+        <h2 class="cs-h2">Web Delivery Program Manager — and diagnostician.</h2>
         <p class="cs-p">
-          I owned the master project schedule, managed cross-vendor handoffs, ran partner-facing milestone reviews, and served as the connective tissue between teams who couldn't always see each other's work.
+          I owned the master project schedule, managed cross-vendor handoffs, ran partner-facing milestone reviews, and served as the connective tissue between teams who couldn't always see each other's work. That was the formal role. The work I did alongside it was the operational diagnostic — understanding what was actually broken across the full delivery system and designing the path out.
         </p>
         <p class="cs-p">
-          I also owned something less formal but equally important: the relationship between the web team and a design vendor that had started the engagement with significant tension on both sides. One of my first moves was to set up a standing weekly meeting specifically to rebuild that working relationship. By the time I left, that vendor wrote one of the most generous professional references I have received.
+          I also owned something less formal but equally important: the relationship between the web team and a design vendor that had started the engagement with significant tension. One of my first moves was to set up a standing weekly meeting specifically to rebuild that working relationship. By the time I left, that vendor wrote one of the most generous professional references I have received.
         </p>
       </div>
 
-      <!-- 03 WHAT I FOUND -->
+      <!-- 03 THE DIAGNOSTIC -->
       <div class="cs-section" id="section-03">
         <div class="cs-section-num">
           <div class="cs-num-badge">03</div>
-          <span class="cs-section-title">What I found</span>
+          <span class="cs-section-title">The diagnostic</span>
         </div>
-        <h2 class="cs-h2">Three workflows. Same underlying problem.</h2>
+        <h2 class="cs-h2">Five systems. Five versions of the same problem.</h2>
         <p class="cs-p">
-          After mapping the current state across all three major workflows, the structural picture was consistent. None of this was negligence — it was a set of reasonable workarounds that had accumulated over time into a system with no slack left in it.
+          After mapping the current state across all five workflows, the structural picture was consistent: every system had a single point of failure, no audit trail, and a manual dependency that would break under pressure. This was the kind of fragility that's invisible on a good day and catastrophic on a bad one.
         </p>
 
         <div class="finding-grid">
           <div class="finding-card">
             <p class="finding-title">Schedule management</p>
-            <p class="finding-text">Master schedule maintained in MS Project internally, then manually translated into separate Excel workback documents for each partner team. Three versions of the truth, no automatic sync, and growing risk that partners were planning against outdated timelines.</p>
+            <p class="finding-text">Master schedule maintained in MS Project internally, then manually re-created in separate Excel workback documents for each partner team. Three versions of the truth, no sync, growing risk that partners were planning against outdated timelines with no way to know it.</p>
           </div>
           <div class="finding-card">
             <p class="finding-title">Copy handoffs</p>
-            <p class="finding-text">Manual compare-and-merge between two Teams environments, tracked through color-coded Word document highlights. Yellow meant changed copy. Red meant delete. Red font meant placeholder. It worked until someone missed a post, went out of office, or opened the wrong version.</p>
+            <p class="finding-text">Manual compare-and-merge between two Teams environments, tracked through color-coded Word document highlights. Yellow meant changed copy. Red meant delete. Red font meant placeholder. One missed post, one out-of-office, one wrong version opened — and the system failed silently.</p>
           </div>
           <div class="finding-card risk">
             <p class="finding-title">Image and asset management</p>
-            <p class="finding-text">Assets from one team couldn't be accessed directly by another due to permissions gaps. Workaround: the PM screenshots the image, enters it manually into an Asset Matrix spreadsheet, and hopes the metadata holds. Fragile by design.</p>
+            <p class="finding-text">Cross-team permissions gaps meant assets couldn't be shared directly. Workaround: PM screenshots the image, enters it manually into an Asset Matrix spreadsheet, maintains metadata by hand. The PM was the system. That's not a workflow — it's a single point of failure with extra steps.</p>
           </div>
           <div class="finding-card risk">
-            <p class="finding-title">QA launch risk</p>
-            <p class="finding-text">Twenty people were about to share a single QA tracking spreadsheet at launch — no row locking, no audit history, no recovery path if it broke. This was the most immediate structural risk in the program.</p>
+            <p class="finding-title">QA tracking — immediate risk</p>
+            <p class="finding-text">Twenty people were about to share a single Excel QA tracker at launch. No row locking, no audit history, no recovery path. This was the most immediate structural risk in the program — one overwrite event away from losing launch-critical defect records.</p>
+          </div>
+          <div class="finding-card risk">
+            <p class="finding-title">MS Project and Teams integration</p>
+            <p class="finding-text">Schedule data lived in MS Project. Stakeholder communication lived in Teams. No connection between them. Status updates required the PM to manually translate schedule state into Teams posts — creating lag, interpretation risk, and confidentiality exposure when the wrong information reached the wrong channel.</p>
           </div>
         </div>
       </div>
 
-      <!-- 04 WHAT I BUILT -->
+      <!-- 04 THE ROADMAP -->
       <div class="cs-section" id="section-04">
         <div class="cs-section-num">
           <div class="cs-num-badge">04</div>
-          <span class="cs-section-title">What I built</span>
+          <span class="cs-section-title">The roadmap</span>
         </div>
-        <h2 class="cs-h2">Stabilize now. Modernize next.</h2>
+        <h2 class="cs-h2">Stabilize now. Modernize next. Automate later.</h2>
         <p class="cs-p">
-          I didn't propose a full rebuild. The program had commitments and timelines that didn't have room for that. Instead I built a two-horizon plan.
+          I didn't propose a full rebuild. The program had commitments and timelines that didn't have room for that. Instead I designed a phased remediation roadmap: three horizons, each one building on the last, each one scoped to what the program could actually absorb at that point.
         </p>
 
         <div class="built-grid">
           <div class="built-card">
-            <p class="built-horizon">Short term</p>
-            <p class="built-title">QA intake workflow</p>
-            <p class="built-text">Designed and piloted a QA intake workflow using Microsoft Forms feeding into a SharePoint-backed tracker. Replaced the shared Excel QA sheet with structured intake — every submission gets a timestamp, an owner, and a record that can't be accidentally overwritten. Documented the rollout path to full implementation.</p>
+            <p class="built-horizon">Immediate — proof of concept</p>
+            <p class="built-title">QA intake via Forms + SharePoint</p>
+            <p class="built-text">Designed and piloted a QA intake workflow using Microsoft Forms feeding into a SharePoint-backed tracker. Replaced the shared Excel sheet with structured intake — every submission gets a timestamp, an owner, and a record that can't be overwritten. Estimated to eliminate 80–90% of the most likely failure modes at launch.</p>
           </div>
           <div class="built-card">
-            <p class="built-horizon">Medium term</p>
-            <p class="built-title">Milestone visibility model</p>
-            <p class="built-text">Drafted a milestone visibility model using Teams, SharePoint, and Power BI — designed to give executive stakeholders a live readiness view without exposing the confidential internal schedule. Role-based access meant each audience saw exactly what they needed, nothing more.</p>
+            <p class="built-horizon">Short-term — systems replacement</p>
+            <p class="built-title">SharePoint Lists + Power BI visibility model</p>
+            <p class="built-text">Designed a SharePoint Asset Library to replace the screenshot-based Excel asset matrix — centralizing image metadata, version control, and partner access permissions. Paired with a milestone visibility model in Teams, SharePoint, and Power BI that gave executive stakeholders live readiness views without exposing the confidential internal schedule.</p>
+          </div>
+          <div class="built-card">
+            <p class="built-horizon">Medium-term — automation</p>
+            <p class="built-title">Power Automate + integrated schedule view</p>
+            <p class="built-text">Roadmapped a Power Automate-connected model that would eliminate manual status translation between MS Project and Teams — live schedule data surfaced to the right audiences through role-filtered channel views, reducing PM overhead and confidentiality risk simultaneously.</p>
+          </div>
+          <div class="built-card">
+            <p class="built-horizon">Documentation</p>
+            <p class="built-title">Plain-language current-state map</p>
+            <p class="built-text">Documented all five workflow areas in plain language — what the process was, what the risks were, what a pragmatic improvement path looked like. Not a complaint document. A map with a route marked on it, written to hand off cleanly to whoever came next.</p>
           </div>
         </div>
-
-        <p class="cs-p" style="margin-top: 1.5rem;">
-          I also documented the full current-state picture across all three workflow areas in plain language: what the process was, what the risks were, and what a pragmatic improvement path looked like. Not a complaint document. A map with a route marked on it.
-        </p>
       </div>
 
-      <!-- 05 HONEST PART -->
+      <!-- 05 CHANGE MANAGEMENT -->
       <div class="cs-section" id="section-05">
         <div class="cs-section-num">
           <div class="cs-num-badge">05</div>
+          <span class="cs-section-title">Change management</span>
+        </div>
+        <h2 class="cs-h2">The roadmap only works if the team moves with it.</h2>
+        <p class="cs-p">
+          A remediation plan that lives in a document and never gets adopted is just documentation. I knew from the start that the technical fixes were the easier half of this work — the harder half was getting a team that had been operating a certain way for months to change how it operated, without disrupting the delivery timeline they were already behind on.
+        </p>
+        <p class="cs-p">
+          I built a formal change management framework alongside the technical roadmap: a structured brainstorming process that walked each affected team through the current-state pain points, the proposed future state, and what the transition would require from them specifically. The goal was not to announce a new process. It was to make the team part of designing it, so that adoption wasn't something that happened to them.
+        </p>
+
+        <div class="results-list">
+          <div class="result-item">
+            <div class="result-dot"></div>
+            <p class="result-text">The QA intake proof-of-concept was piloted with the team before it was proposed as the standard — designed to be tested, not announced.</p>
+          </div>
+          <div class="result-item">
+            <div class="result-dot"></div>
+            <p class="result-text">Each workflow area had a dedicated current-state/future-state document that made the problem legible to people who hadn't mapped it themselves.</p>
+          </div>
+          <div class="result-item">
+            <div class="result-dot"></div>
+            <p class="result-text">The remediation roadmap was designed to be presented formally to the broader delivery team — the delivery manager had asked me to run that session before the engagement ended.</p>
+          </div>
+          <div class="result-item">
+            <div class="result-dot"></div>
+            <p class="result-text">The design vendor relationship — which had started with real friction — ended with that vendor writing one of the strongest professional references I have received. Relationship repair is change management too.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 HONEST PART -->
+      <div class="cs-section" id="section-06">
+        <div class="cs-section-num">
+          <div class="cs-num-badge">06</div>
           <span class="cs-section-title">The honest part</span>
         </div>
         <h2 class="cs-h2">What I left behind.</h2>
 
         <div class="honest-block">
           <p>
-            The engagement ended before the remediation plan was fully implemented. That was consistent with the contract risk I had flagged from week one — the timeline was ambitious and the program had structural vulnerabilities that needed time to address.
+            The engagement ended before the full remediation plan was implemented. That was consistent with the contract risk I had flagged from week one — the timeline was ambitious and the structural vulnerabilities needed time to address properly.
           </p>
           <p>
-            What I left behind was a clear diagnosis, a tested proof-of-concept, a documented path forward, and a set of partner relationships in better shape than I found them.
+            What I left behind was a complete diagnostic, a phased roadmap across all five systems, a tested proof-of-concept on the most immediate risk, plain-language documentation the next person could actually use, and a change management framework that was ready to be presented. The work was done. The implementation was the next chapter.
           </p>
           <p>
-            This is some of the most honest PM work in my portfolio — not a triumphant launch story, but a real account of what it looks like to walk into a fragile system, map it carefully, and hand the next person a better starting position than you had.
+            This is some of the most honest PM work in my portfolio — not a triumphant launch story, but a real account of what it looks like to walk into a fragile system, map it carefully, design the way out, and hand the next person a better starting position than you had.
           </p>
         </div>
       </div>
