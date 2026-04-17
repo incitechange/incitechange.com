@@ -546,6 +546,17 @@
       transform: translateY(-1px);
     }
 
+    /* Card link overlay — valid HTML approach for block cards */
+    .project-card { position: relative; }
+    .card-link-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: var(--radius-lg);
+    }
+    /* Tags and card-reveal sit above the overlay */
+    .tag-row, .card-reveal { position: relative; z-index: 2; }
+
     .card-reveal {
       font-size: 0.875rem;
       font-weight: 500;
@@ -1077,7 +1088,7 @@
 
       <div class="card-grid">
 
-        <a href="process-case-study.html" class="project-card">
+        <div class="project-card"><a href="process-case-study.html" class="card-link-overlay" aria-label="Read case study: When the process is the problem" tabindex="0"></a>
           <div class="card-bar bar-mixed"></div>
           <div class="card-body">
             <p class="card-eyebrow">Enterprise Web Delivery · 2025</p>
@@ -1088,9 +1099,9 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
-        <a href="seton.html" class="project-card">
+        <div class="project-card"><a href="seton.html" class="card-link-overlay" aria-label="Read case study: Enterprise at a human scale" tabindex="0"></a>
           <div class="card-bar bar-teal"></div>
           <div class="card-body">
             <p class="card-eyebrow">Seton Healthcare · 2014–2018</p>
@@ -1101,9 +1112,9 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
-        <a href="360training.html" class="project-card">
+        <div class="project-card"><a href="360training.html" class="card-link-overlay" aria-label="Read case study: Teaching AI to help, not replace" tabindex="0"></a>
           <div class="card-bar bar-lime"></div>
           <div class="card-body">
             <p class="card-eyebrow">360training · 2021–2023</p>
@@ -1114,9 +1125,9 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
-        <a href="tasb.html" class="project-card">
+        <div class="project-card"><a href="tasb.html" class="card-link-overlay" aria-label="Read case study: Building an agency from the inside" tabindex="0"></a>
           <div class="card-bar bar-navy"></div>
           <div class="card-body">
             <p class="card-eyebrow">TASB · 2018–2019</p>
@@ -1127,9 +1138,9 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
-        <a href="ets.html" class="project-card">
+        <div class="project-card"><a href="ets.html" class="card-link-overlay" aria-label="Read case study: 100,000 tasks and counting" tabindex="0"></a>
           <div class="card-bar bar-teal"></div>
           <div class="card-body">
             <p class="card-eyebrow">ETS via PwC · 2019–2021</p>
@@ -1140,9 +1151,9 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
-        <a href="austin-free-net.html" class="project-card">
+        <div class="project-card"><a href="austin-free-net.html" class="card-link-overlay" aria-label="Read case study: Digital access as a public good" tabindex="0"></a>
           <div class="card-bar bar-mixed"></div>
           <div class="card-body">
             <p class="card-eyebrow">Austin Free-Net &amp; TEAJF · 2011–2014</p>
@@ -1153,7 +1164,7 @@
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </a>
+        </div>
 
       </div>
 
@@ -1202,21 +1213,21 @@
 
       <div class="making-grid">
 
-        <a href="making-paint-pour.html" class="making-card mc-navy">
+        <div class="making-card mc-navy"><a href="making-paint-pour.html" class="card-link-overlay" aria-label="Gravity as a design tool" tabindex="0"></a>
           <p class="mc-tag">Paint Pouring</p>
           <h3 class="mc-title">Gravity as a design tool</h3>
           <p class="mc-desc">Pigment weight, fluid chemistry, and a calculated pour sequence. Set the variables. Release control. See what gravity does with them.</p>
           <div class="mc-reveal">See the work</a>
         </div>
 
-        <a href="making-pax-box.html" class="making-card mc-teal">
+        <div class="making-card mc-teal"><a href="making-pax-box.html" class="card-link-overlay" aria-label="The Pax Box" tabindex="0"></a>
           <p class="mc-tag">Craftvention</p>
           <h3 class="mc-title">The Pax Box</h3>
           <p class="mc-desc">Built to hold cat accessories. Also functions as a side table. Motion-activated light inside. Cat-proof latch.</p>
           <div class="mc-reveal">See the project</a>
         </div>
 
-        <a href="making-pax-et-amor.html" class="making-card mc-dark">
+        <div class="making-card mc-dark"><a href="making-pax-et-amor.html" class="card-link-overlay" aria-label="A problem. A constraint." tabindex="0"></a>
           <p class="mc-tag">Lori-vention</p>
           <h3 class="mc-title">A problem. A constraint.</h3>
           <p class="mc-desc">Magnets, velcro, resin, and whatever's at hand. The goal is always the same: remove the friction.</p>
