@@ -711,6 +711,17 @@
   <script>
     let activeTag = null;
 
+    // On load: check URL param for pre-selected tag
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const tagParam = params.get('tag');
+      if (tagParam) {
+        const matchEl = document.querySelector(`.tag[data-tag="${tagParam}"]`);
+        const label = matchEl ? matchEl.textContent.trim() : tagParam.replace(/-/g,' ');
+        filterByTag(tagParam, label);
+      }
+    });
+
     // Tag click handler — works on tags inside cards
     document.querySelectorAll('.tag[data-tag]').forEach(tag => {
       tag.addEventListener('click', function(e) {

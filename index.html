@@ -454,6 +454,7 @@
     }
 
     .project-card {
+      display: block;
       background: var(--white);
       border-radius: var(--radius-lg);
       border: 1px solid var(--ink-100);
@@ -533,6 +534,17 @@
     .tag-navy    { background: var(--navy-100);  color: var(--navy-700); }
     .tag-lime    { background: var(--lime-100);  color: var(--lime-700); }
     .tag-neutral { background: var(--ink-100);   color: var(--ink-600); }
+
+    /* Linked tags — clickable, open filtered work page */
+    a.tag-link {
+      text-decoration: none;
+      cursor: pointer;
+      transition: filter var(--transition-base), transform 150ms ease;
+    }
+    a.tag-link:hover {
+      filter: brightness(0.88);
+      transform: translateY(-1px);
+    }
 
     .card-reveal {
       font-size: 0.875rem;
@@ -625,6 +637,7 @@
     }
 
     .making-card {
+      display: block;
       border-radius: var(--radius-xl);
       padding: 2rem;
       position: relative;
@@ -1064,95 +1077,83 @@
 
       <div class="card-grid">
 
-        <div class="project-card">
+        <a href="process-case-study.html" class="project-card">
           <div class="card-bar bar-mixed"></div>
           <div class="card-body">
             <p class="card-eyebrow">Enterprise Web Delivery · 2025</p>
             <h3 class="card-title">When the process is the problem</h3>
-            <p class="card-desc">A multi-vendor Microsoft Surface web program running on manual spreadsheets, ad-hoc handoffs, and hope. Diagnosed the structural risks and built a pragmatic path out.</p>
+            <p class="card-desc">A multi-vendor Microsoft Surface web program running on manual spreadsheets, ad-hoc handoffs, and a shared QA tracker twenty people were about to use simultaneously. Five broken systems. A three-horizon remediation roadmap.</p>
             <div class="tag-row">
-              <span class="tag tag-teal">Process Design</span>
-              <span class="tag tag-navy">MS Project</span>
-              <span class="tag tag-neutral">SharePoint</span>
+              <a href="work.html?tag=process-design" class="tag tag-teal tag-link" onclick="event.stopPropagation()">Process Design</a>          <a href="work.html?tag=web-delivery" class="tag tag-teal tag-link" onclick="event.stopPropagation()">Web Delivery</a>          <a href="work.html?tag=ms-project" class="tag tag-neutral tag-link" onclick="event.stopPropagation()">MS Project</a>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="seton.html" class="project-card">
           <div class="card-bar bar-teal"></div>
           <div class="card-body">
             <p class="card-eyebrow">Seton Healthcare · 2014–2018</p>
             <h3 class="card-title">Enterprise at a human scale</h3>
-            <p class="card-desc">Led digital strategy across a regulated healthcare system — secure physician portals, online scheduling, a Sitecore migration, and stakeholders who did not always agree.</p>
+            <p class="card-desc">Four years delivering digital programs across a regulated healthcare system — a secure physician portal, patient scheduling, a Sitecore migration, and the process infrastructure that held it all together.</p>
             <div class="tag-row">
-              <span class="tag tag-navy">Enterprise PM</span>
-              <span class="tag tag-teal">Sitecore</span>
-              <span class="tag tag-neutral">Healthcare</span>
+              <a href="work.html?tag=enterprise-pm" class="tag tag-navy tag-link" onclick="event.stopPropagation()">Enterprise PM</a>          <a href="work.html?tag=cms" class="tag tag-teal tag-link" onclick="event.stopPropagation()">CMS</a>          <span class="tag tag-neutral">Healthcare</span>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="360training.html" class="project-card">
           <div class="card-bar bar-lime"></div>
           <div class="card-body">
             <p class="card-eyebrow">360training · 2021–2023</p>
             <h3 class="card-title">Teaching AI to help, not replace</h3>
-            <p class="card-desc">Built AI-assisted content workflows that got to first draft in a fraction of the time — without letting the machine anywhere near the judgment calls.</p>
+            <p class="card-desc">Platform strategy approved by the CTO and CMO. Delivery infrastructure built from scratch. AI workflows running across content, architecture decisions, and requirements — practical, not performative.</p>
             <div class="tag-row">
-              <span class="tag tag-lime">AI Workflows</span>
-              <span class="tag tag-teal">Web Delivery</span>
-              <span class="tag tag-neutral">Drupal</span>
+              <span class="tag tag-lime">AI Workflows</span>          <a href="work.html?tag=web-delivery" class="tag tag-teal tag-link" onclick="event.stopPropagation()">Web Delivery</a>          <a href="work.html?tag=cms" class="tag tag-neutral tag-link" onclick="event.stopPropagation()">CMS</a>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="tasb.html" class="project-card">
           <div class="card-bar bar-navy"></div>
           <div class="card-body">
             <p class="card-eyebrow">TASB · 2018–2019</p>
             <h3 class="card-title">Building an agency from the inside</h3>
-            <p class="card-desc">Ran a fee-for-service internal digital agency serving Texas school boards — scopes, budgets, stakeholder focus groups, and an analytics model that connected member behavior to business goals.</p>
+            <p class="card-desc">A fee-for-service internal digital agency for Texas school boards — 40+ hours of stakeholder focus groups, a full measurement chain from GTM through Power BI, and a headless CMS migration alongside it all.</p>
             <div class="tag-row">
-              <span class="tag tag-navy">Program Management</span>
-              <span class="tag tag-teal">Analytics</span>
-              <span class="tag tag-neutral">Salesforce</span>
+              <a href="work.html?tag=program-management" class="tag tag-navy tag-link" onclick="event.stopPropagation()">Program Management</a>          <a href="work.html?tag=analytics" class="tag tag-teal tag-link" onclick="event.stopPropagation()">Analytics</a>          <a href="work.html?tag=process-design" class="tag tag-neutral tag-link" onclick="event.stopPropagation()">Process Design</a>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="ets.html" class="project-card">
           <div class="card-bar bar-teal"></div>
           <div class="card-body">
             <p class="card-eyebrow">ETS via PwC · 2019–2021</p>
             <h3 class="card-title">100,000 tasks and counting</h3>
-            <p class="card-desc">Managed interconnected project schedules at enterprise scale for Texas K-12 statewide assessment — and supported and improved the Power BI reporting infrastructure that made it all visible to executives.</p>
+            <p class="card-desc">Two visibility layers for a Texas K-12 statewide assessment PMO: MS Project customization so PMs could see the portfolio, Power BI so executives could. The infrastructure problem underneath both.</p>
             <div class="tag-row">
-              <span class="tag tag-navy">Enterprise PMO</span>
-              <span class="tag tag-lime">Power BI</span>
-              <span class="tag tag-neutral">MS Project</span>
+              <a href="work.html?tag=enterprise-pm" class="tag tag-navy tag-link" onclick="event.stopPropagation()">Enterprise PM</a>          <a href="work.html?tag=analytics" class="tag tag-lime tag-link" onclick="event.stopPropagation()">Analytics</a>          <a href="work.html?tag=ms-project" class="tag tag-neutral tag-link" onclick="event.stopPropagation()">MS Project</a>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
-        <div class="project-card">
+        <a href="austin-free-net.html" class="project-card">
           <div class="card-bar bar-mixed"></div>
           <div class="card-body">
             <p class="card-eyebrow">Austin Free-Net &amp; TEAJF · 2011–2014</p>
             <h3 class="card-title">Digital access as a public good</h3>
-            <p class="card-desc">Rebuilt a nonprofit's web presence from the ground up, automated reporting for city and federal grant compliance, and created a learning management system using free tools.</p>
+            <p class="card-desc">Three beats: a website rebuilt from scratch, a learning management system built from Google Sheets and Forms, and a PRSA-winning campaign that quadrupled traffic to a statewide civil legal help platform.</p>
             <div class="tag-row">
-              <span class="tag tag-teal">Nonprofit</span>
-              <span class="tag tag-navy">Salesforce</span>
-              <span class="tag tag-neutral">PRSA Award</span>
+              <a href="work.html?tag=web-delivery" class="tag tag-teal tag-link" onclick="event.stopPropagation()">Web Delivery</a>          <a href="work.html?tag=analytics" class="tag tag-navy tag-link" onclick="event.stopPropagation()">Analytics</a>          <span class="tag tag-neutral">Nonprofit</span>
             </div>
             <div class="card-reveal">Read the case study</div>
           </div>
-        </div>
+        </a>
 
       </div>
 
@@ -1201,25 +1202,25 @@
 
       <div class="making-grid">
 
-        <div class="making-card mc-navy">
+        <a href="making-paint-pour.html" class="making-card mc-navy">
           <p class="mc-tag">Paint Pouring</p>
           <h3 class="mc-title">Gravity as a design tool</h3>
           <p class="mc-desc">Pigment weight, fluid chemistry, and a calculated pour sequence. Set the variables. Release control. See what gravity does with them.</p>
-          <div class="mc-reveal">See the work</div>
+          <div class="mc-reveal">See the work</a>
         </div>
 
-        <div class="making-card mc-teal">
+        <a href="making-pax-box.html" class="making-card mc-teal">
           <p class="mc-tag">Craftvention</p>
           <h3 class="mc-title">The Pax Box</h3>
           <p class="mc-desc">Built to hold cat accessories. Also functions as a side table. Motion-activated light inside. Cat-proof latch.</p>
-          <div class="mc-reveal">See the project</div>
+          <div class="mc-reveal">See the project</a>
         </div>
 
-        <div class="making-card mc-dark">
+        <a href="making-pax-et-amor.html" class="making-card mc-dark">
           <p class="mc-tag">Lori-vention</p>
           <h3 class="mc-title">A problem. A constraint.</h3>
           <p class="mc-desc">Magnets, velcro, resin, and whatever's at hand. The goal is always the same: remove the friction.</p>
-          <div class="mc-reveal">See the work</div>
+          <div class="mc-reveal">See the work</a>
         </div>
 
       </div>
