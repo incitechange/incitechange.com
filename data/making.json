@@ -1,0 +1,32 @@
+{
+  "_comment": "Source of truth for making section cards on homepage. Edit here to update.",
+  "cards": [
+    {
+      "id": "paint-pour",
+      "href": "making-paint-pour.html",
+      "tag": "Paint Pouring",
+      "title": "Gravity as a design tool",
+      "description": "Pigment weight, fluid chemistry, and a calculated pour sequence. Set the variables. Release control. See what gravity does with them.",
+      "color": "mc-navy",
+      "reveal": "See the work"
+    },
+    {
+      "id": "pax-box",
+      "href": "making-pax-box.html",
+      "tag": "Craftvention",
+      "title": "The Pax Box",
+      "description": "Built to hold cat accessories. Also functions as a side table. Motion-activated light inside. Cat-proof latch.",
+      "color": "mc-teal",
+      "reveal": "See the project"
+    },
+    {
+      "id": "pax-et-amor",
+      "href": "making-pax-et-amor.html",
+      "tag": "Lori-vention",
+      "title": "A problem. A constraint.",
+      "description": "Magnets, velcro, resin, and whatever's at hand. The goal is always the same: remove the friction.",
+      "color": "mc-dark",
+      "reveal": "See the work"
+    }
+  ]
+}
