@@ -1,0 +1,295 @@
+{
+  "_comment": "Source of truth for all work/case study cards. Edit here; index.html and work.html render from this file.",
+  "cards": [
+    {
+      "id": "bridge-partners",
+      "href": "process-case-study.html",
+      "eyebrow": "Enterprise Web Delivery · 2025",
+      "title": "When the process is the problem",
+      "description": "A multi-vendor Microsoft Surface web program running on manual spreadsheets, ad-hoc handoffs, and a shared QA tracker twenty people were about to use simultaneously. Five broken systems. A three-horizon remediation roadmap.",
+      "bar": "bar-mixed",
+      "tags": [
+        {
+          "label": "Process Design",
+          "slug": "process-design",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "MS Project",
+          "slug": "ms-project",
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "process-design,web-delivery,program-management,ms-project,sharepoint,power-bi,qa-workflows",
+      "workEyebrow": "Bridge Partners · 2025",
+      "workTags": [
+        {
+          "label": "Process Design",
+          "slug": "process-design",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Program Management",
+          "slug": "program-management",
+          "color": "tag-navy"
+        },
+        {
+          "label": "MS Project",
+          "slug": "ms-project",
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "A partner-heavy web program running on manual spreadsheets, color-coded Word docs, and ad-hoc handoffs. Mapped five broken delivery systems and built a three-horizon remediation roadmap."
+    },
+    {
+      "id": "seton",
+      "href": "seton.html",
+      "eyebrow": "Seton Healthcare · 2014–2018",
+      "title": "Enterprise at a human scale",
+      "description": "Four years delivering digital programs across a regulated healthcare system — a secure physician portal, patient scheduling, a Sitecore migration, and the process infrastructure that held it all together.",
+      "bar": "bar-teal",
+      "tags": [
+        {
+          "label": "Enterprise PM",
+          "slug": "enterprise-pm",
+          "color": "tag-navy"
+        },
+        {
+          "label": "CMS",
+          "slug": "cms",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Healthcare",
+          "slug": null,
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "enterprise-pm,web-delivery,program-management,cms,sitecore,healthcare,requirements",
+      "workEyebrow": "Seton Healthcare · 2014–2018",
+      "workTags": [
+        {
+          "label": "Enterprise PM",
+          "slug": "enterprise-pm",
+          "color": "tag-navy"
+        },
+        {
+          "label": "CMS",
+          "slug": "cms",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Sitecore",
+          "slug": null,
+          "color": "tag-neutral"
+        },
+        {
+          "label": "Healthcare",
+          "slug": null,
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "Led digital strategy across a regulated healthcare system — secure physician portals, online scheduling, a Sitecore migration, and the process infrastructure that held it all together."
+    },
+    {
+      "id": "360training",
+      "href": "360training.html",
+      "eyebrow": "360training · 2021–2023",
+      "title": "Teaching AI to help, not replace",
+      "description": "Platform strategy approved by the CTO and CMO. Delivery infrastructure built from scratch. AI workflows running across content, architecture decisions, and requirements — practical, not performative.",
+      "bar": "bar-lime",
+      "tags": [
+        {
+          "label": "AI Workflows",
+          "slug": null,
+          "color": "tag-lime"
+        },
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "CMS",
+          "slug": "cms",
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "ai-workflows,web-delivery,ecommerce,cms,program-management,analytics",
+      "workEyebrow": "360training · 2021–2023",
+      "workTags": [
+        {
+          "label": "AI Workflows",
+          "slug": null,
+          "color": "tag-lime"
+        },
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Ecommerce",
+          "slug": null,
+          "color": "tag-teal"
+        },
+        {
+          "label": "CMS",
+          "slug": "cms",
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "Platform strategy approved by the CTO and CMO. Delivery infrastructure built from scratch. AI workflows cutting recurring content production time to a fraction — practical, not performative."
+    },
+    {
+      "id": "tasb",
+      "href": "tasb.html",
+      "eyebrow": "TASB · 2018–2019",
+      "title": "Building an agency from the inside",
+      "description": "A fee-for-service internal digital agency for Texas school boards — 40+ hours of stakeholder focus groups, a full measurement chain from GTM through Power BI, and a headless CMS migration alongside it all.",
+      "bar": "bar-navy",
+      "tags": [
+        {
+          "label": "Program Management",
+          "slug": "program-management",
+          "color": "tag-navy"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Process Design",
+          "slug": "process-design",
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "program-management,analytics,web-delivery,requirements,process-design",
+      "workEyebrow": "TASB · 2018–2019",
+      "workTags": [
+        {
+          "label": "Program Management",
+          "slug": "program-management",
+          "color": "tag-navy"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Process Design",
+          "slug": "process-design",
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "Ran a fee-for-service internal digital agency for Texas school boards — scopes, budgets, 40+ hours of stakeholder focus groups, and an analytics model connecting member behavior to business goals."
+    },
+    {
+      "id": "ets",
+      "href": "ets.html",
+      "eyebrow": "ETS via PwC · 2019–2021",
+      "title": "100,000 tasks and counting",
+      "description": "Two visibility layers for a Texas K-12 statewide assessment PMO: MS Project customization so PMs could see the portfolio, Power BI so executives could. The infrastructure problem underneath both.",
+      "bar": "bar-teal",
+      "tags": [
+        {
+          "label": "Enterprise PM",
+          "slug": "enterprise-pm",
+          "color": "tag-navy"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-lime"
+        },
+        {
+          "label": "MS Project",
+          "slug": "ms-project",
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "enterprise-pm,analytics,program-management,power-bi,ms-project",
+      "workEyebrow": "ETS via PwC · 2019–2021",
+      "workTags": [
+        {
+          "label": "Enterprise PM",
+          "slug": "enterprise-pm",
+          "color": "tag-navy"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Power BI",
+          "slug": null,
+          "color": "tag-lime"
+        },
+        {
+          "label": "MS Project",
+          "slug": "ms-project",
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "Managed interconnected project schedules at enterprise scale for Texas K-12 statewide assessment — and built the two-layer visibility infrastructure that made 100,000 tasks legible to executives."
+    },
+    {
+      "id": "austin-free-net",
+      "href": "austin-free-net.html",
+      "eyebrow": "Austin Free-Net & TEAJF · 2011–2014",
+      "title": "Digital access as a public good",
+      "description": "Three beats: a website rebuilt from scratch, a learning management system built from Google Sheets and Forms, and a PRSA-winning campaign that quadrupled traffic to a statewide civil legal help platform.",
+      "bar": "bar-mixed",
+      "tags": [
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-navy"
+        },
+        {
+          "label": "Nonprofit",
+          "slug": null,
+          "color": "tag-neutral"
+        }
+      ],
+      "dataTags": "nonprofit,web-delivery,analytics,program-management,requirements",
+      "workEyebrow": "Austin Free-Net · 2011–2014",
+      "workTags": [
+        {
+          "label": "Nonprofit",
+          "slug": null,
+          "color": "tag-teal"
+        },
+        {
+          "label": "Web Delivery",
+          "slug": "web-delivery",
+          "color": "tag-teal"
+        },
+        {
+          "label": "Analytics",
+          "slug": "analytics",
+          "color": "tag-neutral"
+        }
+      ],
+      "workDescription": "Rebuilt a nonprofit web presence, built a learning management system from Google Sheets and Forms, and ran a PRSA-winning campaign that quadrupled traffic to TexasLawHelp.org."
+    }
+  ]
+}
