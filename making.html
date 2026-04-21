@@ -27,7 +27,7 @@
       --font-display: 'Fraunces', Georgia, serif;
       --font-body: 'Outfit', sans-serif;
       --radius-sm: 4px; --radius-md: 8px; --radius-lg: 16px; --radius-xl: 24px;
-      --transition-base: 250ms ease; --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      --transition-base: 250ms ease;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
@@ -50,11 +50,11 @@
     .ph-shape-2 { position: absolute; bottom: 10px; right: 220px; width: 70px; height: 70px; background: var(--lime-400); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); opacity: 0.15; pointer-events: none; }
     .ph-shape-3 { position: absolute; bottom: -30px; left: 8%; width: 160px; height: 160px; background: var(--navy-700); border-radius: 50%; opacity: 0.8; pointer-events: none; }
     .ph-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
-    .ph-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-400); margin-bottom: 1rem; }
+    .ph-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-400); margin-bottom: 1rem; animation: fadeUp 0.5s ease 0.05s both; }
     .ph-eyebrow::before { content: ''; display: inline-block; width: 24px; height: 2px; background: var(--lime-400); border-radius: 2px; }
-    .ph-headline { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.03em; color: var(--cream); margin-bottom: 1.25rem; }
+    .ph-headline { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.03em; color: var(--cream); margin-bottom: 1.25rem; animation: fadeUp 0.5s ease 0.15s both; }
     .ph-headline em { font-style: italic; color: var(--teal-300); }
-    .ph-sub { font-size: 1.0625rem; font-weight: 300; color: var(--navy-300); line-height: 1.65; max-width: 560px; }
+    .ph-sub { font-size: 1.0625rem; font-weight: 300; color: var(--navy-300); line-height: 1.65; max-width: 620px; animation: fadeUp 0.5s ease 0.25s both; }
 
     /* FILTER BAR */
     .filter-bar { padding: 1.25rem clamp(1.5rem, 5vw, 4rem); border-bottom: 1px solid var(--ink-100); background: var(--cream); display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
@@ -71,12 +71,23 @@
     .ab-clear { font-size: 0.8125rem; font-weight: 500; color: var(--teal-300); cursor: pointer; background: none; border: none; font-family: var(--font-body); }
     .ab-clear:hover { color: var(--cream); }
 
-    /* MAKING GRID */
-    .making-section { padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem); }
+    /* MAKING SECTIONS */
+    .making-section { padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem); }
+    .making-section + .making-section { padding-top: 0; }
     .making-inner { max-width: 1200px; margin: 0 auto; }
 
+    /* SECTION HEADER */
+    .section-head { margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--ink-100); }
+    .section-head-row { display: flex; align-items: baseline; gap: 0.875rem; margin-bottom: 0.625rem; }
+    .section-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime-400); flex-shrink: 0; position: relative; top: -1px; }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-400); }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.875rem); font-weight: 300; color: var(--navy-800); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.625rem; }
+    .section-intro { font-size: 0.9375rem; font-weight: 300; color: var(--ink-500); line-height: 1.7; max-width: 700px; }
+
+    /* MAKING GRID */
     .making-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
+    /* MAKING CARD */
     .making-card {
       border-radius: var(--radius-xl); overflow: hidden; cursor: pointer;
       transition: all var(--transition-base); position: relative;
@@ -86,16 +97,14 @@
     .making-card:hover .mc-reveal { opacity: 1; transform: translateY(0); }
     .making-card.hidden { display: none; }
 
-    .mc-image {
-      width: 100%; aspect-ratio: 4/3; object-fit: cover;
-      background: var(--ink-800); display: flex; align-items: center; justify-content: center;
-    }
-
-    /* Placeholder for cards without photos yet */
+    .mc-image { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
     .mc-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .mc-placeholder.navy { background: var(--navy-800); }
     .mc-placeholder.teal { background: var(--teal-800); }
-    .mc-placeholder.dark { background: var(--ink-900); border-top: 2px solid var(--lime-400); }
+    .mc-placeholder.dark { background: var(--ink-900); }
+    .mc-placeholder.gravity { background: linear-gradient(135deg, var(--navy-800), var(--teal-900)); }
+    .mc-placeholder.materials { background: linear-gradient(135deg, var(--teal-800), var(--navy-700)); }
+    .mc-placeholder.constraints { background: linear-gradient(135deg, var(--navy-900), var(--ink-800)); }
     .mc-placeholder-shape { position: absolute; border-radius: 50%; opacity: 0.2; }
 
     .mc-body { padding: 1.5rem; background: var(--white); flex: 1; display: flex; flex-direction: column; border: 1px solid var(--ink-100); border-top: none; border-radius: 0 0 var(--radius-xl) var(--radius-xl); }
@@ -106,7 +115,10 @@
     .mc-tag { font-size: 0.65rem; font-weight: 500; padding: 3px 9px; border-radius: 100px; background: var(--ink-100); color: var(--ink-600); cursor: pointer; transition: all var(--transition-base); }
     .mc-tag:hover { background: var(--teal-100); color: var(--teal-700); }
     .mc-reveal { font-size: 0.8125rem; font-weight: 500; color: var(--teal-600); opacity: 0; transform: translateY(4px); transition: all var(--transition-base); display: flex; align-items: center; gap: 0.35rem; }
-    .mc-reveal::after { content: '→'; }
+    .mc-reveal::after { content: '\2192'; }
+
+    /* SECTION DIVIDER */
+    .section-divider { height: 1px; background: var(--ink-100); margin: 0 clamp(1.5rem, 5vw, 4rem); }
 
     /* EMPTY STATE */
     .empty-state { display: none; grid-column: 1/-1; text-align: center; padding: 4rem 2rem; }
@@ -114,15 +126,22 @@
     .empty-state p { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; font-style: italic; color: var(--ink-400); margin-bottom: 1rem; }
     .empty-state button { font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; color: var(--teal-600); background: none; border: 1.5px solid var(--teal-400); border-radius: var(--radius-sm); padding: 10px 20px; cursor: pointer; }
 
-    /* ABOUT MAKING */
-    .about-making { background: var(--ink-50); padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem); border-top: 1px solid var(--ink-100); }
-    .am-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-    .am-body p { font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.8; margin-bottom: 1.25rem; }
-    .am-body p:last-child { margin-bottom: 0; }
-    .am-stats { display: flex; flex-direction: column; gap: 1rem; }
-    .am-stat { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
-    .am-stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--teal-500); line-height: 1; flex-shrink: 0; min-width: 60px; }
-    .am-stat-label { font-size: 0.9rem; color: var(--ink-600); line-height: 1.4; }
+    /* WHY MAKING */
+    .why-making { background: var(--ink-50); padding: clamp(3rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem); border-top: 1px solid var(--ink-100); }
+    .wm-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .wm-eyebrow { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+    .wm-eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime-400); }
+    .wm-eyebrow-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-400); }
+    .wm-title { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 300; color: var(--navy-800); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.5rem; }
+    .wm-body p { font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.8; margin-bottom: 1.25rem; }
+    .wm-body p:last-child { margin-bottom: 0; }
+    .wm-right { display: flex; flex-direction: column; gap: 1.25rem; padding-top: 0.5rem; }
+    .wm-pull { background: var(--navy-800); border-radius: var(--radius-lg); padding: 1.75rem; }
+    .wm-pull-text { font-family: var(--font-display); font-size: 1.2rem; font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.5; }
+    .wm-pull-text em { color: var(--teal-300); font-style: normal; }
+    .wm-note { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; }
+    .wm-note-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime-700); margin-bottom: 0.5rem; }
+    .wm-note-text { font-size: 0.9rem; color: var(--ink-600); line-height: 1.55; }
 
     /* FOOTER */
     .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
@@ -134,12 +153,15 @@
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-    .ph-eyebrow { animation: fadeUp 0.5s ease 0.05s both; }
-    .ph-headline { animation: fadeUp 0.5s ease 0.15s both; }
-    .ph-sub { animation: fadeUp 0.5s ease 0.25s both; }
 
-    @media (max-width: 900px) { .making-grid { grid-template-columns: 1fr 1fr; } .am-inner { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .making-grid { grid-template-columns: 1fr; } .nav-links { gap: 1.25rem; } }
+    @media (max-width: 900px) {
+      .making-grid { grid-template-columns: 1fr 1fr; }
+      .wm-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      .making-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 1.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -162,8 +184,8 @@
     <div class="ph-shape-3"></div>
     <div class="ph-inner">
       <p class="ph-eyebrow">Making</p>
-      <h1 class="ph-headline">The problem-solving<br><em>doesn't stop.</em></h1>
-      <p class="ph-sub">Paint pouring, craftventions, Lori-ventions, and the ongoing project of making the environment work better.</p>
+      <h1 class="ph-headline">Same brain,<br><em>different materials.</em></h1>
+      <p class="ph-sub">Paint pouring, found-material builds, structural experiments, and the ongoing project of making the environment work better.</p>
     </div>
   </div>
 
@@ -171,9 +193,9 @@
   <div class="filter-bar">
     <span class="filter-label">Filter</span>
     <button class="filter-btn active" onclick="filterMaking('all', this)">All</button>
-    <button class="filter-btn" onclick="filterMaking('paint-pouring', this)">Paint Pouring</button>
-    <button class="filter-btn" onclick="filterMaking('craftvention', this)">Craftventions</button>
-    <button class="filter-btn" onclick="filterMaking('lori-vention', this)">Lori-ventions</button>
+    <button class="filter-btn" onclick="filterMaking('gravity', this)">Things gravity made</button>
+    <button class="filter-btn" onclick="filterMaking('materials', this)">Things materials made</button>
+    <button class="filter-btn" onclick="filterMaking('constraints', this)">Things constraints made</button>
   </div>
 
   <!-- ACTIVE FILTER BANNER -->
@@ -182,162 +204,100 @@
     <button class="ab-clear" onclick="clearMakingFilter()">Show all ×</button>
   </div>
 
-  <!-- MAKING GRID -->
-  <section class="making-section">
+  <!-- SECTION 1: THINGS GRAVITY MADE -->
+  <section class="making-section" id="section-gravity">
     <div class="making-inner">
-      <div class="making-grid" id="makingGrid">
-
-        <!-- PAX ET AMOR -->
-        <div class="making-card" data-type="craftvention" data-href="making-pax-et-amor.html">
-          <div class="mc-placeholder teal" style="position:relative;">
-            <div class="mc-placeholder-shape" style="width:120px;height:120px;background:var(--teal-600);top:-20px;right:-20px;"></div>
-            <div class="mc-placeholder-shape" style="width:60px;height:60px;background:var(--lime-400);bottom:20px;left:20px;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);border-radius:0;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--teal-200);position:relative;z-index:1;">Photo coming soon</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Craftvention</p>
-            <h3 class="mc-title">Pax et Amor</h3>
-            <p class="mc-desc">Wall art made from stained glass, cardboard, and fur. A portrait of Pax using found and recycled materials. Rated 5/5.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="craftvention">craftvention</span>
-              <span class="mc-tag" data-tag="wall-art">wall art</span>
-              <span class="mc-tag" data-tag="pax">pax</span>
-            </div>
-            <div class="mc-reveal">See the project</div>
-          </div>
+      <div class="section-head">
+        <div class="section-head-row">
+          <div class="section-dot"></div>
+          <span class="section-label">01</span>
         </div>
-
-        <!-- PAX ACCESSORIES BOX -->
-        <div class="making-card" data-type="craftvention" data-href="making-pax-box.html">
-          <div class="mc-placeholder dark" style="position:relative;">
-            <div class="mc-placeholder-shape" style="width:100px;height:100px;background:var(--lime-400);top:-10px;right:-10px;opacity:0.15;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--ink-400);position:relative;z-index:1;">Photo coming soon</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Craftvention</p>
-            <h3 class="mc-title">The Pax Box</h3>
-            <p class="mc-desc">A side table and toy storage box designed to look like the cat who uses it. Paint-poured resin top in Pax's colors, felt collar band with silver studs, motion-activated interior light, cat-proof latches. Rated 4.5/5.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="craftvention">craftvention</span>
-              <span class="mc-tag" data-tag="pax">pax</span>
-              <span class="mc-tag" data-tag="resin">resin</span>
-              <span class="mc-tag" data-tag="paint-pouring">paint pouring</span>
-            </div>
-            <div class="mc-reveal">See the project</div>
-          </div>
-        </div>
-
-        <!-- PAX HOUSE -->
-        <div class="making-card" data-type="lori-vention">
-          <div class="mc-placeholder navy" style="position:relative;">
-            <div class="mc-placeholder-shape" style="width:80px;height:80px;background:var(--teal-500);top:20px;left:20px;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--navy-300);position:relative;z-index:1;">Photo coming soon</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Lori-vention</p>
-            <h3 class="mc-title">Pax House</h3>
-            <p class="mc-desc">Furniture built from cardboard and packing materials. What you do when you have the materials and the need at the same time. Rated 3/5 — functional, not precious.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="lori-vention">lori-vention</span>
-              <span class="mc-tag" data-tag="cardboard">cardboard</span>
-              <span class="mc-tag" data-tag="pax">pax</span>
-            </div>
-            <div class="mc-reveal">See the project</div>
-          </div>
-        </div>
-
-        <!-- GOLFHOLE POUR -->
-        <div class="making-card" data-type="paint-pouring" data-href="making-paint-pour.html">
-          <div class="mc-placeholder teal" style="position:relative;background:var(--navy-900);">
-            <div class="mc-placeholder-shape" style="width:160px;height:160px;background:var(--teal-600);top:-40px;right:-40px;"></div>
-            <div class="mc-placeholder-shape" style="width:80px;height:80px;background:var(--lime-400);bottom:-20px;left:-20px;opacity:0.3;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--navy-400);position:relative;z-index:1;">In progress</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Paint Pouring</p>
-            <h3 class="mc-title">Golfhole Series</h3>
-            <p class="mc-desc">A series in progress. The goal is wall art that uses the physics of fluid dynamics as the design tool — pigment weight, pour sequence, and gravity doing the work.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="paint-pouring">paint pouring</span>
-              <span class="mc-tag" data-tag="wall-art">wall art</span>
-            </div>
-            <div class="mc-reveal">See the series</div>
-          </div>
-        </div>
-
-        <!-- PLACEHOLDER: MORE COMING -->
-        <div class="making-card" data-type="paint-pouring">
-          <div class="mc-placeholder" style="background:var(--teal-900);position:relative;">
-            <div class="mc-placeholder-shape" style="width:200px;height:200px;background:var(--teal-700);top:-60px;left:-60px;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--teal-400);position:relative;z-index:1;">More pours coming</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Paint Pouring</p>
-            <h3 class="mc-title">Blues and Teals Series</h3>
-            <p class="mc-desc">The dominant color story in the studio. Blues, teals, and greens — sometimes with a poppy yellow-green that shows up whether you planned for it or not.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="paint-pouring">paint pouring</span>
-              <span class="mc-tag" data-tag="wall-art">wall art</span>
-            </div>
-            <div class="mc-reveal">See the work</div>
-          </div>
-        </div>
-
-        <!-- PLACEHOLDER: LORI-VENTIONS -->
-        <div class="making-card" data-type="lori-vention">
-          <div class="mc-placeholder dark" style="background:var(--ink-900);position:relative;">
-            <div class="mc-placeholder-shape" style="width:60px;height:60px;background:var(--lime-400);top:30px;right:30px;clip-path:polygon(0 0,100% 0,100% 100%);border-radius:0;opacity:0.25;"></div>
-            <span style="font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--ink-400);position:relative;z-index:1;">More coming</span>
-          </div>
-          <div class="mc-body">
-            <p class="mc-type">Lori-vention</p>
-            <h3 class="mc-title">Household friction, solved</h3>
-            <p class="mc-desc">Magnets, velcro, resin, and whatever else removes the friction. Documentation in progress — there are more of these than you'd think.</p>
-            <div class="mc-tags">
-              <span class="mc-tag" data-tag="lori-vention">lori-vention</span>
-              <span class="mc-tag" data-tag="magnets">magnets</span>
-              <span class="mc-tag" data-tag="velcro">velcro</span>
-            </div>
-            <div class="mc-reveal">See the work</div>
-          </div>
-        </div>
-
-        <div class="empty-state" id="makingEmpty">
+        <h2 class="section-title">Things gravity made</h2>
+        <p class="section-intro">Paint pouring looks like art. It’s also physics. The weight of each pigment, the chemicals you add to change viscosity, the pour sequence, the angle of the surface — all of it affects how fluid moves. You’re designing a system and then releasing it. The result is always a negotiation between what you intended and what the paint decided.</p>
+      </div>
+      <div class="making-grid" id="gravityGrid">
+        <!-- Cards rendered from data/making.json -->
+        <div class="empty-state" id="gravityEmpty">
           <p>Nothing here with that filter yet.</p>
           <button onclick="clearMakingFilter()">Show everything</button>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ABOUT MAKING -->
-  <section class="about-making">
-    <div class="am-inner">
-      <div>
-        <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;">
-          <div style="width:10px;height:10px;border-radius:50%;background:var(--lime-400);flex-shrink:0;position:relative;top:-2px;"></div>
-          <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-400);">Why making matters</p>
+  <div class="section-divider"></div>
+
+  <!-- SECTION 2: THINGS MATERIALS MADE -->
+  <section class="making-section" id="section-materials">
+    <div class="making-inner">
+      <div class="section-head">
+        <div class="section-head-row">
+          <div class="section-dot"></div>
+          <span class="section-label">02</span>
         </div>
-        <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.25rem);font-weight:300;color:var(--navy-800);letter-spacing:-0.02em;line-height:1.15;margin-bottom:1.5rem;">It's the same brain.</h2>
-        <div class="am-body">
-          <p>Paint pouring looks like art, but it's physics. The weight of the pigment, the chemicals you add to each color, the pour sequence — these all affect how gravity moves the fluid across the canvas. You're designing a system and then letting it run.</p>
-          <p>Craftventions are constraints problems. You have found materials, a functional need, and a standard of quality you're not willing to compromise on. The Pax Box needed to be beautiful, functional as a side table, secure against a determined cat, and self-illuminating. Those aren't competing goals once you stop treating them that way.</p>
-          <p>Lori-ventions are exactly what they sound like. A friction point exists. It's fixable. Here's the most elegant solution that will actually hold up.</p>
+        <h2 class="section-title">Things materials made</h2>
+        <p class="section-intro">When you apply fluid paint to a three-dimensional object, gravity works differently — it follows the curve, pools at the low point, runs toward the edge. When you build a skin of paint on a flat surface and peel it off and wrap it around something else, you’re transferring the record of one physical event onto a completely different form.</p>
+      </div>
+      <div class="making-grid" id="materialsGrid">
+        <!-- Cards rendered from data/making.json -->
+        <div class="empty-state" id="materialsEmpty">
+          <p>Nothing here with that filter yet.</p>
+          <button onclick="clearMakingFilter()">Show everything</button>
         </div>
       </div>
-      <div class="am-stats">
-        <div class="am-stat">
-          <span class="am-stat-num">5★</span>
-          <span class="am-stat-label">Pax et Amor — stained glass, cardboard, and fur wall art</span>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 3: THINGS CONSTRAINTS MADE -->
+  <section class="making-section" id="section-constraints">
+    <div class="making-inner">
+      <div class="section-head">
+        <div class="section-head-row">
+          <div class="section-dot"></div>
+          <span class="section-label">03</span>
         </div>
-        <div class="am-stat">
-          <span class="am-stat-num">4.5★</span>
-          <span class="am-stat-label">The Pax Box — cat-proof, motion-activated, paint-poured side table</span>
+        <h2 class="section-title">Things constraints made</h2>
+        <p class="section-intro">A problem exists. Available materials are finite. The standard of quality is non-negotiable. These are the best conditions for making something good — the constraint is what forces the interesting decision. No budget for the elegant solution means inventing one.</p>
+      </div>
+      <div class="making-grid" id="constraintsGrid">
+        <!-- Cards rendered from data/making.json -->
+        <div class="empty-state" id="constraintsEmpty">
+          <p>Nothing here with that filter yet.</p>
+          <button onclick="clearMakingFilter()">Show everything</button>
         </div>
-        <div class="am-stat">
-          <span class="am-stat-num">∞</span>
-          <span class="am-stat-label">Lori-ventions deployed in the wild — documentation in progress</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY MAKING -->
+  <section class="why-making">
+    <div class="wm-inner">
+      <div>
+        <div class="wm-eyebrow">
+          <div class="wm-eyebrow-dot"></div>
+          <span class="wm-eyebrow-label">Why making matters</span>
+        </div>
+        <h2 class="wm-title">Paint pouring got me<br>because of the physics.</h2>
+        <div class="wm-body">
+          <p>The weight of each pigment determines how it moves through the carrier fluid. Silicone oil changes the surface tension and opens cells. The pour sequence — which color hits the canvas first, which sits on top — shapes what gets buried and what rises. You can understand all of this deeply and still not fully predict what happens when the paint starts to move.</p>
+          <p>That’s the part I can’t stop chasing. The variables are mine. The outcome isn’t. Every pour is a negotiation between what I set up and what the fluid decides, and the results of that negotiation are consistently more interesting than anything I would have designed on purpose.</p>
+          <p>The constraint-based work — the lamp, the lightbox, the cardboard stool, the Pax house — comes from a different kind of pleasure: the specific satisfaction of making something real from what’s actually available. No budget for the right material means finding out what the wrong material can actually do. The plastic bag roof is waterproof. The cardboard stool holds my weight. The wicker shade became stained glass.</p>
+          <p>This is not a side project. This is where I go when I need to make something with my hands, get something wrong, figure out why, and try it again.</p>
+        </div>
+      </div>
+      <div class="wm-right">
+        <div class="wm-pull">
+          <p class="wm-pull-text">Every pour is a negotiation between what I set up and <em>what the fluid decides.</em></p>
+        </div>
+        <div class="wm-note">
+          <p class="wm-note-label">On found materials</p>
+          <p class="wm-note-text">Found materials have their own logic. Following it is more interesting than overriding it. The plastic bag roof is waterproof. The cardboard stool holds body weight. The wicker shade became stained glass.</p>
+        </div>
+        <div class="wm-note">
+          <p class="wm-note-label">On the rules</p>
+          <p class="wm-note-text">The rules for paint pouring are well established. Certain ratios work. I read them, understood them, and then started asking what happens if you don’t follow them. The interesting pieces came from the wrong ratio, the unexpected substrate, the pour that went sideways.</p>
         </div>
       </div>
     </div>
@@ -355,6 +315,77 @@
   </footer>
 
   <script>
+    // ── DATA & RENDER ─────────────────────────────────────────────────────────
+    async function renderMaking() {
+      try {
+        const res = await fetch('data/making.json');
+        const data = await res.json();
+
+        const sections = { gravity: [], materials: [], constraints: [] };
+        data.cards.forEach(card => {
+          if (sections[card.section]) sections[card.section].push(card);
+        });
+
+        ['gravity', 'materials', 'constraints'].forEach(section => {
+          const grid = document.getElementById(section + 'Grid');
+          const empty = document.getElementById(section + 'Empty');
+          const cards = sections[section];
+          if (!cards.length) return;
+
+          const html = cards.map(card => buildCard(card)).join('\n');
+          // Insert before empty state
+          empty.insertAdjacentHTML('beforebegin', html);
+
+          // Attach click handlers
+          grid.querySelectorAll('.making-card[data-href]').forEach(el => {
+            el.addEventListener('click', function(e) {
+              if (e.target.closest('.mc-tag')) return;
+              window.location.href = this.dataset.href;
+            });
+          });
+        });
+
+        // Handle URL param filter after render
+        const params = new URLSearchParams(window.location.search);
+        const t = params.get('type');
+        if (t) {
+          const btn = document.querySelector(\`.filter-btn[data-filter="${t}"]\`);
+          if (btn) filterMaking(t, btn);
+        }
+      } catch(err) {
+        console.error('Making render failed:', err);
+      }
+    }
+
+    function buildCard(card) {
+      const imageHtml = card.image
+        ? `<img class="mc-image" src="${card.image}" alt="${card.title}" loading="lazy">`
+        : `<div class="mc-placeholder ${card.placeholderColor || card.section}">
+            <div class="mc-placeholder-shape" style="width:120px;height:120px;background:var(--teal-600);top:-20px;right:-20px;"></div>
+            <div class="mc-placeholder-shape" style="width:60px;height:60px;background:var(--lime-400);bottom:20px;left:20px;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);border-radius:0;"></div>
+            <span style="font-family:var(--font-display);font-size:0.9rem;font-weight:300;color:var(--navy-200);position:relative;z-index:1;">Photo coming soon</span>
+          </div>`;
+
+      const tagsHtml = (card.tags || []).map(t =>
+        `<span class="mc-tag" data-tag="${t.toLowerCase().replace(/\s+/g,'-')}">${t}</span>`
+      ).join('\n');
+
+      const hrefAttr = card.href ? `data-href="${card.href}"` : '';
+      const statusBadge = card.status ? `<span style="font-size:0.65rem;font-weight:600;padding:2px 8px;border-radius:100px;background:var(--lime-100);color:var(--lime-700);margin-left:0.5rem;">${card.status}</span>` : '';
+
+      return `<div class="making-card" data-section="${card.section}" ${hrefAttr}>
+        ${imageHtml}
+        <div class="mc-body">
+          <p class="mc-type">${card.type}${statusBadge}</p>
+          <h3 class="mc-title">${card.title}</h3>
+          <p class="mc-desc">${card.description}</p>
+          <div class="mc-tags">${tagsHtml}</div>
+          <div class="mc-reveal">${card.reveal || 'See the project'}</div>
+        </div>
+      </div>`;
+    }
+
+    // ── FILTER ────────────────────────────────────────────────────────────────
     let activeFilter = null;
 
     function filterMaking(type, btn) {
@@ -364,46 +395,43 @@
       if (type === 'all') { clearMakingFilter(); return; }
 
       activeFilter = type;
-      let visible = 0;
-      document.querySelectorAll('.making-card').forEach(card => {
-        if (card.dataset.type === type) { card.classList.remove('hidden'); visible++; }
-        else { card.classList.add('hidden'); }
+
+      // Show/hide sections
+      ['gravity', 'materials', 'constraints'].forEach(s => {
+        const section = document.getElementById('section-' + s);
+        const dividers = document.querySelectorAll('.section-divider');
+        if (section) section.style.display = (s === type) ? '' : 'none';
+        dividers.forEach(d => d.style.display = 'none');
       });
+
+      // Show all cards within the visible section
+      document.querySelectorAll('.making-card').forEach(c => c.classList.remove('hidden'));
 
       const banner = document.getElementById('activeBanner');
       const label = document.getElementById('activeBannerLabel');
       banner.classList.add('visible');
-      const labelMap = { 'paint-pouring': 'Paint Pouring', 'craftvention': 'Craftventions', 'lori-vention': 'Lori-ventions' };
+      const labelMap = {
+        'gravity': 'Things gravity made',
+        'materials': 'Things materials made',
+        'constraints': 'Things constraints made'
+      };
       label.textContent = labelMap[type] || type;
-      document.getElementById('makingEmpty').classList.toggle('visible', visible === 0);
     }
 
     function clearMakingFilter() {
       activeFilter = null;
+      ['gravity', 'materials', 'constraints'].forEach(s => {
+        const section = document.getElementById('section-' + s);
+        if (section) section.style.display = '';
+      });
       document.querySelectorAll('.making-card').forEach(c => c.classList.remove('hidden'));
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       document.querySelector('.filter-btn').classList.add('active');
       document.getElementById('activeBanner').classList.remove('visible');
-      document.getElementById('makingEmpty').classList.remove('visible');
+      document.querySelectorAll('.section-divider').forEach(d => d.style.display = '');
     }
 
-    // Card navigation - only navigate if card has a data-href and click was not on a tag
-    document.querySelectorAll('.making-card[data-href]').forEach(card => {
-      card.addEventListener('click', function(e) {
-        if (e.target.closest('.mc-tag')) return; // tag clicks filter, don't navigate
-        window.location.href = this.dataset.href;
-      });
-    });
-
-    // Handle URL param
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const t = params.get('type');
-      if (t) {
-        const btn = document.querySelector(`.filter-btn[onclick*="${t}"]`);
-        if (btn) filterMaking(t, btn);
-      }
-    });
+    renderMaking();
   </script>
 </body>
 </html>
