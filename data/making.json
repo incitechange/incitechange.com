@@ -13,9 +13,10 @@
         "dark ground"
       ],
       "href": null,
-      "image": null,
+      "image": "images/swipe-blue.jpg",
       "placeholderColor": "gravity",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#05051a"
     },
     {
       "id": "swipe-teal",
@@ -30,9 +31,10 @@
         "designed to match"
       ],
       "href": null,
-      "image": null,
+      "image": "images/swipe-teal.jpg",
       "placeholderColor": "gravity",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#031008"
     },
     {
       "id": "round-pour",
@@ -46,9 +48,10 @@
         "leftover palette"
       ],
       "href": null,
-      "image": null,
+      "image": "images/round-pour.jpg",
       "placeholderColor": "gravity",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#050814"
     },
     {
       "id": "dutch-cigar",
@@ -63,9 +66,10 @@
         "small format"
       ],
       "href": null,
-      "image": null,
+      "image": "images/dutch-cigar.jpg",
       "placeholderColor": "gravity",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#f5f5f5"
     },
     {
       "id": "shelf",
@@ -80,9 +84,10 @@
         "green and teal"
       ],
       "href": null,
-      "image": null,
+      "image": "images/shelf.jpg",
       "placeholderColor": "gravity",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#03100a"
     },
     {
       "id": "vases-skins",
@@ -97,9 +102,10 @@
         "applied"
       ],
       "href": null,
-      "image": null,
+      "image": "images/vases-skins.jpg",
       "placeholderColor": "materials",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#050e1a"
     },
     {
       "id": "cup-turner",
@@ -114,9 +120,10 @@
         "rotation"
       ],
       "href": null,
-      "image": null,
+      "image": "images/cup-turner.jpg",
       "placeholderColor": "materials",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#050814"
     },
     {
       "id": "whisky-bottle",
@@ -132,9 +139,10 @@
         "vertical"
       ],
       "href": null,
-      "image": null,
+      "image": "images/whisky-bottle.jpg",
       "placeholderColor": "materials",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#041a10"
     },
     {
       "id": "dark-vase",
@@ -149,9 +157,10 @@
         "banding"
       ],
       "href": null,
-      "image": null,
+      "image": "images/dark-vase.jpg",
       "placeholderColor": "materials",
-      "reveal": "See the work"
+      "reveal": "See the work",
+      "bgColor": "#0a0a0a"
     },
     {
       "id": "lamp",
@@ -166,9 +175,10 @@
         "found object"
       ],
       "href": "making-paint-pour.html",
-      "image": null,
+      "image": "images/lamp.jpg",
       "placeholderColor": "constraints",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#1a0a00"
     },
     {
       "id": "pax-lightbox",
@@ -184,9 +194,10 @@
         "timer lights"
       ],
       "href": "making-pax-et-amor.html",
-      "image": null,
+      "image": "images/pax-lightbox.jpg",
       "placeholderColor": "constraints",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#0a0514"
     },
     {
       "id": "cardboard-stool",
@@ -201,10 +212,11 @@
         "furniture"
       ],
       "href": null,
-      "image": null,
+      "image": "images/cardboard-stool.jpg",
       "placeholderColor": "constraints",
       "reveal": "See the project",
-      "status": "Ongoing series"
+      "status": "Ongoing series",
+      "bgColor": "#0a0a0a"
     },
     {
       "id": "pax-box",
@@ -219,9 +231,10 @@
         "found materials"
       ],
       "href": "making-pax-box.html",
-      "image": null,
+      "image": "images/pax-box.jpg",
       "placeholderColor": "constraints",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#050e1a"
     },
     {
       "id": "pax-house",
@@ -238,7 +251,8 @@
       "href": null,
       "image": null,
       "placeholderColor": "constraints",
-      "reveal": "See the project"
+      "reveal": "See the project",
+      "bgColor": "#080808"
     }
   ]
 }
