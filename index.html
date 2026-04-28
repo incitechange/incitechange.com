@@ -535,6 +535,10 @@
     .tag-lime    { background: var(--lime-100);  color: var(--lime-700); }
     .tag-neutral { background: var(--ink-100);   color: var(--ink-600); }
 
+    /* Non-filterable tags -- display only, not clickable */
+    span.tag { cursor: default; opacity: 0.75; }
+    span.tag:hover { filter: none; transform: none; }
+
     /* Linked tags — clickable, open filtered work page */
     a.tag-link {
       text-decoration: none;
@@ -1110,7 +1114,7 @@
         <blockquote class="tb-quote">
           "She untangles and reframes chaotic team systems and emotions into fixable processes — with empathy and calmness. I saw it firsthand."
         </blockquote>
-        <p class="tb-attr">Design vendor, enterprise web delivery engagement · 2025</p>
+        <p class="tb-attr">Design vendor, Bridge Partners engagement · 2025</p>
       </div>
     </div>
   </section>
@@ -1218,10 +1222,10 @@
     }
 
     function buildMakingCard(card) {
-      return `<div class="making-card ${card.color}">
-          <a href="${card.href}" class="card-link-overlay"
-             aria-label="${card.title}" tabindex="0"></a>
-          <p class="mc-tag">${card.tag}</p>
+      const hasLink = card.href && card.href !== "null";
+      return `<div class="making-card ${card.color} ${hasLink ? "making-card-linked" : ""}">
+          ${hasLink ? `<a href="${card.href}" class="card-link-overlay" aria-label="${card.title}" tabindex="0"></a>` : ""}
+          <p class="mc-tag">${card.type}</p>
           <h3 class="mc-title">${card.title}</h3>
           <p class="mc-desc">${card.description}</p>
           <div class="mc-reveal">${card.reveal}</div>

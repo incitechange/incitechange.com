@@ -396,7 +396,7 @@
         `<span class="mc-tag" data-tag="${t.toLowerCase().replace(/\s+/g,'-')}">${t}</span>`
       ).join('\n');
 
-      const hrefAttr = card.href ? `data-href="${card.href}"` : '';
+      const hrefAttr = (card.href && card.href !== "null") ? `data-href="${card.href}"` : '';
       const statusBadge = card.status ? `<span style="font-size:0.65rem;font-weight:600;padding:2px 8px;border-radius:100px;background:var(--lime-100);color:var(--lime-700);margin-left:0.5rem;">${card.status}</span>` : '';
 
       return `<div class="making-card" data-section="${card.section}" ${hrefAttr}>
