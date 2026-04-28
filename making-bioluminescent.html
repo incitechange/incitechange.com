@@ -18,44 +18,35 @@
     .nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--ink-100);padding:0 clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:4rem;height:64px;}.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--navy-800);letter-spacing:-0.02em;flex-shrink:0;}.nav-logo span{color:var(--lime-400);}.nav-links{display:flex;gap:2.5rem;list-style:none;}.nav-links a{font-size:0.875rem;font-weight:500;color:var(--ink-600);letter-spacing:0.02em;transition:color var(--transition-base);position:relative;padding-bottom:2px;}.nav-links a:hover{color:var(--navy-800);}.nav-links a.active{color:var(--navy-800);}.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--lime-400);border-radius:2px;}
 
     /* BACK BAR */
-    .back-bar{padding:1rem clamp(1.5rem,5vw,4rem);border-bottom:1px solid var(--ink-100);}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--ink-500);transition:color var(--transition-base);}.back-link::before{content:'\2190';}.back-link:hover{color:var(--navy-800);}
+    .back-bar{background:var(--navy-950);padding:0.875rem clamp(1.5rem,5vw,4rem);border-bottom:1px solid rgba(255,255,255,0.06);}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;font-weight:500;color:var(--navy-400);transition:color var(--transition-base);}.back-link::before{content:'\2190';}.back-link:hover{color:var(--cream);}
 
-    /* HERO HEADER -- deep navy to match the piece */
-    .mk-header{background:var(--navy-950);padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3rem);position:relative;overflow:hidden;}
-    .mk-shape-1{position:absolute;top:-80px;right:-60px;width:320px;height:320px;background:var(--navy-800);border-radius:50%;opacity:0.6;pointer-events:none;}
-    .mk-shape-2{position:absolute;bottom:-30px;left:8%;width:180px;height:180px;background:var(--teal-900);border-radius:50%;opacity:0.5;pointer-events:none;}
-    .mk-shape-3{position:absolute;top:40%;right:15%;width:60px;height:60px;background:var(--teal-700);border-radius:50%;opacity:0.3;pointer-events:none;}
-    .mk-header-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}
-    .mk-type-badge{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-400);margin-bottom:1rem;}
-    .mk-headline{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.05;letter-spacing:-0.03em;color:var(--cream);margin-bottom:1rem;}
+    /* HERO -- text only, no image, dark field */
+    .mk-header{background:var(--navy-950);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,3vw,2.5rem);position:relative;overflow:hidden;}
+    .mk-shape-1{position:absolute;top:-80px;right:-60px;width:300px;height:300px;background:var(--navy-800);border-radius:50%;opacity:0.4;pointer-events:none;}
+    .mk-shape-2{position:absolute;bottom:-20px;left:6%;width:140px;height:140px;background:var(--teal-900);border-radius:50%;opacity:0.4;pointer-events:none;}
+    .mk-header-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;align-items:end;gap:3rem;}
+    .mk-header-text{}
+    .mk-type-badge{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-400);margin-bottom:0.875rem;}
+    .mk-headline{font-family:var(--font-display);font-size:clamp(2.75rem,5vw,4.5rem);font-weight:300;line-height:1.0;letter-spacing:-0.03em;color:var(--cream);margin-bottom:0.875rem;}
     .mk-headline em{font-style:italic;color:var(--teal-300);}
-    .mk-subhead{font-size:1.0625rem;font-weight:300;color:var(--navy-300);line-height:1.65;max-width:560px;margin-bottom:1.75rem;}
-    .mk-meta{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;}
-    .mk-meta-item{font-size:0.8rem;color:var(--navy-400);}.mk-meta-item strong{color:var(--lime-400);font-weight:500;}
+    .mk-subhead{font-size:1.0625rem;font-weight:300;color:var(--navy-300);line-height:1.65;max-width:520px;}
+    .mk-meta{display:flex;flex-direction:column;gap:0.625rem;text-align:right;flex-shrink:0;}
+    .mk-meta-item{font-size:0.8rem;color:var(--navy-500);white-space:nowrap;}
+    .mk-meta-item strong{color:var(--lime-400);font-weight:500;display:block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.1rem;}
 
-    /* HERO IMAGE */
-    .hero-image-section{background:var(--navy-950);padding:0 clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3rem);}
-    .hero-image-inner{max-width:1200px;margin:0 auto;}
-    .hero-img{width:100%;max-height:560px;object-fit:contain;border-radius:var(--radius-xl);display:block;}
-    .hero-img-caption{font-size:0.8rem;color:var(--navy-400);margin-top:0.75rem;font-style:italic;}
+    /* FULL-WIDTH PAINTING IMAGE on dark bg */
+    .painting-stage{background:var(--navy-950);padding:0 0 clamp(2rem,4vw,3rem);}
+    .painting-img{display:block;width:100%;max-height:600px;object-fit:contain;}
+    .painting-caption{max-width:1200px;margin:0.75rem auto 0;padding:0 clamp(1.5rem,5vw,4rem);font-size:0.8rem;color:var(--navy-500);font-style:italic;}
 
-    /* BODY -- two-column with sidebar */
-    .mk-body{max-width:1200px;margin:0 auto;padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start;}
-    .mk-main{}
-    .mk-sidebar{}
+    /* BODY -- two-column prose + sidebar */
+    .mk-body{max-width:1200px;margin:0 auto;padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start;}
 
     /* MAIN PROSE */
-    .mk-section{margin-bottom:2.75rem;}
-    .mk-section:last-child{margin-bottom:0;}
+    .mk-section{margin-bottom:2.75rem;}.mk-section:last-child{margin-bottom:0;}
     .mk-section-label{font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-600);margin-bottom:0.625rem;}
     .mk-h2{font-family:var(--font-display);font-size:clamp(1.375rem,2.5vw,1.75rem);font-weight:400;color:var(--navy-800);margin-bottom:0.875rem;line-height:1.2;}
-    .mk-p{font-size:1rem;font-weight:300;color:var(--ink-700);line-height:1.85;margin-bottom:1rem;}
-    .mk-p:last-child{margin-bottom:0;}
-    .mk-p em{font-style:italic;color:var(--navy-700);}
-
-    /* PULL QUOTE */
-    .pull-quote{border-left:3px solid var(--teal-400);padding:0.875rem 1.25rem;margin:1.75rem 0;background:var(--white);border-radius:0 var(--radius-md) var(--radius-md) 0;}
-    .pull-quote p{font-family:var(--font-display);font-size:1.125rem;font-weight:300;font-style:italic;color:var(--navy-800);line-height:1.5;}
+    .mk-p{font-size:1rem;font-weight:300;color:var(--ink-700);line-height:1.85;margin-bottom:1rem;}.mk-p:last-child{margin-bottom:0;}
 
     /* STEP LIST */
     .step-list{margin:1.25rem 0;display:flex;flex-direction:column;gap:0.75rem;}
@@ -63,24 +54,33 @@
     .step-num{font-size:0.75rem;font-weight:600;color:var(--teal-500);font-family:var(--font-display);}
     .step-text{font-size:0.9375rem;font-weight:300;color:var(--ink-700);line-height:1.7;}
 
+    /* PULL QUOTE */
+    .pull-quote{border-left:3px solid var(--teal-400);padding:0.875rem 1.25rem;margin:1.75rem 0;background:var(--white);border-radius:0 var(--radius-md) var(--radius-md) 0;}
+    .pull-quote p{font-family:var(--font-display);font-size:1.125rem;font-weight:300;font-style:italic;color:var(--navy-800);line-height:1.5;}
+
+    /* INLINE DETAIL IMAGE */
+    .detail-image-block{margin:1.75rem -0.5rem;background:var(--ink-900);border-radius:var(--radius-lg);overflow:hidden;}
+    .detail-img{display:block;width:100%;max-height:420px;object-fit:cover;object-position:center 40%;}
+    .detail-caption{padding:0.625rem 1rem;font-size:0.78rem;color:var(--ink-400);font-style:italic;}
+
     /* LINKED PIECE CARD */
     .linked-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);overflow:hidden;margin-top:1rem;display:block;transition:all var(--transition-base);color:inherit;}
     .linked-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,43,69,0.1);border-color:var(--teal-200);}
-    .linked-card-img{width:100%;height:140px;object-fit:cover;display:block;background:var(--navy-900);}
+    .linked-card-swatch{width:100%;height:100px;background:linear-gradient(135deg,var(--navy-900),var(--teal-900));display:flex;align-items:center;justify-content:center;}
     .linked-card-body{padding:1rem;}
     .linked-card-type{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime-700);margin-bottom:0.3rem;}
     .linked-card-title{font-family:var(--font-display);font-size:1rem;font-weight:400;color:var(--navy-800);}
     .linked-card-note{font-size:0.8125rem;color:var(--ink-500);margin-top:0.3rem;line-height:1.5;}
 
-    /* SIDEBAR TECH NOTES */
+    /* SIDEBAR */
+    .mk-sidebar{position:sticky;top:80px;}
     .sidebar-block{background:var(--navy-800);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.25rem;}
     .sidebar-label{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime-400);margin-bottom:1rem;display:block;}
-    .sidebar-row{display:flex;flex-direction:column;gap:0.75rem;}
-    .sidebar-item{}
-    .sidebar-item-name{font-size:0.75rem;font-weight:600;color:var(--navy-200);margin-bottom:0.2rem;}
-    .sidebar-item-val{font-size:0.8125rem;font-weight:300;color:var(--navy-300);line-height:1.55;}
-    .sidebar-divider{height:1px;background:var(--navy-700);margin:0.75rem 0;}
-
+    .sidebar-row{display:flex;flex-direction:column;gap:0;}
+    .sidebar-item{padding:0.625rem 0;}
+    .sidebar-divider{height:1px;background:var(--navy-700);}
+    .sidebar-item-name{font-size:0.72rem;font-weight:600;color:var(--navy-300);margin-bottom:0.2rem;text-transform:uppercase;letter-spacing:0.06em;}
+    .sidebar-item-val{font-size:0.8125rem;font-weight:300;color:var(--navy-400);line-height:1.55;}
     .sidebar-note{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.25rem;}
     .sidebar-note-label{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-600);margin-bottom:0.625rem;display:block;}
     .sidebar-note p{font-size:0.875rem;font-weight:300;color:var(--ink-600);line-height:1.65;}
@@ -88,16 +88,14 @@
     /* MORE MAKING */
     .more-making{background:var(--ink-50);border-top:1px solid var(--ink-100);padding:clamp(3rem,5vw,4rem) clamp(1.5rem,5vw,4rem);}
     .more-inner{max-width:1200px;margin:0 auto;}
-    .more-header{display:flex;align-items:baseline;gap:0.875rem;margin-bottom:1.5rem;}
-    .more-dot{width:8px;height:8px;border-radius:50%;background:var(--lime-400);flex-shrink:0;position:relative;top:-1px;}
+    .more-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
+    .more-dot{width:8px;height:8px;border-radius:50%;background:var(--lime-400);flex-shrink:0;}
     .more-eyebrow{font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-400);}
-    .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:0.5rem;}
-    .more-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.5rem;cursor:pointer;transition:all var(--transition-base);text-decoration:none;color:inherit;display:block;}
+    .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+    .more-card{background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.5rem;transition:all var(--transition-base);display:block;color:inherit;}
     .more-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,43,69,0.1);border-color:var(--teal-200);}
     .more-type{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime-700);margin-bottom:0.375rem;}
     .more-title{font-family:var(--font-display);font-size:1.0625rem;font-weight:400;color:var(--navy-800);line-height:1.25;}
-    .more-see-all{display:inline-flex;align-items:center;gap:0.375rem;font-size:0.875rem;font-weight:500;color:var(--teal-600);margin-top:1.5rem;}
-    .more-see-all::after{content:'\2192';}
 
     /* FOOTER */
     .footer{background:var(--navy-950);padding:2rem clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
@@ -105,7 +103,11 @@
     .footer-nav{display:flex;gap:2rem;list-style:none;}.footer-nav a{font-size:0.8125rem;color:var(--navy-400);transition:color var(--transition-base);}.footer-nav a:hover{color:var(--navy-200);}
     .footer-copy{font-size:0.75rem;color:var(--navy-600);}
 
-    @media(max-width:900px){.mk-body{grid-template-columns:1fr;}.mk-sidebar{order:-1;}.more-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:900px){
+      .mk-header-inner{grid-template-columns:1fr;}.mk-meta{flex-direction:row;text-align:left;flex-wrap:wrap;}.mk-meta-item strong{display:inline;margin-bottom:0;}
+      .mk-body{grid-template-columns:1fr;}.mk-sidebar{position:static;order:-1;}
+      .more-grid{grid-template-columns:1fr 1fr;}
+    }
     @media(max-width:600px){.nav-links{gap:1.25rem;}.more-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -126,35 +128,36 @@
     <a href="making.html" class="back-link">Back to Making</a>
   </div>
 
-  <!-- HERO -->
+  <!-- HERO: TEXT ONLY -->
   <div class="mk-header">
     <div class="mk-shape-1"></div>
     <div class="mk-shape-2"></div>
-    <div class="mk-shape-3"></div>
     <div class="mk-header-inner">
-      <p class="mk-type-badge">Dutch Pour &middot; Arteza Metallics</p>
-      <h1 class="mk-headline">Bioluminescent.</h1>
-      <p class="mk-subhead">I was going for a comet. The paint had other ideas.</p>
+      <div class="mk-header-text">
+        <p class="mk-type-badge">Dutch Pour &middot; Arteza Metallics</p>
+        <h1 class="mk-headline">Bioluminescent.</h1>
+        <p class="mk-subhead">I was going for a comet. The paint had other ideas.</p>
+      </div>
       <div class="mk-meta">
-        <span class="mk-meta-item"><strong>Palette</strong> Arteza Ultramarine, metallic blues</span>
-        <span class="mk-meta-item"><strong>Technique</strong> Dutch pour</span>
-        <span class="mk-meta-item"><strong>State</strong> Finished</span>
+        <div class="mk-meta-item"><strong>Palette</strong>Arteza Ultramarine + metallic blues</div>
+        <div class="mk-meta-item"><strong>Technique</strong>Dutch pour</div>
+        <div class="mk-meta-item"><strong>State</strong>Finished</div>
       </div>
     </div>
   </div>
 
-  <!-- HERO IMAGE -->
-  <div class="hero-image-section">
-    <div class="hero-image-inner">
-      <img src="images/swipe-blue.jpg" alt="Bioluminescent — Dutch pour on canvas, a luminous blue form against deep navy" class="hero-img" loading="eager">
-      <p class="hero-img-caption">Azteca Ultramarine Blue on canvas &middot; Arteza metallic blues with silicone oil &middot; Dutch pour</p>
-    </div>
+  <!-- FULL-WIDTH PAINTING: canvas on flat dark bg -->
+  <div class="painting-stage">
+    <img src="images/bioluminescent-main.jpg"
+         alt="Bioluminescent — Dutch pour, Azteca Ultramarine Blue on canvas"
+         class="painting-img"
+         loading="eager">
+    <p class="painting-caption">Azteca Ultramarine Blue on canvas &middot; Arteza metallic blues with silicone oil &middot; Dutch pour</p>
   </div>
 
   <!-- BODY + SIDEBAR -->
   <div class="mk-body">
 
-    <!-- MAIN CONTENT -->
     <div class="mk-main">
 
       <div class="mk-section">
@@ -168,7 +171,6 @@
         <p class="mk-section-label">The layers</p>
         <h2 class="mk-h2">Physics, in order.</h2>
         <p class="mk-p">The Dutch pour doesn&rsquo;t use a cup flip or a swipe. The colors go directly onto the wet canvas in a puddle, layered one at a time. The sequence matters because the sequence is physics.</p>
-
         <div class="step-list">
           <div class="step">
             <span class="step-num">01</span>
@@ -180,7 +182,7 @@
           </div>
           <div class="step">
             <span class="step-num">03</span>
-            <span class="step-text"><strong>Ultramarine on top.</strong> The heaviest paint goes in last. This is counterintuitive until you understand the goal: it needs to push down through the lighter metallic layers when the air hits.</span>
+            <span class="step-text"><strong>Ultramarine on top.</strong> The heaviest paint goes in last. Counterintuitive until you understand the goal: it needs to push down through the lighter metallic layers when the air hits.</span>
           </div>
         </div>
       </div>
@@ -195,6 +197,15 @@
         </div>
 
         <p class="mk-p">The torch is a separate pass. Six inches from the canvas, five-second sweeps. It pops the air bubbles that form during pouring, increases cell generation by temporarily changing the paint&rsquo;s viscosity, and encourages the paint to move within itself one more time. More bubbles visible: another pass. The torch runs on every piece &mdash; it&rsquo;s not finishing, it&rsquo;s part of the making.</p>
+
+        <!-- DETAIL IMAGE: cell structures up close -->
+        <div class="detail-image-block">
+          <img src="images/bioluminescent-detail.jpg"
+               alt="Close-up: cell and ring structures in Bioluminescent"
+               class="detail-img"
+               loading="lazy">
+          <p class="detail-caption">The ring and arch formations. These are where the silicone oil opened cells at the surface &mdash; each ring is a place where the oil resisted the medium and the paint pulled apart around it.</p>
+        </div>
       </div>
 
       <div class="mk-section">
@@ -202,17 +213,15 @@
         <h2 class="mk-h2">A comet became something else.</h2>
         <p class="mk-p">I wanted a comet &mdash; a fast, directed thing moving through dark space. What arrived was slower and stranger. The Ultramarine settled into a central mass with a trailing edge, but the shape reads as biological rather than astronomical. A nudibranch, maybe: a sea creature, electric blue, lit from within, trailing edges dissolving into the dark field around it.</p>
         <p class="mk-p">The dark field and the central form are the same paint. Non-metallic Ultramarine as the base, Ultramarine again on top of the puddle. The same color behaving differently because of where it was in the sequence, what it had to move through, what the air did to it. The semi-transparency of the pigment means the metallic layers underneath are still visible in the finished piece &mdash; you can see the structure of how it was built, not just the surface.</p>
-        <p class="mk-p">I called it Bioluminescent. It feels right.</p>
       </div>
 
       <div class="mk-section">
         <p class="mk-section-label">The leftover</p>
         <h2 class="mk-h2">The session didn&rsquo;t end here.</h2>
-        <p class="mk-p">When this pour was finished there was paint left &mdash; in the cups, on the palette. Rather than discard it, I did a flip cup on a round canvas: stacked the colors in a cup, inverted it, lifted. Torch pass. The round piece carries the same palette, the same session, the same conversation between pigment and medium. It&rsquo;s a separate work. But it comes from here.</p>
-
+        <p class="mk-p">When this pour was finished there was paint left &mdash; in the cups, on the palette. Rather than discard it, I did a flip cup on a round canvas: stacked the colors in a cup, inverted it, pulled it up and let the paint spread. Torch pass. The round piece carries the same palette, the same session, the same conversation between pigment and medium. It&rsquo;s a separate work. But it comes from here.</p>
         <a href="making-round-pour.html" class="linked-card">
-          <div class="linked-card-img" style="background:linear-gradient(135deg,var(--navy-900),var(--teal-900));display:flex;align-items:center;justify-content:center;">
-            <div style="width:70%;height:70%;background:radial-gradient(circle,#2255cc,#0d2a88);border-radius:50%;opacity:0.9;"></div>
+          <div class="linked-card-swatch">
+            <div style="width:65%;height:65%;background:radial-gradient(circle,#2255cc,#0d2a88);border-radius:50%;opacity:0.9;"></div>
           </div>
           <div class="linked-card-body">
             <p class="linked-card-type">Fluid pour &middot; Round canvas</p>
@@ -226,66 +235,50 @@
 
     <!-- SIDEBAR -->
     <aside class="mk-sidebar">
-
       <div class="sidebar-block">
         <span class="sidebar-label">Technical notes</span>
         <div class="sidebar-row">
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Paint</p>
-            <p class="sidebar-item-val">Arteza Metallic Acrylics including Azteca Ultramarine Blue (non-metallic base layer)</p>
+            <p class="sidebar-item-val">Arteza Metallic Acrylics &mdash; including Azteca Ultramarine Blue (non-metallic base layer)</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Medium</p>
             <p class="sidebar-item-val">Water + Liquitex Pouring Medium</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Additives</p>
             <p class="sidebar-item-val">Silicone oil in one metallic blue layer</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Technique</p>
             <p class="sidebar-item-val">Dutch pour &mdash; fluid base, layered puddle, air movement</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Tools</p>
-            <p class="sidebar-item-val">Hairdryer (cool, low speed) &middot; Straw &middot; Butane torch</p>
+            <p class="sidebar-item-val">Hairdryer (cool, low) &middot; Straw &middot; Butane torch</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">Support</p>
             <p class="sidebar-item-val">Horizontal canvas</p>
           </div>
-
           <div class="sidebar-divider"></div>
-
           <div class="sidebar-item">
             <p class="sidebar-item-name">State</p>
             <p class="sidebar-item-val">Finished</p>
           </div>
-
         </div>
       </div>
 
       <div class="sidebar-note">
         <span class="sidebar-note-label">On Ultramarine</span>
-        <p>Azteca Ultramarine Blue is one of the heaviest pigments in the Arteza line. It is also partially transparent, which means layers beneath it remain visible in the finished piece. That combination &mdash; weight and translucency &mdash; is what makes it useful as both a ground and a top layer.</p>
+        <p>Azteca Ultramarine Blue is one of the heaviest pigments in the Arteza line. It is also partially transparent, which means layers beneath it remain visible in the finished piece. That combination &mdash; weight and translucency &mdash; is what makes it useful as both a ground and a top layer in the same piece.</p>
       </div>
-
     </aside>
 
   </div><!-- /mk-body -->
