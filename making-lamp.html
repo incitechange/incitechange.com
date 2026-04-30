@@ -77,19 +77,40 @@
     .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
     .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
     .back-link:hover { color: var(--teal-800); }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
+    .nav-logo span { color: var(--lime-400); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--ink-600); letter-spacing: 0.02em; transition: color var(--transition-base); position: relative; padding-bottom: 2px; }
+    .nav-links a:hover { color: var(--navy-800); }
+    .nav-links a.active { color: var(--navy-800); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--lime-400); border-radius: 2px; }
+
+    /* FOOTER */
+    .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .footer-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy-300); }
+    .footer-logo span { color: var(--lime-400); }
+    .footer-nav { display: flex; gap: 2rem; list-style: none; }
+    .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
+    .footer-nav a:hover { color: var(--navy-200); }
+    .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
+
+    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
   </style>
 </head>
 <body>
 
-  <header class="header">
+  <header class="nav">
     <div class="header-inner">
-      <a href="index.html" class="logo">lori<span>.</span></a>
+      <a href="index.html" class="nav-logo">lori<span>.</span></a>
       <nav>
-        <ul class="nav-list">
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="making.html" class="nav-link">Making</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="making.html" class="active">Making</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
