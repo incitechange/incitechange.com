@@ -9,8 +9,8 @@
       "description": "I was going for a comet. The paint had other ideas. Azteca Ultramarine Blue as ground and top layer, metallic blues with silicone oil in between, Dutch pour with a hairdryer and straw. The result was biological rather than astronomical.",
       "tags": ["dutch pour", "canvas", "ultramarine", "cells", "blue"],
       "href": "making-bioluminescent.html",
-      "image": null,
-      "placeholderColor": "gravity",
+      "image": "images/making-bioluminescent-card.png",
+      "bgColor": "#0a1e30",
       "reveal": "See the project"
     },
 
@@ -19,11 +19,11 @@
       "section": "gravity",
       "type": "Paint Pouring",
       "title": "Across the room.",
-      "description": "I had a shower curtain I loved. I decided to make the painting that went with it. Swipe pour with a wet paper towel — one pass per zone, preserving the cellular structure in each line. The vertical canvas mirrors the curtain's geometry. They read the same from across the room.",
+      "description": "I had a shower curtain I loved. I decided to make the painting that went with it. Swipe pour with a wet paper towel — one pass per zone, preserving the cellular structure in each line. They read the same from across the room.",
       "tags": ["swipe pour", "canvas", "ultramarine", "designed to match", "cells"],
       "href": "making-across-the-room.html",
-      "image": null,
-      "placeholderColor": "gravity",
+      "image": "images/making-across-the-room-card.png",
+      "bgColor": "#0d2b45",
       "reveal": "See the project"
     },
 
@@ -35,8 +35,8 @@
       "description": "Same paint, same session as Bioluminescent. Leftover cups flipped onto a round canvas. The round format removed the horizon line — without a horizon, the same palette stopped reading as ocean and started reading as space.",
       "tags": ["flip cup", "round canvas", "leftover palette", "ultramarine"],
       "href": "making-round-pour.html",
-      "image": null,
-      "placeholderColor": "gravity",
+      "image": "images/making-round-pour-card.png",
+      "bgColor": "#060f1a",
       "reveal": "See the project"
     },
 
@@ -45,11 +45,11 @@
       "section": "gravity",
       "type": "Paint Pouring",
       "title": "Darkness emerging from light.",
-      "description": "An inversion of the usual ground. White base, blues and greens on top — white is the heaviest pigment and sinks through the lighter colors, carrying them outward. Air from a blow dryer, perpendicular to the stripe direction, opens the cells. On a cigar box lid — dense, compressed, nothing has room to drift.",
+      "description": "An inversion of the usual ground. White base, blues and greens on top. White is the heaviest pigment and sinks through the lighter colors, carrying them outward. Air from a blow dryer opens the cells. On a cigar box lid — dense, compressed, nothing has room to drift.",
       "tags": ["dutch pour", "white ground", "cigar box", "cells", "air"],
       "href": "making-dutch-pour.html",
-      "image": null,
-      "placeholderColor": "gravity",
+      "image": "images/making-dutch-pour-card.png",
+      "bgColor": "#082e30",
       "reveal": "See the project"
     },
 
@@ -61,8 +61,8 @@
       "description": "When the bracket is flat, it's a painting. When it's open, it's a shelf. Two flip cups to cover the full length, countersunk screw holes drilled before pouring so the hardware disappears. Bolted into studs. Holds a speaker, a pen cup, hand lotion. Occasionally a cat.",
       "tags": ["flip cup", "functional", "green and teal", "furniture", "cells"],
       "href": "making-shelf.html",
-      "image": null,
-      "placeholderColor": "gravity",
+      "image": "images/making-shelf-card.png",
+      "bgColor": "#125c60",
       "reveal": "See the project"
     },
 
@@ -71,11 +71,11 @@
       "section": "materials",
       "type": "Paint Skins · Glass",
       "title": "The skin remembers.",
-      "description": "A pour happens once. The skin carries it somewhere else. Three glass vessels, three different origins — two wrapped in skins from the runoff paint of paintings that no longer exist, one from an intentional pour. Mod Podge, clear coat, pristine glass inside. Still functional.",
+      "description": "A pour happens once. The skin carries it somewhere else. Three glass vessels, three different origins — two wrapped in skins from the runoff of paintings that no longer exist, one from an intentional pour. Mod Podge, clear coat, pristine glass inside. Still functional.",
       "tags": ["paint skins", "glass", "transfer", "cells", "marbling", "functional"],
       "href": "making-vases.html",
-      "image": null,
-      "placeholderColor": "materials",
+      "image": "images/making-vases-card.png",
+      "bgColor": "#0d2b45",
       "reveal": "See the project"
     },
 
@@ -84,11 +84,11 @@
       "section": "materials",
       "type": "Paint Skins · Narrative Object",
       "title": "The bottle depicts what it does.",
-      "description": "The incense I burn produces smoke that falls rather than rises. The bottle needed to show it. Green pour standing upright — paint falling the way smoke falls. Black and silver skin wrapped over it, the cellular structure reading exactly like smoke caught in a photograph. Stores falling-smoke incense cones inside.",
+      "description": "The incense I burn produces smoke that falls rather than rises. The bottle needed to show it. Green pour standing upright — paint falling the way smoke falls. Black and silver skin wrapped over it, the cellular structure reading exactly like smoke caught in a photograph.",
       "tags": ["paint skins", "vertical pour", "narrative object", "incense", "found materials"],
       "href": "making-whisky-bottle.html",
-      "image": null,
-      "placeholderColor": "materials",
+      "image": "images/making-whisky-bottle-card.png",
+      "bgColor": "#111412",
       "reveal": "See the project"
     },
 
@@ -97,11 +97,11 @@
       "section": "materials",
       "type": "Resin and Mica",
       "title": "The design tool is rotation.",
-      "description": "Not gravity. Not air. Centrifugal force. A promotional thermal cup on a cup turner — resin and mica applied while it spins, each color settling into its own orbit. Silver, purple, blue, teal, olive. First time working with resin and mica. Now holds pens and Pax's grooming brush. Velcroed to the side table.",
+      "description": "Not gravity. Not air. Centrifugal force. A promotional thermal cup on a cup turner — resin and mica applied while it spins, each color settling into its own orbit. Silver, purple, blue, teal, olive. First time working with resin and mica. Now holds pens and Pax's grooming brush.",
       "tags": ["resin", "mica", "cup turner", "rotation", "functional", "first attempt"],
       "href": "making-resin-cup.html",
-      "image": null,
-      "placeholderColor": "materials",
+      "image": "images/making-resin-cup-card.png",
+      "bgColor": "#1e2422",
       "reveal": "See the project"
     },
 
@@ -110,11 +110,11 @@
       "section": "constraints",
       "type": "Transformation · Found Object",
       "title": "The lamp it was supposed to be.",
-      "description": "Wood base, wicker shade. Neither wrong — just not right. Stripped the seagrass off the wire frame. Rebuilt the shade using a rainbow arc tile pattern designed in GIMP, printed, laminated, and fitted to the frame. The base prepped with gesso and painted in iridescent copper and rose. Beside the couch. Not a quiet object.",
+      "description": "Wood base, wicker shade. Neither wrong — just not right. Stripped the seagrass off the wire frame. Rebuilt the shade using a rainbow arc tile pattern designed in GIMP, printed, laminated, and fitted to the frame. The base repainted in iridescent copper and rose. Not a quiet object.",
       "tags": ["transformation", "found object", "iridescent", "stained glass paper", "GIMP"],
       "href": "making-lamp.html",
-      "image": null,
-      "placeholderColor": "constraints",
+      "image": "images/making-lamp-card.png",
+      "bgColor": "#0d2b45",
       "reveal": "See the project"
     },
 
@@ -123,11 +123,11 @@
       "section": "constraints",
       "type": "Found Materials · Lightbox",
       "title": "Pax et Amor",
-      "description": "The box is packing material. The panels are oiled paper cut and assembled to behave like stained glass when backlit. The image was AI-generated — I wanted a specific portrait and used the tool that could produce it. Inside, a light strip on a timer. PAX is the cat's name and the Latin word for peace.",
+      "description": "The box is packing material. The panels are oiled paper cut and assembled to behave like stained glass when backlit. The image was AI-generated — I wanted a specific portrait and used the tool that could produce it. Inside, a light strip on a timer.",
       "tags": ["lightbox", "stained glass paper", "found materials", "AI-assisted", "pax"],
       "href": "making-pax-et-amor.html",
-      "image": null,
-      "placeholderColor": "constraints",
+      "image": "images/making-pax-et-amor-card.png",
+      "bgColor": "#082e30",
       "reveal": "See the project"
     },
 
@@ -136,11 +136,11 @@
       "section": "constraints",
       "type": "Structural Cardboard",
       "title": "It looks like cast iron.",
-      "description": "It is cardboard. Four to five layers laminated with wheat paste, paper mached smooth, three-legged form. The top is a fluid pour in black and white — it reads as volcanic stone. Sits outside the front door through Portland weather. First in a series about what cardboard furniture can actually be.",
+      "description": "It is cardboard. Four to five layers laminated with wheat paste, paper mached smooth, three-legged form. The top is a fluid pour in black and white — it reads as volcanic stone. Sits outside the front door through Portland weather. First in a series.",
       "tags": ["cardboard", "structural", "furniture", "paper mache", "outdoor", "ongoing series"],
       "href": "making-plant-stand.html",
-      "image": null,
-      "placeholderColor": "constraints",
+      "image": "images/making-plant-stand-card.png",
+      "bgColor": "#111412",
       "reveal": "See the project",
       "status": "Series in progress"
     },
@@ -153,8 +153,8 @@
       "description": "A side table designed to look like the cat who uses it. Paint skin lid sealed with resin, black felt collar band with silver upholstery tacks, two cat-proof latches, motion-activated interior light. Stores cat toys and catnip. The catnip is the issue. He knows it's in there.",
       "tags": ["craftvention", "paint skins", "resin", "furniture", "pax", "functional"],
       "href": "making-pax-box.html",
-      "image": null,
-      "placeholderColor": "constraints",
+      "image": "images/making-pax-box-card.png",
+      "bgColor": "#1e2422",
       "reveal": "See the project"
     },
 
@@ -163,11 +163,11 @@
       "section": "constraints",
       "type": "Lori-vention · Reclaimed Materials",
       "title": "Pax house",
-      "description": "Fully detached. One occupant. Mail delivery available. Built entirely from reclaimed materials — cardboard A-frame, hand-cut shingles, glass bead texture on all blue surfaces, scratch-built mailbox with a working flag. Interior waterproofed with ironed plastic bags, fully felt-lined with built-in sewn pillows. The landscaping is intentional.",
+      "description": "Fully detached. One occupant. Mail delivery available. Built entirely from reclaimed materials — cardboard A-frame, hand-cut shingles, glass bead texture on all blue surfaces, scratch-built mailbox with a working flag. Interior waterproofed and fully felt-lined with built-in sewn pillows.",
       "tags": ["lori-vention", "cardboard", "reclaimed materials", "pax", "construction"],
       "href": "making-pax-house.html",
-      "image": null,
-      "placeholderColor": "constraints",
+      "image": "images/making-pax-house-card.png",
+      "bgColor": "#123760",
       "reveal": "See the project"
     }
 
