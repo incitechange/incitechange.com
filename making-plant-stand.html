@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>It Looks Like Cast Iron &#8212; Lori Williams</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy-950: #060f1a; --navy-900: #0a1e30; --navy-800: #0d2b45; --navy-700: #123760;
@@ -33,51 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    .mk-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-    .photo-section { background: var(--ink-50); padding: 2rem 0; }
-    .photo-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .photo-placeholder { background: var(--navy-900); border-radius: 4px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
-    .photo-placeholder-text { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
-    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; }
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-    .linked-card { display: flex; gap: 1.5rem; background: var(--ink-50); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--ink-100); transition: border-color 0.2s; margin-top: 2rem; }
-    .linked-card:hover { border-color: var(--teal-400); }
-    .linked-card-swatch { width: 80px; height: 80px; border-radius: 4px; background: var(--navy-900); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-    .linked-card-body { display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; }
-    .linked-card-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); }
-    .linked-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--navy-900); }
-    .linked-card-note { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; color: var(--ink-500); }
-    .photo-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #f0fafa); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
     /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
@@ -96,13 +51,74 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-
     @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
+    /* BACK NAV */
+    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+
+    /* HERO */
+    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+
+    /* PHOTO HERO — 3 panel */
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
+    .photo-hero-grid.single { grid-template-columns: 1fr; }
+    .photo-main-slot { height: 520px; overflow: hidden; }
+    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
+    .photo-stack-slot { flex: 1; overflow: hidden; }
+    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
+    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
+
+    /* BODY */
+    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+
+    /* INLINE DETAIL IMAGE */
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+
+    /* TECH BLOCK */
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+
+    /* TAGS */
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+
+    /* MORE MAKING */
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-    <header class="nav">
+  <header class="nav">
     <a href="index.html" class="nav-logo">lori<span>.</span></a>
     <nav><ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -112,11 +128,9 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-
   <div class="back-nav">
     <a href="making.html" class="back-link">&#8592; Back to Making</a>
   </div>
-
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Structural Cardboard &middot; Paper Mache &middot; Fluid Pour</p>
@@ -124,46 +138,37 @@
       <p class="mk-subtitle">The first piece in a series about what cardboard furniture can actually be.</p>
     </div>
   </section>
-
-  <div class="photo-section">
-    <div class="photo-inner">
-      <div class="photo-placeholder">
-        <p class="photo-placeholder-text">Photo coming</p>
+  <div class="photo-hero">
+    <div class="photo-hero-grid">
+      <div class="photo-main-slot"><img src='images/stool_detail3.png' alt='Plant stand top view, round black and silver pour' loading='lazy'></div>
+      <div class="photo-stack">
+      <div class="photo-stack-slot"><img src="images/stool_detail.png" alt="Plant stand surface close-up" loading="lazy"></div>
+      <div class="photo-stack-slot"><img src="images/stool_detail2.png" alt="Plant stand surface panoramic" loading="lazy"></div>
       </div>
-      <p class="photo-caption">Structural laminated cardboard &middot; wheat paste &middot; paper mache surface &middot; black and white fluid pour top</p>
     </div>
   </div>
-
   <div class="mk-body">
-
     <div class="mk-section">
       <p class="mk-section-label">The premise</p>
       <h2 class="mk-h2">Cardboard as a real material.</h2>
-      <p class="mk-p">Cardboard is not a temporary material. Corrugated cardboard properly oriented and laminated is strong in compression &#8212; strong enough, it turns out, to function as outdoor furniture. This piece sits outside the front door holding a plant. It has done this through Portland weather. It is still there.</p>
-      <p class="mk-p">The goal was to find out what cardboard furniture could be if you stopped treating it as a substitute for real materials and started treating it as the material itself.</p>
+      <p class="mk-p">Cardboard is not a temporary material. Corrugated cardboard properly oriented and laminated is strong in compression &#8212; strong enough to function as outdoor furniture. This piece sits outside the front door holding a plant. It has done this through Portland weather. It is still there.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The build</p>
       <h2 class="mk-h2">Wheat paste and paper mache.</h2>
       <p class="mk-p">The form is three-legged &#8212; a round top on three rectangular legs. Each component is four to five layers of corrugated cardboard, cut to shape and laminated together with wheat paste. The wheat paste is the traditional bookbinding adhesive &#8212; flour and water cooked to a thick slurry. It bonds the layers flat and hard as it dries.</p>
-      <p class="mk-p">The laminated cardboard is strong but rough. The corrugated texture would telegraph through any surface finish. Paper mache solved that &#8212; several coats applied over the legs and top, each allowed to dry fully before the next. The paper mache fills the texture, rounds the edges slightly, and creates a unified surface that takes paint the way wood does.</p>
+      <p class="mk-p">The laminated cardboard is strong but rough. Paper mache solved that &#8212; several coats applied over the legs and top, each allowed to dry fully before the next. The paper mache fills the texture, rounds the edges slightly, and creates a unified surface that takes paint the way wood does.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The surface</p>
       <h2 class="mk-h2">Volcanic.</h2>
-      <p class="mk-p">The legs are painted with Azteca silver metallic &#8212; the same pigment family as the pour work, applied as a solid coat. The legs read as metal at a glance.</p>
-      <p class="mk-p">The top is a fluid pour &#8212; black and white with silver moving through it, poured directly onto the paper mache surface. The swirling forms and deep voids in the close-up look volcanic. Molten stone cooling, or the surface of something that formed under pressure. The drips over the edge where the paint ran during the pour are still there. They record the moment correctly.</p>
+      <p class="mk-p">The legs are painted with Azteca silver metallic. The top is a fluid pour &#8212; black and white with silver moving through it, poured directly onto the paper mache surface. The swirling forms and deep voids look volcanic. Molten stone cooling, or the surface of something that formed under pressure. The drips over the edge where the paint ran during the pour are still there. They record the moment correctly.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">What this is the beginning of</p>
       <h2 class="mk-h2">First in a series.</h2>
-      <p class="mk-p">This is the first piece. The series premise is simple: cardboard is available, cheap, and structurally underestimated. Wheat paste and paper mache are labor-intensive but cost almost nothing. The question is how far the approach scales &#8212; larger forms, more complex geometry, different surface treatments.</p>
-      <p class="mk-p">The plant stand is a proof of concept. It works. The series continues.</p>
+      <p class="mk-p">This is the first piece. The series premise is simple: cardboard is available, cheap, and structurally underestimated. Wheat paste and paper mache are labor-intensive but cost almost nothing. The question is how far the approach scales &#8212; larger forms, more complex geometry, different surface treatments. The plant stand is a proof of concept. It works. The series continues.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
       <div class="tech-block">
@@ -172,50 +177,34 @@
         <div class="tech-row"><span class="tech-label">Surface prep</span><span class="tech-value">Paper mache, multiple coats</span></div>
         <div class="tech-row"><span class="tech-label">Leg finish</span><span class="tech-value">Azteca silver metallic</span></div>
         <div class="tech-row"><span class="tech-label">Top</span><span class="tech-value">Fluid pour, black and white with silver</span></div>
-        <div class="tech-row"><span class="tech-label">Pour technique</span><span class="tech-value">Direct pour onto paper mache surface</span></div>
         <div class="tech-row"><span class="tech-label">Location</span><span class="tech-value">Outside front door, in use as plant stand</span></div>
         <div class="tech-row"><span class="tech-label">Weather exposure</span><span class="tech-value">Yes</span></div>
         <div class="tech-row"><span class="tech-label">Status</span><span class="tech-value">First in series, ongoing</span></div>
       </div>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Tags</p>
       <div class="mk-tags">
         <a href="making.html" class="mk-tag">cardboard</a>
         <a href="making.html" class="mk-tag">structural</a>
-        <a href="making.html" class="mk-tag">paint pouring</a>
         <a href="making.html" class="mk-tag">furniture</a>
         <a href="making.html" class="mk-tag">paper mache</a>
-        <a href="making.html" class="mk-tag">wheat paste</a>
         <a href="making.html" class="mk-tag">outdoor</a>
         <a href="making.html" class="mk-tag">ongoing series</a>
       </div>
     </div>
-
   </div>
-
   <section class="more-making">
     <div class="more-inner">
       <div class="section-header"><div class="section-dot"></div><p class="section-eyebrow">More making</p></div>
       <h2 class="section-title-sm" style="margin-bottom:1.5rem;">Same brain, different materials.</h2>
       <div class="more-grid">
-        <a href="making-bioluminescent.html" class="more-card">
-          <p class="more-type">Paint Pouring</p>
-          <p class="more-title">Bioluminescent</p>
-        </a>
-        <a href="making-pax-et-amor.html" class="more-card">
-          <p class="more-type">Craftvention</p>
-          <p class="more-title">Pax et Amor</p>
-        </a>
-        <a href="making.html" class="more-card">
-          <p class="more-type">All making</p>
-          <p class="more-title">See everything &#8594;</p>
-        </a>
+        <a href="making-lamp.html" class="more-card"><p class="more-type">Transformation</p><p class="more-title">The lamp it was supposed to be.</p></a>
+        <a href="making-pax-box.html" class="more-card"><p class="more-type">Found Object</p><p class="more-title">The Pax Box</p></a>
+        <a href="making.html" class="more-card"><p class="more-type">All making</p><p class="more-title">See everything &#8594;</p></a>
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <a href="index.html" class="footer-logo">lori<span>.</span></a>
     <nav><ul class="footer-nav">
@@ -226,6 +215,5 @@
     </ul></nav>
     <p class="footer-copy">&#169; 2026 Lori Williams</p>
   </footer>
-
 </body>
 </html>

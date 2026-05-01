@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spacey, Not Oceanic &#8212; Lori Williams</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy-950: #060f1a; --navy-900: #0a1e30; --navy-800: #0d2b45; --navy-700: #123760;
@@ -33,50 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    .mk-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-    .photo-section { background: var(--ink-50); padding: 2rem 0; }
-    .photo-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .photo-placeholder { background: var(--navy-900); border-radius: 50%; aspect-ratio: 1/1; max-width: 500px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
-    .photo-placeholder-text { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
-    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; text-align: center; }
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-    .linked-card { display: flex; gap: 1.5rem; background: var(--ink-50); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--ink-100); transition: border-color 0.2s; margin-top: 2rem; }
-    .linked-card:hover { border-color: var(--teal-400); }
-    .linked-card-swatch { width: 80px; height: 80px; border-radius: 4px; background: var(--navy-900); flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .linked-card-body { display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; }
-    .linked-card-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); }
-    .linked-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--navy-900); }
-    .linked-card-note { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; color: var(--ink-500); }
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #f0fafa); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
     /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
@@ -95,13 +51,74 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-
     @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
+    /* BACK NAV */
+    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+
+    /* HERO */
+    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+
+    /* PHOTO HERO — 3 panel */
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
+    .photo-hero-grid.single { grid-template-columns: 1fr; }
+    .photo-main-slot { height: 520px; overflow: hidden; }
+    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
+    .photo-stack-slot { flex: 1; overflow: hidden; }
+    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
+    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
+
+    /* BODY */
+    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+
+    /* INLINE DETAIL IMAGE */
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+
+    /* TECH BLOCK */
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+
+    /* TAGS */
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+
+    /* MORE MAKING */
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-    <header class="nav">
+  <header class="nav">
     <a href="index.html" class="nav-logo">lori<span>.</span></a>
     <nav><ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -111,11 +128,9 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-
   <div class="back-nav">
     <a href="making.html" class="back-link">&#8592; Back to Making</a>
   </div>
-
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Flip Cup &middot; Round Canvas</p>
@@ -123,59 +138,34 @@
       <p class="mk-subtitle">Same paint. Same session. The round canvas changed what it became.</p>
     </div>
   </section>
-
-  <div class="photo-section">
-    <div class="photo-inner">
-      <div class="photo-placeholder">
-        <p class="photo-placeholder-text">Photo coming</p>
-      </div>
-      <p class="photo-caption">Flip cup on round canvas &middot; Arteza metallics, Azteca Ultramarine Blue &middot; residual silicone from Bioluminescent session</p>
+  <div class="photo-hero">
+    <div class="photo-hero-grid single">
+      <div class="photo-main-slot" style="height:480px;"><img src='images/making-round-pour-card.png' alt='' loading='lazy'></div>
     </div>
   </div>
-
   <div class="mk-body">
-
     <div class="mk-section">
       <p class="mk-section-label">The origin</p>
       <h2 class="mk-h2">Same session. Different conversation.</h2>
       <p class="mk-p">A flip cup uses what&#8217;s left. After the Bioluminescent pour was finished, the cups still had paint &#8212; ultramarine blue and blue metallics, layered in the order they&#8217;d been used. Most of the silicone oil had already floated to the surface during the first pour. A trace amount remained. Enough.</p>
-      <p class="mk-p">I stacked the colors into a single cup, inverted it onto a round canvas, and lifted. The paint underneath spread on its own. Then tilt work to move it across the surface, torch pass to release the bubbles. Done.</p>
+      <p class="mk-p">I stacked the colors into a single cup, inverted it onto a round canvas, and lifted. The paint underneath spread on its own. Then tilt work to move it across the surface, torch pass to release the bubbles.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The format</p>
       <h2 class="mk-h2">No horizon.</h2>
-      <p class="mk-p">The format changes everything. A rectangular canvas has orientation &#8212; top, bottom, implied horizon. A round canvas has none of that. There&#8217;s no up. The composition radiates from wherever the flip cup landed, and the tilt spreads it without a preferred direction.</p>
+      <p class="mk-p">A rectangular canvas has orientation &#8212; top, bottom, implied horizon. A round canvas has none of that. There&#8217;s no up. The composition radiates from wherever the flip cup landed, and the tilt spreads it without a preferred direction.</p>
       <p class="mk-p">That&#8217;s part of why this piece reads differently than Bioluminescent. Same palette, same session, same chemistry. But the round format removed the horizon line, and without a horizon, the result stopped reading as ocean and started reading as space.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The distinction</p>
       <h2 class="mk-h2">Spacey, not oceanic.</h2>
-      <p class="mk-p">That distinction matters. The Bioluminescent piece has depth &#8212; you read downward into it, the way you&#8217;d read into water. This one has distance. You read outward from the center, the way you&#8217;d read a star field or a nebula. The cells are the same cellular chemistry, but in a radial field without a horizon they become something else &#8212; less biological, more astronomical.</p>
+      <p class="mk-p">The Bioluminescent piece has depth &#8212; you read downward into it, the way you&#8217;d read into water. This one has distance. You read outward from the center, the way you&#8217;d read a star field or a nebula. The cells are the same cellular chemistry, but in a radial field without a horizon they become something else &#8212; less biological, more astronomical.</p>
       <p class="mk-p">I find it weirdly soothing. The blue is the same blue. The mood is completely different.</p>
     </div>
-
-    <div class="mk-section">
-      <p class="mk-section-label">What connects them</p>
-      <h2 class="mk-h2">The field the creature lives in.</h2>
-      <p class="mk-p">This piece lives in direct conversation with Bioluminescent. It uses the same paint, from the same session, with the same silicone chemistry still faintly active. If Bioluminescent is the creature, this is the field it lives in.</p>
-      <p class="mk-p">They&#8217;re not a series. But they belong together.</p>
-
-      <a href="making-bioluminescent.html" class="linked-card">
-        <div class="linked-card-swatch" style="background: radial-gradient(circle, #1a3a8a, #050d2a);"></div>
-        <div class="linked-card-body">
-          <p class="linked-card-type">Dutch Pour &middot; Canvas</p>
-          <p class="linked-card-title">Bioluminescent</p>
-          <p class="linked-card-note">The session this pour came from.</p>
-        </div>
-      </a>
-    </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
       <div class="tech-block">
-        <div class="tech-row"><span class="tech-label">Paint</span><span class="tech-value">Arteza Metallic Acrylics, Azteca Ultramarine Blue (non-metallic), blue metallics</span></div>
+        <div class="tech-row"><span class="tech-label">Paint</span><span class="tech-value">Arteza Metallic Acrylics, Azteca Ultramarine Blue, blue metallics</span></div>
         <div class="tech-row"><span class="tech-label">Silicone oil</span><span class="tech-value">Residual from Bioluminescent session</span></div>
         <div class="tech-row"><span class="tech-label">Technique</span><span class="tech-value">Flip cup on round canvas, tilt work, torch pass</span></div>
         <div class="tech-row"><span class="tech-label">Support</span><span class="tech-value">Round canvas</span></div>
@@ -183,7 +173,6 @@
         <div class="tech-row"><span class="tech-label">State</span><span class="tech-value">Finished</span></div>
       </div>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Tags</p>
       <div class="mk-tags">
@@ -194,30 +183,18 @@
         <a href="making.html" class="mk-tag">ultramarine</a>
       </div>
     </div>
-
   </div>
-
   <section class="more-making">
     <div class="more-inner">
       <div class="section-header"><div class="section-dot"></div><p class="section-eyebrow">More making</p></div>
       <h2 class="section-title-sm" style="margin-bottom:1.5rem;">Same brain, different materials.</h2>
       <div class="more-grid">
-        <a href="making-bioluminescent.html" class="more-card">
-          <p class="more-type">Paint Pouring</p>
-          <p class="more-title">Bioluminescent</p>
-        </a>
-        <a href="making-pax-et-amor.html" class="more-card">
-          <p class="more-type">Craftvention</p>
-          <p class="more-title">Pax et Amor</p>
-        </a>
-        <a href="making.html" class="more-card">
-          <p class="more-type">All making</p>
-          <p class="more-title">See everything &#8594;</p>
-        </a>
+        <a href="making-bioluminescent.html" class="more-card"><p class="more-type">Paint Pouring</p><p class="more-title">Bioluminescent</p></a>
+        <a href="making-across-the-room.html" class="more-card"><p class="more-type">Paint Pouring</p><p class="more-title">Across the room.</p></a>
+        <a href="making.html" class="more-card"><p class="more-type">All making</p><p class="more-title">See everything &#8594;</p></a>
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <a href="index.html" class="footer-logo">lori<span>.</span></a>
     <nav><ul class="footer-nav">
@@ -228,6 +205,5 @@
     </ul></nav>
     <p class="footer-copy">&#169; 2026 Lori Williams</p>
   </footer>
-
 </body>
 </html>

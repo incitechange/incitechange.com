@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darkness Emerging from Light &#8212; Lori Williams</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --navy-950: #060f1a; --navy-900: #0a1e30; --navy-800: #0d2b45; --navy-700: #123760;
@@ -33,51 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    .mk-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-    .photo-section { background: var(--ink-50); padding: 2rem 0; }
-    .photo-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-    .photo-placeholder { background: var(--navy-900); border-radius: 4px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
-    .photo-placeholder-text { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
-    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; }
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-    .linked-card { display: flex; gap: 1.5rem; background: var(--ink-50); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--ink-100); transition: border-color 0.2s; margin-top: 2rem; }
-    .linked-card:hover { border-color: var(--teal-400); }
-    .linked-card-swatch { width: 80px; height: 80px; border-radius: 4px; background: var(--navy-900); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-    .linked-card-body { display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; }
-    .linked-card-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); }
-    .linked-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--navy-900); }
-    .linked-card-note { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; color: var(--ink-500); }
-    .photo-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream-100, #faf8f3); }
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #f0fafa); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
     /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
@@ -96,13 +51,74 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-
     @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
+    /* BACK NAV */
+    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+
+    /* HERO */
+    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+
+    /* PHOTO HERO — 3 panel */
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
+    .photo-hero-grid.single { grid-template-columns: 1fr; }
+    .photo-main-slot { height: 520px; overflow: hidden; }
+    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
+    .photo-stack-slot { flex: 1; overflow: hidden; }
+    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
+    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
+
+    /* BODY */
+    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+
+    /* INLINE DETAIL IMAGE */
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+
+    /* TECH BLOCK */
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+
+    /* TAGS */
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+
+    /* MORE MAKING */
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
+    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-    <header class="nav">
+  <header class="nav">
     <a href="index.html" class="nav-logo">lori<span>.</span></a>
     <nav><ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -112,11 +128,9 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-
   <div class="back-nav">
     <a href="making.html" class="back-link">&#8592; Back to Making</a>
   </div>
-
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Dutch Pour &middot; Cigar Box Lid</p>
@@ -124,46 +138,34 @@
       <p class="mk-subtitle">White ground. Blues and greens on top. Air does the rest.</p>
     </div>
   </section>
-
-  <div class="photo-section">
-    <div class="photo-inner">
-      <div class="photo-placeholder">
-        <p class="photo-placeholder-text">Photo coming</p>
+  <div class="photo-hero">
+    <div class="photo-hero-grid">
+      <div class="photo-main-slot"><img src='images/making-dutch-pour-card.png' alt='Dutch pour on cigar box lid' loading='lazy'></div>
+      <div class="photo-stack">
+      <div class="photo-stack-slot"><img src="images/darknesslight_detail.png" alt="Cell detail, blue and green on white" loading="lazy"></div>
+      <div class="photo-stack-slot"><img src="images/darknesslight_detail2.png" alt="Close-up cells, white ground" loading="lazy"></div>
       </div>
-      <p class="photo-caption">Dutch pour on cigar box lid &middot; blues, greens, black on white ground &middot; blow dryer, perpendicular pass</p>
     </div>
   </div>
-
   <div class="mk-body">
-
     <div class="mk-section">
       <p class="mk-section-label">The setup</p>
       <h2 class="mk-h2">An inversion.</h2>
       <p class="mk-p">Most of the pours in this body of work use a dark ground &#8212; color emerging from darkness. This one inverts that. The base is white fluid paint, and the blues and greens were laid on top of it as stripes, one color on top of the next. Silicone oil added to multiple colors to encourage cell development. Paint mixed thin.</p>
       <p class="mk-p">White acrylic is among the heaviest pigments. It sinks. That physical fact is what makes the composition possible.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The technique</p>
       <h2 class="mk-h2">Air as the tool.</h2>
-      <p class="mk-p">A Dutch pour doesn&#8217;t use gravity and tilt the way a flip cup or swipe pour does. The tool is air &#8212; a directed stream that pushes the pooled paint across the surface. Where the air hits, the paint moves. Where it doesn&#8217;t, it stays.</p>
-      <p class="mk-p">The blow dryer went across the paint pool, not with it &#8212; perpendicular to the stripe direction. That cross-movement is what opened the cells and pushed color away from the center, letting the white ground come through between them. The air separates incompatible fluids at speed, which produces sharper cell walls than you get from tilt work alone.</p>
+      <p class="mk-p">A Dutch pour doesn&#8217;t use gravity and tilt the way a flip cup does. The tool is air &#8212; a directed stream that pushes the pooled paint across the surface. The blow dryer went across the paint pool, not with it &#8212; perpendicular to the stripe direction. That cross-movement is what opened the cells and pushed color away from the center, letting the white ground come through between them.</p>
+      <p class="mk-p">The white stripe on top of the color stack seems counterintuitive. When the heaviest pigment sinks through the colors beneath it, it pushes everything else up and outward &#8212; spreading the blues and greens in a way that thinner paint alone wouldn&#8217;t achieve.</p>
     </div>
-
-    <div class="mk-section">
-      <p class="mk-section-label">What white does when it sinks</p>
-      <h2 class="mk-h2">The heaviest color on top.</h2>
-      <p class="mk-p">The white stripe on top of the color stack seems counterintuitive. If white is the ground, why add more of it on top?</p>
-      <p class="mk-p">Because when the heaviest pigment sinks through the colors beneath it, it pushes everything else up and outward. The white doesn&#8217;t stay on top &#8212; it moves down and out, carrying the blues and greens with it, spreading them across the surface in a way that thinner paint alone wouldn&#8217;t achieve. The result is a white field with color riding on and through it, rather than color sitting on a white background.</p>
-    </div>
-
     <div class="mk-section">
       <p class="mk-section-label">The substrate</p>
       <h2 class="mk-h2">Small and dense.</h2>
       <p class="mk-p">The cigar box lid is small and rigid with hard edges. Paint doesn&#8217;t wrap around &#8212; it hits the boundary and stops. The scale of the cells relative to the small surface makes the composition feel dense and compressed. Nothing has room to thin out or drift. Every square inch is doing something.</p>
       <p class="mk-p">The close-up reads like a reef section under glass &#8212; deep cobalt forms, iridescent green-gold cell walls, dark tessellated structures that look like something that grew rather than something that was made.</p>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
       <div class="tech-block">
@@ -176,43 +178,29 @@
         <div class="tech-row"><span class="tech-label">State</span><span class="tech-value">Finished</span></div>
       </div>
     </div>
-
     <div class="mk-section">
       <p class="mk-section-label">Tags</p>
       <div class="mk-tags">
         <a href="making.html" class="mk-tag">paint pouring</a>
         <a href="making.html" class="mk-tag">dutch pour</a>
-        <a href="making.html" class="mk-tag">air</a>
         <a href="making.html" class="mk-tag">white ground</a>
-        <a href="making.html" class="mk-tag">small format</a>
         <a href="making.html" class="mk-tag">cigar box</a>
         <a href="making.html" class="mk-tag">cells</a>
+        <a href="making.html" class="mk-tag">air</a>
       </div>
     </div>
-
   </div>
-
   <section class="more-making">
     <div class="more-inner">
       <div class="section-header"><div class="section-dot"></div><p class="section-eyebrow">More making</p></div>
       <h2 class="section-title-sm" style="margin-bottom:1.5rem;">Same brain, different materials.</h2>
       <div class="more-grid">
-        <a href="making-bioluminescent.html" class="more-card">
-          <p class="more-type">Paint Pouring</p>
-          <p class="more-title">Bioluminescent</p>
-        </a>
-        <a href="making-pax-et-amor.html" class="more-card">
-          <p class="more-type">Craftvention</p>
-          <p class="more-title">Pax et Amor</p>
-        </a>
-        <a href="making.html" class="more-card">
-          <p class="more-type">All making</p>
-          <p class="more-title">See everything &#8594;</p>
-        </a>
+        <a href="making-bioluminescent.html" class="more-card"><p class="more-type">Paint Pouring</p><p class="more-title">Bioluminescent</p></a>
+        <a href="making-shelf.html" class="more-card"><p class="more-type">Paint Pouring</p><p class="more-title">The fold-down shelf.</p></a>
+        <a href="making.html" class="more-card"><p class="more-type">All making</p><p class="more-title">See everything &#8594;</p></a>
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <a href="index.html" class="footer-logo">lori<span>.</span></a>
     <nav><ul class="footer-nav">
@@ -223,6 +211,5 @@
     </ul></nav>
     <p class="footer-copy">&#169; 2026 Lori Williams</p>
   </footer>
-
 </body>
 </html>
