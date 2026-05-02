@@ -33,7 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
     .nav-logo span { color: var(--lime-400); }
@@ -42,8 +41,49 @@
     .nav-links a:hover { color: var(--navy-800); }
     .nav-links a.active { color: var(--navy-800); }
     .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--lime-400); border-radius: 2px; }
-
-    /* FOOTER */
+    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+    .mk-hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-inner { max-width: 1100px; margin: 0 auto; }
+    .photo-hero-inner img { width: 100%; max-height: 580px; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 400px; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
+    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-400); padding: 0.75rem 2rem; font-style: italic; }
+    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream); }
     .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     .footer-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy-300); }
     .footer-logo span { color: var(--lime-400); }
@@ -51,70 +91,7 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
-    /* BACK NAV */
-    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
-    /* HERO */
-    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-
-    /* PHOTO HERO — 3 panel */
-    .photo-hero { background: var(--ink-900); }
-    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
-    .photo-hero-grid.single { grid-template-columns: 1fr; }
-    .photo-main-slot { height: 520px; overflow: hidden; }
-    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
-    .photo-stack-slot { flex: 1; overflow: hidden; }
-    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
-    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
-    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
-
-    /* BODY */
-    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-
-    /* INLINE DETAIL IMAGE */
-    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
-    .mk-detail img { width: 100%; height: auto; display: block; }
-    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
-    .mk-detail-2up .mk-detail { margin: 0; }
-
-    /* TECH BLOCK */
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-row:last-child { margin-bottom: 0; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-
-    /* TAGS */
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-
-    /* MORE MAKING */
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } .more-grid { grid-template-columns: 1fr; } .mk-detail-2up { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -128,9 +105,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-  <div class="back-nav">
-    <a href="making.html" class="back-link">&#8592; Back to Making</a>
-  </div>
+  <div class="back-nav"><a href="making.html" class="back-link">&#8592; Back to Making</a></div>
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Paint Skins &middot; Glass Vessels</p>
@@ -139,13 +114,10 @@
     </div>
   </section>
   <div class="photo-hero">
-    <div class="photo-hero-grid">
-      <div class="photo-main-slot"><img src='images/making-vases-card.png' alt='Two vases with plants' loading='lazy'></div>
-      <div class="photo-stack">
-      <div class="photo-stack-slot"><img src="images/vase_detail2.png" alt="Blue swipe pour detail on vase" loading="lazy"></div>
-      <div class="photo-stack-slot"><img src="images/vases_detail1.png" alt="Teal swipe pour detail on vase" loading="lazy"></div>
-      </div>
+    <div class="photo-hero-inner">
+      <img src="images/making-vases-card.png" alt="Two vases with plants, teal and blue paint skins" loading="lazy">
     </div>
+    
   </div>
   <div class="mk-body">
     <div class="mk-section">
@@ -155,37 +127,31 @@
       <p class="mk-p">The skin is then transferred to a new surface. In this case, glass vases &#8212; curved, three-dimensional forms that the original pour knew nothing about. The skin wraps the curve, mod podge holds the edge, and a coat of clear acrylic seals and deepens the color. The inside of the glass stays pristine. Still functional. Still holds water.</p>
     </div>
     <div class="mk-section">
-      <p class="mk-section-label">The technique</p>
-      <h2 class="mk-h2">Peel, wrap, seal.</h2>
-      <p class="mk-p">The skins for these vases were poured using a flip cup on a silicone sheet &#8212; the same flip cup mechanics as a canvas pour, but the destination is temporary. The silicone backing releases cleanly when the paint is fully cured. The skin peels up in one piece, slightly tacky on the clean side, which helps it grip the glass before the adhesive sets.</p>
-      <p class="mk-p">Wrapping a curved form is a different problem than laying a skin flat. The clear coat that follows seals the edges permanently and makes the colors read about thirty percent richer than the dry skin alone.</p>
-    </div>
-    <div class="mk-section">
       <p class="mk-section-label">The two vases</p>
       <h2 class="mk-h2">Same color family. Different origins.</h2>
-      <p class="mk-p"><strong>The living room vase</strong> &#8212; the tallest, with a flared top and a slight waist. Originally held cut flowers, now holds water bamboo. The skin on this one came from the runoff paint of a different painting entirely &#8212; paint that fell off the edge onto the plastic mat below and pooled exactly where gravity put it. No tilting, no intervention. The original painting is gone. The paint that escaped it isn&#8217;t. The lack of silicone is what kept the colors from separating into cells. What you see instead is what the paint did when left to move on its own.</p>
-      <p class="mk-p"><strong>The office vase</strong> &#8212; hourglass-shaped, currently holding rooting wandering jew cuttings. This skin was poured intentionally and thicker. The thicker paint base is what produced the large, distinct cells visible on the surface &#8212; more silicone, more paint weight, more separation between colors. Same color family, completely different surface character.</p>
+      <p class="mk-p"><strong>The living room vase</strong> &#8212; the tallest, with a flared top and a slight waist. Originally held cut flowers, now holds water bamboo. The skin came from the runoff paint of a different painting entirely &#8212; paint that fell off the edge onto the plastic mat below and pooled exactly where gravity put it. No tilting, no intervention. The original painting is gone. The paint that escaped it isn&#8217;t.</p>
+      <div class="mk-detail"><img src="images/vases_detail1.png" alt="Teal swipe pour detail on living room vase" loading="lazy"></div>
+      <p class="mk-p"><strong>The office vase</strong> &#8212; hourglass-shaped, currently holding rooting wandering jew cuttings. This skin was poured intentionally and thicker. The thicker paint base produced the large, distinct cells visible on the surface &#8212; more silicone, more paint weight, more separation between colors. Same color family, completely different surface character.</p>
+      <div class="mk-detail"><img src="images/vase_detail2.png" alt="Blue swipe pour detail on office vase" loading="lazy"></div>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">The inside</p>
       <h2 class="mk-h2">Still functional.</h2>
-      <p class="mk-p">The clear coat seals the exterior. The interior is untouched glass &#8212; smooth, waterproof, unchanged. Both vases hold water. Both have held plants or flowers. A skin on a vase isn&#8217;t decoration applied to something useful &#8212; it&#8217;s a record of a physical event wrapped around something that keeps doing its job.</p>
+      <p class="mk-p">The clear coat seals the exterior. The interior is untouched glass &#8212; smooth, waterproof, unchanged. Both vases hold water. A skin on a vase isn&#8217;t decoration applied to something useful &#8212; it&#8217;s a record of a physical event wrapped around something that keeps doing its job.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
       <div class="tech-block">
-        <div class="tech-row"><span class="tech-label">Skins</span><span class="tech-value">Poured on silicone sheet, flip cup technique; living room vase from pour runoff</span></div>
+        <div class="tech-row"><span class="tech-label">Skins</span><span class="tech-value">Poured on silicone sheet; living room vase from pour runoff</span></div>
         <div class="tech-row"><span class="tech-label">Paint</span><span class="tech-value">Acrylic, varied consistency</span></div>
         <div class="tech-row"><span class="tech-label">Silicone oil</span><span class="tech-value">Absent in living room vase (wave pattern), present in office vase (cells)</span></div>
         <div class="tech-row"><span class="tech-label">Adhesive</span><span class="tech-value">Mod Podge</span></div>
         <div class="tech-row"><span class="tech-label">Sealer</span><span class="tech-value">Clear acrylic coat</span></div>
-        <div class="tech-row"><span class="tech-label">Vessels</span><span class="tech-value">Tall flared vase, hourglass vase</span></div>
         <div class="tech-row"><span class="tech-label">Interior</span><span class="tech-value">Untouched glass, fully functional</span></div>
         <div class="tech-row"><span class="tech-label">Current homes</span><span class="tech-value">Living room (bamboo), office (wandering jew cuttings)</span></div>
       </div>
     </div>
-    <div class="mk-section">
-      <p class="mk-section-label">Tags</p>
+    <div class="mk-section"><p class="mk-section-label">Tags</p>
       <div class="mk-tags">
         <a href="making.html" class="mk-tag">paint skins</a>
         <a href="making.html" class="mk-tag">glass</a>

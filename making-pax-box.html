@@ -33,7 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
     .nav-logo span { color: var(--lime-400); }
@@ -42,8 +41,49 @@
     .nav-links a:hover { color: var(--navy-800); }
     .nav-links a.active { color: var(--navy-800); }
     .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--lime-400); border-radius: 2px; }
-
-    /* FOOTER */
+    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+    .mk-hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-inner { max-width: 1100px; margin: 0 auto; }
+    .photo-hero-inner img { width: 100%; max-height: 580px; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 400px; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
+    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-400); padding: 0.75rem 2rem; font-style: italic; }
+    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream); }
     .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     .footer-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy-300); }
     .footer-logo span { color: var(--lime-400); }
@@ -51,70 +91,7 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
-    /* BACK NAV */
-    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
-    /* HERO */
-    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-
-    /* PHOTO HERO — 3 panel */
-    .photo-hero { background: var(--ink-900); }
-    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
-    .photo-hero-grid.single { grid-template-columns: 1fr; }
-    .photo-main-slot { height: 520px; overflow: hidden; }
-    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
-    .photo-stack-slot { flex: 1; overflow: hidden; }
-    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
-    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
-    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
-
-    /* BODY */
-    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-
-    /* INLINE DETAIL IMAGE */
-    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
-    .mk-detail img { width: 100%; height: auto; display: block; }
-    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
-    .mk-detail-2up .mk-detail { margin: 0; }
-
-    /* TECH BLOCK */
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-row:last-child { margin-bottom: 0; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-
-    /* TAGS */
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-
-    /* MORE MAKING */
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } .more-grid { grid-template-columns: 1fr; } .mk-detail-2up { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -128,9 +105,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-  <div class="back-nav">
-    <a href="making.html" class="back-link">&#8592; Back to Making</a>
-  </div>
+  <div class="back-nav"><a href="making.html" class="back-link">&#8592; Back to Making</a></div>
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Found Object Transformation</p>
@@ -139,32 +114,31 @@
     </div>
   </section>
   <div class="photo-hero">
-    <div class="photo-hero-grid single">
-      <div class="photo-main-slot" style="height:480px;"><img src='images/making-pax-box-card.png' alt='' loading='lazy'></div>
+    <div class="photo-hero-inner">
+      <img src="images/making-pax-box-card.png" alt="The Pax Box with Pax sitting on top" loading="lazy">
     </div>
+    
   </div>
   <div class="mk-body">
     <div class="mk-section">
       <p class="mk-section-label">The brief</p>
       <h2 class="mk-h2">Six requirements. One object.</h2>
-      <p class="mk-p">Pax has accessories. Wand toys, crinkle balls, a charging cable for a motorized toy, catnip, miscellaneous items that needed a home near the couch. The brief was: one object that stores all of it, functions as a side table at the correct height, is beautiful enough to live in the living room, and is secure against a cat who knows exactly what&#8217;s inside and has opinions about accessing it unsupervised.</p>
-      <p class="mk-p">The catnip is the issue. He knows it&#8217;s in there.</p>
+      <p class="mk-p">Pax has accessories. Wand toys, crinkle balls, a charging cable for a motorized toy, catnip, miscellaneous items that needed a home near the couch. The brief was: one object that stores all of it, functions as a side table at the correct height, is beautiful enough to live in the living room, and is secure against a cat who knows exactly what&#8217;s inside. The catnip is the issue. He knows it&#8217;s in there.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">The box</p>
       <h2 class="mk-h2">Built to look like him.</h2>
-      <p class="mk-p">The starting point was a wooden storage box. Two latches were added to the front and painted silver &#8212; the original box had no mechanism to keep it closed against a determined cat. The exterior needed to look like him. Pax is a ragdoll &#8212; dark face and ears, white chest, light body, and a black studded collar he wore for years. All of that is in the box.</p>
+      <p class="mk-p">The starting point was a wooden storage box. Two latches were added to the front and painted silver. Pax is a ragdoll &#8212; dark face and ears, white chest, light body, and a black studded collar he wore for years. All of that is in the box.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">The surface</p>
       <h2 class="mk-h2">Skin, resin, and a collar detail.</h2>
-      <p class="mk-p">The lid top is a paint skin &#8212; bronze, black, silver, and grey with dense cellular development and crater-like ring formations. Over the skin, a layer of clear resin &#8212; poured on top to seal, harden, and protect. The resin makes the surface wipeable and sturdy enough to hold a drink or a book without damage.</p>
-      <p class="mk-p">The band around the lid edge is black felt with upholstery tacks painted silver &#8212; a direct reference to the studded collar Pax used to wear. The tacks are evenly spaced. The detail is small and specific enough that if you know Pax, you see it immediately.</p>
+      <p class="mk-p">The lid top is a paint skin &#8212; bronze, black, silver, and grey with dense cellular development and crater-like ring formations. Over the skin, a layer of clear resin &#8212; poured on top to seal, harden, and protect. The resin makes the surface wipeable and sturdy enough to hold a drink or a book without damage. The band around the lid edge is black felt with upholstery tacks painted silver &#8212; a direct reference to the studded collar Pax used to wear.</p>
     </div>
     <div class="mk-section">
-      <p class="mk-section-label">The inside</p>
-      <h2 class="mk-h2">Motion-activated light.</h2>
-      <p class="mk-p">The interior has a magnetic USB-rechargeable light mounted inside the lid. It&#8217;s motion-activated &#8212; open the box, the interior illuminates. The box sits beside the couch as a side table. He sits on top of it regularly. The latches remain closed. He remains annoyed. The system is working as intended.</p>
+      <p class="mk-section-label">In use</p>
+      <h2 class="mk-h2">Working as intended.</h2>
+      <p class="mk-p">The interior has a magnetic USB-rechargeable light mounted inside the lid. Motion-activated &#8212; open the box, the interior illuminates. The box sits beside the couch as a side table. He sits on top of it regularly. The latches remain closed. He remains annoyed. The system is working as intended.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
@@ -180,8 +154,7 @@
         <div class="tech-row"><span class="tech-label">State</span><span class="tech-value">Finished, in daily use</span></div>
       </div>
     </div>
-    <div class="mk-section">
-      <p class="mk-section-label">Tags</p>
+    <div class="mk-section"><p class="mk-section-label">Tags</p>
       <div class="mk-tags">
         <a href="making.html" class="mk-tag">paint skins</a>
         <a href="making.html" class="mk-tag">resin</a>

@@ -33,7 +33,6 @@
     html { font-size: 16px; scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--cream); color: var(--ink-900); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    /* NAV */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--ink-100); padding: 0 clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 4rem; height: 64px; }
     .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy-800); letter-spacing: -0.02em; flex-shrink: 0; }
     .nav-logo span { color: var(--lime-400); }
@@ -42,8 +41,49 @@
     .nav-links a:hover { color: var(--navy-800); }
     .nav-links a.active { color: var(--navy-800); }
     .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--lime-400); border-radius: 2px; }
-
-    /* FOOTER */
+    .back-nav { max-width: 800px; margin: 0 auto; padding: 1.5rem 2rem 0; }
+    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .back-link:hover { color: var(--teal-800); }
+    .mk-hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--ink-100); }
+    .mk-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
+    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
+    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
+    .photo-hero { background: var(--ink-900); }
+    .photo-hero-inner { max-width: 1100px; margin: 0 auto; }
+    .photo-hero-inner img { width: 100%; max-height: 580px; object-fit: cover; display: block; }
+    .photo-placeholder { width: 100%; height: 400px; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
+    .photo-placeholder p { font-family: var(--font-body); font-size: 0.85rem; color: var(--navy-500); }
+    .photo-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-400); padding: 0.75rem 2rem; font-style: italic; }
+    .mk-body { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+    .mk-section { margin-bottom: 3.5rem; }
+    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
+    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
+    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
+    .mk-p:last-child { margin-bottom: 0; }
+    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
+    .mk-detail img { width: 100%; height: auto; display: block; }
+    .mk-detail-caption { font-family: var(--font-body); font-size: 0.8rem; color: var(--ink-400); margin-top: 0.5rem; font-style: italic; }
+    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+    .mk-detail-2up .mk-detail { margin: 0; }
+    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
+    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
+    .tech-row:last-child { margin-bottom: 0; }
+    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
+    .tech-value { color: var(--ink-600); font-weight: 300; }
+    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
+    .more-making { background: var(--navy-900); padding: 4rem 0; }
+    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .more-card { background: var(--navy-800); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700); transition: border-color 0.2s; }
+    .more-card:hover { border-color: var(--teal-400); }
+    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
+    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream); }
+    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
+    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
+    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream); }
     .footer { background: var(--navy-950); padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     .footer-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy-300); }
     .footer-logo span { color: var(--lime-400); }
@@ -51,70 +91,7 @@
     .footer-nav a { font-size: 0.8125rem; color: var(--navy-400); transition: color var(--transition-base); }
     .footer-nav a:hover { color: var(--navy-200); }
     .footer-copy { font-size: 0.75rem; color: var(--navy-600); }
-    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } }
-    /* BACK NAV */
-    .back-nav { max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; }
-    .back-link { font-family: var(--font-body); font-size: 0.85rem; color: var(--teal-600); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .back-link:hover { color: var(--teal-800); }
-
-    /* HERO */
-    .mk-hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--ink-100); }
-    .mk-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .mk-eyebrow { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 1rem; }
-    .mk-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--navy-900); line-height: 1.1; margin-bottom: 1rem; }
-    .mk-subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--ink-600); line-height: 1.6; max-width: 600px; }
-
-    /* PHOTO HERO — 3 panel */
-    .photo-hero { background: var(--ink-900); }
-    .photo-hero-grid { display: grid; grid-template-columns: 2fr 1fr; max-width: 1200px; margin: 0 auto; gap: 3px; }
-    .photo-hero-grid.single { grid-template-columns: 1fr; }
-    .photo-main-slot { height: 520px; overflow: hidden; }
-    .photo-main-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-stack { display: flex; flex-direction: column; gap: 3px; }
-    .photo-stack-slot { flex: 1; overflow: hidden; }
-    .photo-stack-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-placeholder { width: 100%; height: 100%; background: var(--navy-800); display: flex; align-items: center; justify-content: center; }
-    .photo-placeholder p { font-family: var(--font-body); font-size: 0.8rem; color: var(--navy-500); }
-    @media (max-width: 700px) { .photo-hero-grid { grid-template-columns: 1fr; } .photo-stack { flex-direction: row; } .photo-main-slot { height: 340px; } }
-
-    /* BODY */
-    .mk-body { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .mk-section { margin-bottom: 3.5rem; }
-    .mk-section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); margin-bottom: 0.75rem; }
-    .mk-h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; color: var(--navy-900); line-height: 1.2; margin-bottom: 1.25rem; }
-    .mk-p { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--ink-700); line-height: 1.75; margin-bottom: 1rem; }
-    .mk-p:last-child { margin-bottom: 0; }
-
-    /* INLINE DETAIL IMAGE */
-    .mk-detail { margin: 2rem 0; border-radius: 4px; overflow: hidden; }
-    .mk-detail img { width: 100%; height: auto; display: block; }
-    .mk-detail-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin: 2rem 0; }
-    .mk-detail-2up .mk-detail { margin: 0; }
-
-    /* TECH BLOCK */
-    .tech-block { background: var(--ink-50); border-left: 3px solid var(--teal-500); padding: 1.5rem 2rem; border-radius: 0 4px 4px 0; }
-    .tech-row { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.9rem; }
-    .tech-row:last-child { margin-bottom: 0; }
-    .tech-label { font-weight: 500; color: var(--ink-700); min-width: 160px; flex-shrink: 0; }
-    .tech-value { color: var(--ink-600); font-weight: 300; }
-
-    /* TAGS */
-    .mk-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .mk-tag { font-family: var(--font-body); font-size: 0.75rem; font-weight: 400; color: var(--teal-600); background: var(--teal-50, #eafbfc); border: 1px solid var(--teal-200); border-radius: 2rem; padding: 0.25rem 0.75rem; text-decoration: none; }
-
-    /* MORE MAKING */
-    .more-making { background: var(--navy-900); padding: 4rem 0; }
-    .more-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .more-card { background: var(--navy-800, #1a2535); border-radius: 4px; padding: 1.25rem; text-decoration: none; border: 1px solid var(--navy-700, #253045); transition: border-color 0.2s; }
-    .more-card:hover { border-color: var(--teal-400); }
-    .more-type { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-400); margin-bottom: 0.5rem; }
-    .more-title { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .section-dot { width: 8px; height: 8px; background: var(--lime-400); border-radius: 50%; }
-    .section-eyebrow { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-300); }
-    .section-title-sm { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--cream, #faf8f3); }
-    @media (max-width: 600px) { .more-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .nav-links { gap: 1.25rem; } .more-grid { grid-template-columns: 1fr; } .mk-detail-2up { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -128,9 +105,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></nav>
   </header>
-  <div class="back-nav">
-    <a href="making.html" class="back-link">&#8592; Back to Making</a>
-  </div>
+  <div class="back-nav"><a href="making.html" class="back-link">&#8592; Back to Making</a></div>
   <section class="mk-hero">
     <div class="mk-hero-inner">
       <p class="mk-eyebrow">Flip Cup &middot; Round Canvas</p>
@@ -139,28 +114,26 @@
     </div>
   </section>
   <div class="photo-hero">
-    <div class="photo-hero-grid single">
-      <div class="photo-main-slot" style="height:480px;"><img src='images/making-round-pour-card.png' alt='' loading='lazy'></div>
+    <div class="photo-hero-inner">
+      <img src="images/making-round-pour-card.png" alt="Round canvas flip cup pour" loading="lazy">
     </div>
+    
   </div>
   <div class="mk-body">
     <div class="mk-section">
       <p class="mk-section-label">The origin</p>
       <h2 class="mk-h2">Same session. Different conversation.</h2>
-      <p class="mk-p">A flip cup uses what&#8217;s left. After the Bioluminescent pour was finished, the cups still had paint &#8212; ultramarine blue and blue metallics, layered in the order they&#8217;d been used. Most of the silicone oil had already floated to the surface during the first pour. A trace amount remained. Enough.</p>
-      <p class="mk-p">I stacked the colors into a single cup, inverted it onto a round canvas, and lifted. The paint underneath spread on its own. Then tilt work to move it across the surface, torch pass to release the bubbles.</p>
+      <p class="mk-p">A flip cup uses what&#8217;s left. After the Bioluminescent pour was finished, the cups still had paint &#8212; ultramarine blue and blue metallics, layered in the order they&#8217;d been used. Most of the silicone oil had already floated to the surface during the first pour. A trace amount remained. Enough. I stacked the colors into a single cup, inverted it onto a round canvas, and lifted. Then tilt work to move it across the surface, torch pass to release the bubbles.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">The format</p>
       <h2 class="mk-h2">No horizon.</h2>
-      <p class="mk-p">A rectangular canvas has orientation &#8212; top, bottom, implied horizon. A round canvas has none of that. There&#8217;s no up. The composition radiates from wherever the flip cup landed, and the tilt spreads it without a preferred direction.</p>
-      <p class="mk-p">That&#8217;s part of why this piece reads differently than Bioluminescent. Same palette, same session, same chemistry. But the round format removed the horizon line, and without a horizon, the result stopped reading as ocean and started reading as space.</p>
+      <p class="mk-p">A rectangular canvas has orientation &#8212; top, bottom, implied horizon. A round canvas has none of that. The composition radiates from wherever the flip cup landed, and the tilt spreads it without a preferred direction. Same palette, same session, same chemistry. But the round format removed the horizon line, and without a horizon, the result stopped reading as ocean and started reading as space.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">The distinction</p>
       <h2 class="mk-h2">Spacey, not oceanic.</h2>
-      <p class="mk-p">The Bioluminescent piece has depth &#8212; you read downward into it, the way you&#8217;d read into water. This one has distance. You read outward from the center, the way you&#8217;d read a star field or a nebula. The cells are the same cellular chemistry, but in a radial field without a horizon they become something else &#8212; less biological, more astronomical.</p>
-      <p class="mk-p">I find it weirdly soothing. The blue is the same blue. The mood is completely different.</p>
+      <p class="mk-p">The Bioluminescent piece has depth &#8212; you read downward into it, the way you&#8217;d read into water. This one has distance. You read outward from the center, the way you&#8217;d read a star field or a nebula. The cells are the same cellular chemistry, but in a radial field without a horizon they become something else &#8212; less biological, more astronomical. I find it weirdly soothing. The blue is the same blue. The mood is completely different.</p>
     </div>
     <div class="mk-section">
       <p class="mk-section-label">Technical notes</p>
@@ -173,8 +146,7 @@
         <div class="tech-row"><span class="tech-label">State</span><span class="tech-value">Finished</span></div>
       </div>
     </div>
-    <div class="mk-section">
-      <p class="mk-section-label">Tags</p>
+    <div class="mk-section"><p class="mk-section-label">Tags</p>
       <div class="mk-tags">
         <a href="making.html" class="mk-tag">paint pouring</a>
         <a href="making.html" class="mk-tag">flip cup</a>
