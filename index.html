@@ -161,7 +161,6 @@
       gap: 4rem;
     }
 
-    /* Shag-inspired flat geometric shapes — background decoration */
     .hero-shapes {
       position: absolute;
       inset: 0;
@@ -169,7 +168,6 @@
       overflow: hidden;
     }
 
-    /* Large teal circle — top right */
     .shape-circle-lg {
       position: absolute;
       top: -80px;
@@ -181,7 +179,6 @@
       opacity: 0.55;
     }
 
-    /* Lime diamond */
     .shape-diamond {
       position: absolute;
       top: 60px;
@@ -193,7 +190,6 @@
       opacity: 0.7;
     }
 
-    /* Navy rectangle — bottom left */
     .shape-rect {
       position: absolute;
       bottom: -30px;
@@ -206,7 +202,6 @@
       transform: rotate(15deg);
     }
 
-    /* Small teal dot cluster */
     .shape-dot {
       position: absolute;
       border-radius: 50%;
@@ -277,7 +272,6 @@
       align-items: center;
     }
 
-    /* Shag-inspired right panel — graphic/blocked */
     .hero-panel {
       position: relative;
       z-index: 1;
@@ -286,7 +280,6 @@
       gap: 1.25rem;
     }
 
-    /* Stacked color blocks with Shag flat aesthetic */
     .hero-block {
       border-radius: var(--radius-xl);
       padding: 1.75rem 2rem;
@@ -298,14 +291,8 @@
 
     .hero-block:hover { transform: translateX(6px); }
 
-    .hero-block.navy {
-      background: var(--navy-800);
-    }
-
-    .hero-block.teal {
-      background: var(--teal-700);
-    }
-
+    .hero-block.navy { background: var(--navy-800); }
+    .hero-block.teal { background: var(--teal-700); }
     .hero-block.lime-outline {
       background: transparent;
       border: 2px solid var(--lime-400);
@@ -334,7 +321,6 @@
     .teal .hb-text  { color: var(--teal-50); }
     .lime-outline .hb-text { color: var(--navy-800); }
 
-    /* Small geometric corner accent */
     .hero-block::after {
       content: '';
       position: absolute;
@@ -405,7 +391,6 @@
       margin: 0 auto;
     }
 
-    /* Section heading with Shag-style marker */
     .section-header {
       display: flex;
       align-items: baseline;
@@ -443,9 +428,7 @@
     /* ============================================================
        WORK CARDS
     ============================================================ */
-    .work-section {
-      background: var(--cream);
-    }
+    .work-section { background: var(--cream); }
 
     .card-grid {
       display: grid;
@@ -535,11 +518,9 @@
     .tag-lime    { background: var(--lime-100);  color: var(--lime-700); }
     .tag-neutral { background: var(--ink-100);   color: var(--ink-600); }
 
-    /* Non-filterable tags -- display only, not clickable */
     span.tag { cursor: default; opacity: 0.75; }
     span.tag:hover { filter: none; transform: none; }
 
-    /* Linked tags — clickable, open filtered work page */
     a.tag-link {
       text-decoration: none;
       cursor: pointer;
@@ -550,7 +531,6 @@
       transform: translateY(-1px);
     }
 
-    /* Card link overlay — valid HTML approach for block cards */
     .project-card { position: relative; }
     .card-link-overlay {
       position: absolute;
@@ -558,7 +538,6 @@
       z-index: 1;
       border-radius: var(--radius-lg);
     }
-    /* Tags and card-reveal sit above the overlay */
     .tag-row, .card-reveal { position: relative; z-index: 2; }
 
     .card-reveal {
@@ -573,211 +552,10 @@
       gap: 0.4rem;
     }
 
-    .card-reveal::after { content: '→'; }
+    .card-reveal::after { content: '&#8594;'; }
 
     /* ============================================================
-       TESTIMONIAL BAND
-    ============================================================ */
-    .testimonial-band {
-      background: var(--navy-800);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Shag-style geometric shapes in dark band */
-    .tb-shape-1 {
-      position: absolute;
-      right: -60px;
-      top: -60px;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: var(--teal-800);
-      opacity: 0.5;
-    }
-
-    .tb-shape-2 {
-      position: absolute;
-      left: 5%;
-      bottom: -40px;
-      width: 120px;
-      height: 120px;
-      background: var(--lime-400);
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-      opacity: 0.12;
-    }
-
-    .tb-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-    }
-
-    .tb-quote {
-      font-family: var(--font-display);
-      font-size: clamp(1.25rem, 2.5vw, 1.625rem);
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.55;
-      color: var(--cream);
-      margin-bottom: 1.25rem;
-    }
-
-    .tb-attr {
-      font-size: 0.875rem;
-      color: var(--navy-300);
-      font-weight: 500;
-    }
-
-    .tb-accent {
-      display: inline-block;
-      width: 40px;
-      height: 3px;
-      background: var(--lime-400);
-      border-radius: 2px;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ============================================================
-       MAKING TEASER
-    ============================================================ */
-    .making-section {
-      background: var(--ink-50);
-    }
-
-    .making-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    .making-card {
-      display: block;
-      border-radius: var(--radius-xl);
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all var(--transition-base);
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .making-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.2);
-    }
-
-    .making-card:hover .mc-reveal {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .mc-navy  { background: var(--navy-800); }
-    .mc-teal  { background: var(--teal-800); }
-    .mc-dark  { background: var(--ink-900); border: 2px solid var(--lime-400); }
-
-    /* Shag-inspired geometric accent per card */
-    .making-card::before {
-      content: '';
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .mc-navy::before {
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 60px;
-      height: 60px;
-      background: var(--teal-600);
-      border-radius: 50%;
-      opacity: 0.4;
-    }
-
-    .mc-teal::before {
-      top: 1.5rem;
-      right: 2rem;
-      width: 44px;
-      height: 44px;
-      background: var(--lime-400);
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-      opacity: 0.35;
-    }
-
-    .mc-dark::before {
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 50px;
-      height: 50px;
-      background: var(--lime-400);
-      clip-path: polygon(0 0, 100% 0, 100% 100%);
-      opacity: 0.2;
-      border-radius: 0;
-    }
-
-    .mc-tag {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mc-navy .mc-tag  { color: var(--lime-400); }
-    .mc-teal .mc-tag  { color: var(--teal-300); }
-    .mc-dark .mc-tag  { color: var(--lime-400); }
-
-    .mc-title {
-      font-family: var(--font-display);
-      font-size: 1.375rem;
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mc-navy .mc-title { color: var(--cream); }
-    .mc-teal .mc-title { color: var(--teal-50); }
-    .mc-dark .mc-title { color: var(--cream); }
-
-    .mc-desc {
-      font-size: 0.8125rem;
-      line-height: 1.6;
-      position: relative;
-      z-index: 1;
-      margin-bottom: 0.75rem;
-    }
-
-    .mc-navy .mc-desc { color: var(--navy-300); }
-    .mc-teal .mc-desc { color: var(--teal-200); }
-    .mc-dark .mc-desc { color: var(--ink-300); }
-
-    .mc-reveal {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: all var(--transition-base);
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mc-navy .mc-reveal { color: var(--lime-300); }
-    .mc-teal .mc-reveal { color: var(--lime-300); }
-    .mc-dark .mc-reveal { color: var(--lime-400); }
-
-    .mc-reveal::after { content: '→'; }
-
-    /* ============================================================
-       MAKING SECTION FOOTER LINK
+       SECTION FOOTER LINK
     ============================================================ */
     .section-footer-link {
       margin-top: 2rem;
@@ -800,7 +578,7 @@
       gap: 0.75rem;
     }
 
-    .text-link::after { content: '→'; }
+    .text-link::after { content: '&#8594;'; }
 
     /* ============================================================
        CONTACT CLOSER
@@ -812,7 +590,6 @@
       text-align: center;
     }
 
-    /* Shag geometric background */
     .cs-shape-1 {
       position: absolute;
       top: -100px;
@@ -987,22 +764,12 @@
         min-height: auto;
         gap: 3rem;
       }
-
       .hero-panel { order: -1; }
-
-      .making-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .making-grid .making-card:first-child {
-        grid-column: 1 / -1;
-      }
     }
 
     @media (max-width: 600px) {
       .nav-links { gap: 1.25rem; }
       .card-grid { grid-template-columns: 1fr; }
-      .making-grid { grid-template-columns: 1fr; }
       .footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
 
@@ -1011,9 +778,6 @@
 
 <body>
 
-  <!-- ============================================================
-       NAV
-  ============================================================ -->
   <header class="nav">
     <a href="index.html" class="nav-logo">lori<span>.</span></a>
     <nav>
@@ -1028,12 +792,9 @@
   </header>
 
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
+  <!-- HERO -->
   <section class="hero">
 
-    <!-- Background shapes -->
     <div class="hero-shapes">
       <div class="shape-circle-lg"></div>
       <div class="shape-diamond"></div>
@@ -1043,7 +804,6 @@
       <div class="shape-dot" style="width:18px;height:18px;top:20%;left:44%;background:var(--navy-200);"></div>
     </div>
 
-    <!-- Left: copy -->
     <div class="hero-content">
       <p class="hero-eyebrow">Web &amp; Digital Program Manager</p>
       <h1 class="hero-headline">I solve for<br><em>friction.</em></h1>
@@ -1057,11 +817,10 @@
       </div>
     </div>
 
-    <!-- Right: Shag-inspired stacked color blocks -->
     <div class="hero-panel">
       <div class="hero-block navy">
         <p class="hb-label">What I do</p>
-        <p class="hb-text">Own the delivery of complex web programs — from broken first draft to something that actually ships.</p>
+        <p class="hb-text">Own the delivery of complex web programs &#8212; from broken first draft to something that actually ships.</p>
       </div>
       <div class="hero-block teal">
         <p class="hb-label">How I do it</p>
@@ -1069,16 +828,14 @@
       </div>
       <div class="hero-block lime-outline">
         <p class="hb-label">What makes me unusual</p>
-        <p class="hb-text">I've been in enough rooms where things were genuinely broken to know the difference between a technology problem, a process gap, and a communication failure — and to stay calm regardless.</p>
+        <p class="hb-text">I&#8217;ve been in enough rooms where things were genuinely broken to know the difference between a technology problem, a process gap, and a communication failure &#8212; and to stay calm regardless.</p>
       </div>
     </div>
 
   </section>
 
 
-  <!-- ============================================================
-       WORK CARDS
-  ============================================================ -->
+  <!-- WORK CARDS -->
   <section class="section work-section">
     <div class="section-inner">
 
@@ -1092,7 +849,7 @@
 
       <div class="card-grid" id="work-card-grid">
         <!-- Cards rendered by JS from data/work.json -->
-      </div></div>
+      </div>
 
       <div class="section-footer-link">
         <a href="work.html" class="text-link">All work</a>
@@ -1102,75 +859,23 @@
   </section>
 
 
-  <!-- ============================================================
-       TESTIMONIAL BAND
-  ============================================================ -->
-  <section class="section testimonial-band">
-    <div class="tb-shape-1"></div>
-    <div class="tb-shape-2"></div>
-    <div class="section-inner">
-      <div class="tb-inner">
-        <div class="tb-accent"></div>
-        <blockquote class="tb-quote">
-          "She untangles and reframes chaotic team systems and emotions into fixable processes — with empathy and calmness. I saw it firsthand."
-        </blockquote>
-        <p class="tb-attr">Design vendor, Bridge Partners engagement · 2025</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       MAKING TEASER
-  ============================================================ -->
-  <section class="section making-section">
-    <div class="section-inner">
-
-      <div style="margin-bottom: 3rem;">
-        <div class="section-header">
-          <div class="section-dot"></div>
-          <p class="section-eyebrow">Making</p>
-        </div>
-        <h2 class="section-title">Same brain, different materials.</h2>
-        <p style="font-size:1rem;font-weight:300;color:var(--ink-500);line-height:1.7;max-width:540px;margin-top:0.75rem;">
-          The problem-solving doesn't stop when the laptop closes.
-        </p>
-      </div>
-
-      <div class="making-grid" id="making-card-grid">
-        <!-- Cards rendered by JS from data/making.json -->
-      </div></div>
-
-      <div class="section-footer-link">
-        <a href="making.html" class="text-link">All making</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       CONTACT CLOSER
-  ============================================================ -->
+  <!-- CONTACT CLOSER -->
   <section class="section contact-section">
     <div class="cs-shape-1"></div>
     <div class="cs-shape-2"></div>
     <div class="cs-shape-3"></div>
     <div class="section-inner cs-inner">
-      <p class="cs-label">Let's talk</p>
-      <h2 class="cs-headline">If a problem is worth<br><em>solving, I'm interested.</em></h2>
+      <p class="cs-label">Let&#8217;s talk</p>
+      <h2 class="cs-headline">If a problem is worth<br><em>solving, I&#8217;m interested.</em></h2>
       <p class="cs-sub">
-        Whether you've got a role in mind or a delivery situation that's gone sideways —
-        I'm happy to have the conversation.
+        Whether you&#8217;ve got a role in mind or a delivery situation that&#8217;s gone sideways &#8212;
+        I&#8217;m happy to have the conversation.
       </p>
       <a href="contact.html" class="btn-lime">Get in touch</a>
     </div>
   </section>
 
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
   <footer class="footer">
     <a href="index.html" class="footer-logo">lori<span>.</span></a>
     <nav>
@@ -1181,15 +886,11 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <p class="footer-copy">© 2026 Lori Williams</p>
+    <p class="footer-copy">&#169; 2026 Lori Williams</p>
   </footer>
 
 
   <script>
-    // ── DATA-DRIVEN CARD RENDERING ─────────────────────────────────────────
-    // Cards are loaded from data/work.json and data/making.json.
-    // To update a card: edit the JSON file in your GitHub repo. No HTML changes needed.
-
     const MULTI_SLUGS = new Set([
       'process-design','web-delivery','program-management',
       'ms-project','enterprise-pm','cms','analytics'
@@ -1221,35 +922,14 @@
         </div>`;
     }
 
-    function buildMakingCard(card) {
-      const hasLink = card.href && card.href !== "null";
-      return `<div class="making-card ${card.color} ${hasLink ? "making-card-linked" : ""}">
-          ${hasLink ? `<a href="${card.href}" class="card-link-overlay" aria-label="${card.title}" tabindex="0"></a>` : ""}
-          <p class="mc-tag">${card.type}</p>
-          <h3 class="mc-title">${card.title}</h3>
-          <p class="mc-desc">${card.description}</p>
-          <div class="mc-reveal">${card.reveal}</div>
-        </div>`;
-    }
-
     async function renderCards() {
       try {
-        const [workRes, makingRes] = await Promise.all([
-          fetch('data/work.json'),
-          fetch('data/making.json')
-        ]);
-        const work   = await workRes.json();
-        const making = await makingRes.json();
-
+        const res = await fetch('data/work.json');
+        const work = await res.json();
         document.getElementById('work-card-grid').innerHTML =
           work.cards.map(buildWorkCard).join('\n        ');
-
-        document.getElementById('making-card-grid').innerHTML =
-          making.cards.map(buildMakingCard).join('\n        ');
-
       } catch (err) {
         console.error('Card render failed:', err);
-        // Fallback: show a plain message if fetch fails (e.g. opening HTML file directly)
         document.getElementById('work-card-grid').innerHTML =
           '<p style="color:var(--ink-400);padding:2rem">Visit <a href="work.html">the work page</a> to see case studies.</p>';
       }
